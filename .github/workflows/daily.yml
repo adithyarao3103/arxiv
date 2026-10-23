@@ -1,0 +1,55 @@
+name: Daily gazette
+
+on:
+  schedule:
+    # GitHub cron runs in UTC. Two triggers cover Europe/Amsterdam's DST change: the script skips a
+    # trigger that fires before 11:00 local time, or after today's edition already exists.
+    - cron: "0 9 * * *"
+    - cron: "0 10 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Regenerate today's edition even if it already exists"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gazette
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Generate edition
+        env:
+          EVENT: ${{ github.event_name }}
+          FORCE: ${{ inputs.force }}
+        run: |
+          if [ "$EVENT" = "workflow_dispatch" ] && [ "$FORCE" = "true" ]; then
+            python -m gazette.run --force
+          elif [ "$EVENT" = "workflow_dispatch" ]; then
+            python -m gazette.run
+          else
+            python -m gazette.run --not-before-hour 11
+          fi
+      - name: Commit changes
+        run: |
+          git config user.name "gazette-bot"
+          git config user.email "gazette-bot@users.noreply.github.com"
+          git add docs data
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+          else
+            git commit -m "Edition $(date -u +%F)"
+            git push
+          fi
