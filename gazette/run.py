@@ -4,6 +4,7 @@
   python -m gazette.run --force              # regenerate today's edition
   python -m gazette.run --not-before-hour 11 # used by the scheduled workflow (see README)
   python -m gazette.run --rerender           # rebuild every page from saved digests (after editing the template)
+  python -m gazette.run ... --root-dir DIR   # also write DIR/index.html (default: repo root, so /<repo>/ works as well as /<repo>/docs/)
   python -m gazette.run --papers-file p.json --docs-dir /tmp/out --data-dir /tmp/data   # offline testing
 
 No API key or AI is involved: the edition is built from verbatim abstract excerpts (see gazette/extractive.py).
@@ -31,13 +32,24 @@ def save_json(path, obj):
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
-def write_pages(docs, cfg, digest, date, latest):
+def write_pages(docs, cfg, digest, date, latest, root=None):
+    """Write the archived edition and, for the latest one, the front page.
+
+    The front page is written to docs/index.html and, when `root` is given, also to <root>/index.html so that
+    https://<user>.github.io/<repo>/ works as well as .../<repo>/docs/. The two copies differ only in the
+    relative link to the archive (archive/ from docs/, docs/archive/ from the repo root).
+    """
     (docs / "archive").mkdir(parents=True, exist_ok=True)
     archived = dict(digest, nav=[{"label": "Past editions", "href": "./"}, {"label": "Latest edition", "href": "../index.html"}])
     (docs / "archive" / f"{date}.html").write_text(render.build(archived), encoding="utf-8")
     if latest:
         home = dict(digest, nav=[{"label": "Past editions", "href": "archive/"}])
         (docs / "index.html").write_text(render.build(home), encoding="utf-8")
+        if root is not None:
+            root.mkdir(parents=True, exist_ok=True)
+            top = dict(digest, nav=[{"label": "Past editions", "href": "docs/archive/"}])
+            (root / "index.html").write_text(render.build(top), encoding="utf-8")
+            (root / ".nojekyll").touch()
 
 
 def write_archive_index(docs, cfg, editions):
@@ -51,6 +63,7 @@ def main():
     ap.add_argument("--rerender", action="store_true")
     ap.add_argument("--papers-file")
     ap.add_argument("--docs-dir")
+    ap.add_argument("--root-dir", help="where to also write the root index.html (default: the repo root, but only when --docs-dir is not given)")
     ap.add_argument("--data-dir")
     ap.add_argument("--now", help="override the current time, ISO format (testing)")
     args = ap.parse_args()
@@ -58,6 +71,10 @@ def main():
     cfg = load_json(ROOT / "config.json", None)
     docs = Path(args.docs_dir) if args.docs_dir else ROOT / "docs"
     data = Path(args.data_dir) if args.data_dir else ROOT / "data"
+    if args.root_dir:
+        root_index = Path(args.root_dir)
+    else:
+        root_index = ROOT if (not args.docs_dir and cfg.get("root_index", True)) else None
     state = load_json(data / "state.json", {"editions": []})
     tz = ZoneInfo(cfg["timezone"])
     now = datetime.fromisoformat(args.now).replace(tzinfo=tz) if args.now else datetime.now(tz)
@@ -69,7 +86,7 @@ def main():
         for i, ed in enumerate(eds):
             d = load_json(data / "digests" / f"{ed['date']}.json", None)
             if d:
-                write_pages(docs, cfg, d, ed["date"], latest=(i == len(eds) - 1))
+                write_pages(docs, cfg, d, ed["date"], latest=(i == len(eds) - 1), root=root_index)
         write_archive_index(docs, cfg, eds)
         print(f"re-rendered {len(eds)} editions")
         return 0
@@ -119,7 +136,7 @@ def main():
     editions = sorted(others + [entry], key=lambda e: e["date"])
     # everything is computed; only now touch the files, so a failure never leaves a half-written site
     save_json(data / "digests" / f"{today}.json", digest)
-    write_pages(docs, cfg, digest, today, latest=True)
+    write_pages(docs, cfg, digest, today, latest=True, root=root_index)
     write_archive_index(docs, cfg, editions)
     save_json(data / "state.json", {"editions": editions})
     print(f"edition {today}: {n_stories} items from {len(fresh)} papers; lead: {digest['lead']['headline']}")

@@ -6,6 +6,8 @@ text in the edition is a verbatim excerpt of the authors' own abstract. Nothing 
 import math
 import re
 
+from .authors import ProminentAuthors
+
 # ---- ranking signals (edit the weights here if you disagree with them) -----------------------------
 VENUE = re.compile(
     r"\b(accepted|to appear|published in|appeared in|journal reference|jhep|prl|phys\.? ?rev|physical review|"
@@ -126,7 +128,17 @@ def make_digest(papers, cfg):
     for p in ranked:
         p["_section"] = assign_section(p, cfg)
 
-    lead_p = prim[0]
+    # Lead story: if any primary paper has an author on the hard-coded prominent hep-th list (gazette/authors.py),
+    # the lead comes from those papers (best automatic score among them); otherwise the top-scoring paper leads.
+    prominent = ProminentAuthors(cfg.get("extra_prominent_authors", []))
+    for p in prim:
+        p["_prominent"] = prominent.in_paper(p)
+    flagged = [p for p in prim if p["_prominent"]]
+    if flagged:
+        lead_p = max(flagged, key=lambda p: (p["_score"], len(p["_prominent"])))   # max() keeps the first of equal ones
+        prim = [lead_p] + [p for p in prim if p is not lead_p]
+    else:
+        lead_p = prim[0]
     feats = prim[1:1 + size["features"]]
     rest = prim[1 + size["features"]:]
     stories = rest[:size["section_stories"]]
@@ -135,12 +147,19 @@ def make_digest(papers, cfg):
     brief_ps = leftovers[:size["briefs"]]
 
     why = "; ".join(lead_p["_why"]) or "no standout signal"
+    if lead_p["_prominent"]:
+        names = lead_p["_prominent"]
+        who = ", ".join(names[:3]) + (f" and {len(names) - 3} more" if len(names) > 3 else "")
+        reason = (f"Authors include {who}, on the Gazette’s fixed list of prominent {'/'.join(cats)} authors. "
+                  f"Automatic score {lead_p['_score']:g}: {why}.")
+    else:
+        reason = f"Highest automatic score today ({lead_p['_score']:g}): {why}. No author on the prominent-authors list had a paper today."
     lead = _story(lead_p, 750)
     lead.update({
         "kicker": f"Lead Story · {lead_p['primary_category']}",
         "deck": lead_p.get("comment", ""),
         "why_label": "Why it leads.",
-        "why_it_matters": f"Highest automatic score today ({lead_p['_score']:g}): {why}.",
+        "why_it_matters": reason,
     })
 
     features = []
@@ -169,7 +188,8 @@ def make_digest(papers, cfg):
     return {
         "lead": lead, "features": features, "sections": sections, "briefs": briefs,
         "editors_note": "No human or AI editor today: papers are ranked automatically by simple signals "
-                        "(a journal or acceptance noted, page count, cross-listing breadth, stated results).",
+                        "(a journal or acceptance noted, page count, cross-listing breadth, stated results). "
+                        "A paper by an author on a fixed list of prominent hep-th authors takes the lead.",
         "footer": "Text is excerpted verbatim from the authors’ abstracts as posted on arXiv; stories are chosen by an "
                   "automatic ranking, not by an editor, and have not been peer reviewed. Follow the links for the full papers.",
     }

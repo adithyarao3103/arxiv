@@ -12,6 +12,10 @@ on:
         description: "Regenerate today's edition even if it already exists"
         type: boolean
         default: false
+      rerender:
+        description: "Only rebuild all pages from saved editions (after a template change); fetches nothing"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -34,8 +38,11 @@ jobs:
         env:
           EVENT: ${{ github.event_name }}
           FORCE: ${{ inputs.force }}
+          RERENDER: ${{ inputs.rerender }}
         run: |
-          if [ "$EVENT" = "workflow_dispatch" ] && [ "$FORCE" = "true" ]; then
+          if [ "$EVENT" = "workflow_dispatch" ] && [ "$RERENDER" = "true" ]; then
+            python -m gazette.run --rerender
+          elif [ "$EVENT" = "workflow_dispatch" ] && [ "$FORCE" = "true" ]; then
             python -m gazette.run --force
           elif [ "$EVENT" = "workflow_dispatch" ]; then
             python -m gazette.run
@@ -46,7 +53,7 @@ jobs:
         run: |
           git config user.name "gazette-bot"
           git config user.email "gazette-bot@users.noreply.github.com"
-          git add docs data
+          git add index.html .nojekyll docs data
           if git diff --cached --quiet; then
             echo "nothing to commit"
           else

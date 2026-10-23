@@ -4,7 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
-from gazette import extractive as ex, run  # noqa: E402
+from gazette import extractive as ex, run, authors, render  # noqa: E402
 
 CFG = json.loads((ROOT / "config.json").read_text())
 
@@ -68,6 +68,62 @@ def test_ranking_and_digest():
     print("ranking/digest ok:", d["lead"]["headline"], "|", names)
 
 
+def test_authors():
+    P = authors.ProminentAuthors()
+    assert len(P) > 500, len(P)
+    yes = ["Edward Witten", "E. Witten", "J. M. Maldacena", "Juan Martin Maldacena", "Dieter Lüst", "Yu-Tin Huang",
+           "Gerard 't Hooft", "G. 't Hooft", "J. de Boer", "Eric D'Hoker", "Iñaki García Etxebarria", "Xi Yin", "A. Strominger"]
+    no = ["Y. Wang", "Yi Wang", "S. Kim", "B. Strominger", "Edwin Witten", "A. N. Other", "Madonna"]
+    for n in yes:
+        assert P.match(n), n
+    for n in no:
+        assert not P.match(n), n
+    assert authors.ProminentAuthors(["Ada Lovelace"]).match("A. Lovelace")
+    print("authors ok:", len(P), "entries")
+
+
+def test_prominent_lead():
+    ps = fixture()
+    base = ex.make_digest(ps, CFG)["lead"]["arxiv_id"]
+    assert base == "2610.00001"
+    # a modest paper by Witten beats the otherwise top-scoring paper
+    ps[-2] = dict(ps[-2], authors=["Z. Nobody", "Edward Witten"])          # 2610.00019, "Unrelated musings", score ~1
+    d = ex.make_digest(ps, CFG)
+    assert d["lead"]["arxiv_id"] == ps[-2]["id"], d["lead"]
+    assert "Edward Witten" in d["lead"]["why_it_matters"] and "prominent" in d["lead"]["why_it_matters"]
+    ids = [d["lead"]["arxiv_id"]] + [f["arxiv_id"] for f in d["features"]] + [s["arxiv_id"] for sec in d["sections"] for s in sec["stories"]] + [b["arxiv_id"] for b in d["briefs"]]
+    assert len(ids) == len(set(ids)) and base in ids, "former lead must still appear somewhere, once"
+    # a prominent author on a gr-qc cross-list (secondary tier) must NOT take the lead
+    ps2 = fixture()
+    ps2[2] = dict(ps2[2], authors=["Juan Maldacena"])                       # 2610.00003, tier=secondary
+    assert ex.make_digest(ps2, CFG)["lead"]["arxiv_id"] == base
+    # two prominent papers: the better-scoring one leads
+    ps3 = fixture()
+    ps3[3] = dict(ps3[3], authors=["Cumrun Vafa"])                          # "Tiny note", negative score
+    ps3[1] = dict(ps3[1], authors=["Andrew Strominger"])                    # lecture notes, also demoted
+    lead3 = ex.make_digest(ps3, CFG)["lead"]["arxiv_id"]
+    assert lead3 in ("2610.00002", "2610.00004")
+    s = {p["id"]: ex.score(p)[0] for p in ps3}
+    assert s[lead3] == max(s["2610.00002"], s["2610.00004"])
+    print("prominent-author lead ok")
+
+
+def test_render_light_and_layout():
+    d = ex.make_digest(fixture(), CFG)
+    d.update({"title": "T", "date": "d", "edition": "No. 1", "categories": ["hep-th"], "stats": {"a": "1"}})
+    d["lead"]["body"] = [r"$\\mathcal{N}=4$ theory. We show things."]
+    d["lead"]["deck"] = "v2: 45 pages, 12 figures"
+    html = render.build(dict(d, nav=[]))
+    assert "prefers-color-scheme" not in html and "data-theme" not in html and "dark" not in html.lower().replace("darkness", "")
+    assert 'name="color-scheme" content="light"' in html and "color-scheme:light only" in html
+    assert 'class="text drop"' not in html, "no drop cap when the abstract starts with LaTeX"
+    assert "Authors’ note: v2: 45 pages" in html and 'class="deck"' not in html
+    d["lead"]["body"] = ["We show things."]
+    assert 'class="text drop"' in render.build(dict(d, nav=[]))
+    assert html.count('class="section"') == len(d["sections"])
+    print("render ok")
+
+
 def call(*argv):
     sys.argv = ["run"] + list(argv)
     buf = io.StringIO()
@@ -81,11 +137,15 @@ def test_pipeline():
         t = Path(t)
         pf = t / "papers.json"
         pf.write_text(json.dumps(fixture()))
-        base = ["--papers-file", str(pf), "--docs-dir", str(t / "docs"), "--data-dir", str(t / "data")]
+        base = ["--papers-file", str(pf), "--docs-dir", str(t / "docs"), "--data-dir", str(t / "data"), "--root-dir", str(t / "root")]
         rc, out = call(*base, "--now", "2026-10-22T11:30"); print(" ", out)
         html = (t / "docs" / "index.html").read_text()
         assert "No. 1" in html and "Past editions" in html and "verbatim" in html and "Why it leads." in html
         assert (t / "docs" / "archive" / "2026-10-22.html").exists()
+        top = (t / "root" / "index.html").read_text()
+        assert 'href="docs/archive/"' in top and 'href="archive/"' not in top and 'href="archive/"' in html, "root and docs copies differ only in the archive link"
+        assert top.replace('href="docs/archive/"', 'href="archive/"') == html
+        assert (t / "root" / ".nojekyll").exists()
         before = html
         rc, out = call(*base, "--now", "2026-10-23T11:30"); print(" ", out)
         assert "keeping the current edition" in out and (t / "docs" / "index.html").read_text() == before
@@ -100,10 +160,11 @@ def test_pipeline():
         rc, out = call("--not-before-hour", "11", "--docs-dir", str(t / "docs"), "--data-dir", str(t / "data"), "--now", "2026-10-26T11:40")
         assert "already exists" in out
         (t / "docs" / "index.html").unlink()
-        call("--rerender", "--docs-dir", str(t / "docs"), "--data-dir", str(t / "data"))
-        assert (t / "docs" / "index.html").exists()
+        (t / "root" / "index.html").unlink()
+        call("--rerender", "--docs-dir", str(t / "docs"), "--data-dir", str(t / "data"), "--root-dir", str(t / "root"))
+        assert (t / "docs" / "index.html").exists() and (t / "root" / "index.html").exists()
     print("pipeline ok")
 
 
 if __name__ == "__main__":
-    test_split(); test_ranking_and_digest(); test_pipeline(); print("ALL PASSED")
+    test_split(); test_authors(); test_ranking_and_digest(); test_prominent_lead(); test_render_light_and_layout(); test_pipeline(); print("ALL PASSED")

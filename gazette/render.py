@@ -4,67 +4,77 @@ import json
 import sys
 
 CSS = """
-:root{--paper:#f6f1e7;--ink:#1a1a1a;--muted:#5d574a;--rule:#1a1a1a;--soft:#d8cfba;--accent:#8b1a1a;--box:#eee6d3;
-color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#16140f;--ink:#ece6d6;--muted:#a8a190;--rule:#ece6d6;--soft:#3b372b;--accent:#e58b74;--box:#1f1c14;color-scheme:dark}}
-:root[data-theme="dark"]{--paper:#16140f;--ink:#ece6d6;--muted:#a8a190;--rule:#ece6d6;--soft:#3b372b;--accent:#e58b74;--box:#1f1c14;color-scheme:dark}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-*{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:'Source Serif 4',Georgia,'Times New Roman',serif;line-height:1.55}
+:root{--page:#ebe4d2;--paper:#f6f1e7;--ink:#1a1a1a;--muted:#5d574a;--rule:#1a1a1a;--soft:#d8cfba;--accent:#8b1a1a;--box:#eee6d3;
+color-scheme:light only;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--page);-webkit-text-size-adjust:100%}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font-family:'Source Serif 4',Georgia,'Times New Roman',serif;line-height:1.55;overflow-wrap:break-word}
 a{color:inherit;text-decoration:underline dotted;text-underline-offset:2px}a:hover{color:var(--accent)}
-.sheet{max-width:1120px;margin:0 auto;padding:22px 28px 48px}
-.dateline{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:5px 0}
-.nameplate{font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:clamp(2.4rem,8.5vw,5.6rem);line-height:1;text-align:center;margin:.22em 0 .05em;letter-spacing:-.01em}
-.tagline{text-align:center;font-style:italic;color:var(--muted);margin:0 0 12px;padding-bottom:12px;border-bottom:3px double var(--rule)}
-.hd{font-family:'Playfair Display',Georgia,serif;font-weight:900;line-height:1.08;margin:0}
-.kicker{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:.4em}
-.front{display:grid;grid-template-columns:minmax(0,2.3fr) minmax(0,1fr);gap:28px;padding:20px 0;border-bottom:1px solid var(--rule)}
-.lead h2{font-size:clamp(1.9rem,4.6vw,3.2rem);margin:0 0 .25em}
-.deck{font-size:1.15rem;font-style:italic;color:var(--muted);margin:0 0 .6em;line-height:1.35}
-.source{font-size:.78rem;color:var(--muted);font-style:italic;margin:.4em 0 0}
-.lead .text{column-count:2;column-gap:28px;column-rule:1px solid var(--soft);text-align:justify;hyphens:auto}
-.lead .text p{margin:0 0 .8em}
-.lead .text p:first-child::first-letter{float:left;font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:3.6em;line-height:.8;padding:.06em .08em 0 0}
-.whymatters{background:var(--box);border-left:3px solid var(--accent);padding:10px 14px;margin:14px 0 0;font-size:.95rem}
-.rail{border-left:1px solid var(--soft);padding-left:24px}
-.box{margin-bottom:22px}
-.box h3{font-family:'Playfair Display',Georgia,serif;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;margin:0 0 8px;padding-bottom:5px;border-bottom:1px solid var(--rule)}
-.box dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:4px 12px;font-size:.92rem}
-.box dt{color:var(--muted)}.box dd{margin:0;font-weight:700;font-variant-numeric:tabular-nums}
-.box ol{margin:0;padding-left:1.2em;font-size:.92rem}
-.note{font-size:.92rem;font-style:italic}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));border-bottom:1px solid var(--rule)}
-.feature{padding:18px 22px;border-left:1px solid var(--soft)}
+.sheet{max-width:1120px;margin:0 auto;padding:22px 36px 48px;background:var(--paper);min-height:100vh;box-shadow:0 0 0 1px var(--soft),0 10px 40px rgba(60,45,20,.12)}
+.dateline{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:6px 0}
+.dateline span:first-child{text-align:left}.dateline span:nth-child(2){text-align:center}.dateline span:last-child{text-align:right}
+.nameplate{font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:clamp(2.3rem,8vw,5.2rem);line-height:1.02;text-align:center;margin:.24em 0 .06em;letter-spacing:-.01em}
+.tagline{text-align:center;font-style:italic;color:var(--muted);margin:0 0 18px;padding-bottom:12px;border-bottom:3px double var(--rule)}
+.hd{font-family:'Playfair Display',Georgia,serif;font-weight:900;line-height:1.12;margin:0}
+.kicker{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:.45em;line-height:1.35}
+/* front page: lead story + sidebar */
+.front{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,1fr);gap:0;border-bottom:1px solid var(--rule);margin-bottom:0}
+.lead{padding:4px 30px 24px 0}
+.lead h2{font-size:clamp(1.8rem,4.2vw,2.9rem);margin:0 0 .35em}
+.lead .meta{font-size:.82rem;letter-spacing:.02em;color:var(--muted);margin:0 0 1em;padding:.35em 0;border-top:1px solid var(--soft);border-bottom:1px solid var(--soft)}
+.lead .text{font-size:1.06rem;line-height:1.6}
+.lead .text p{margin:0 0 .85em}
+.lead .text.drop p:first-child::first-letter{float:left;font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:3.5em;line-height:.82;padding:.05em .09em 0 0}
+.source{font-size:.8rem;color:var(--muted);font-style:italic;margin:.7em 0 0}
+.whymatters{background:var(--box);border-left:3px solid var(--accent);padding:10px 14px;margin:16px 0 0;font-size:.92rem;line-height:1.5}
+.rail{border-left:1px solid var(--soft);padding:4px 0 24px 26px}
+.box{margin-bottom:24px}.box:last-child{margin-bottom:0}
+.box h3{font-family:'Playfair Display',Georgia,serif;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;margin:0 0 9px;padding-bottom:5px;border-bottom:1px solid var(--rule)}
+.box dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:5px 14px;font-size:.9rem}
+.box dt{color:var(--muted)}.box dd{margin:0;font-weight:700;font-variant-numeric:tabular-nums;text-align:right}
+.box ol{margin:0;padding-left:1.25em;font-size:.9rem}.box li{margin:0 0 .15em}
+.note{font-size:.88rem;font-style:italic;margin:0;line-height:1.5}
+/* features: one row of equal columns */
+.features{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);border-bottom:1px solid var(--rule)}
+.feature{padding:20px 24px 22px;border-left:1px solid var(--soft)}
 .feature:first-child{border-left:0;padding-left:0}.feature:last-child{padding-right:0}
-.feature h3{font-size:1.45rem;margin:0 0 .3em}
-.feature p{margin:.4em 0;font-size:.97rem}
-.section-title{font-family:'Playfair Display',Georgia,serif;font-weight:900;text-transform:uppercase;letter-spacing:.2em;font-size:1rem;text-align:center;border-top:3px double var(--rule);border-bottom:1px solid var(--rule);padding:.4em 0;margin:30px 0 16px}
-.section-note{text-align:center;font-style:italic;color:var(--muted);font-size:.88rem;margin:-6px 0 14px}
-.columns{column-width:290px;column-gap:28px;column-rule:1px solid var(--soft)}
-.story{break-inside:avoid;margin:0 0 20px}
-.story h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:1.2rem;line-height:1.15;margin:0 0 .3em}
-.story p{margin:.3em 0;font-size:.95rem;text-align:justify;hyphens:auto}
+.feature h3{font-size:1.32rem;margin:0 0 .4em}
+.feature p{margin:.4em 0;font-size:.95rem}
+/* sections: each section is a block; blocks flow into two balanced newspaper columns */
+.section-title{font-family:'Playfair Display',Georgia,serif;font-weight:900;text-transform:uppercase;letter-spacing:.18em;font-size:.92rem;text-align:center;border-top:3px double var(--rule);border-bottom:1px solid var(--rule);padding:.45em 0;margin:0 0 14px}
+.section-title.wide{margin:32px 0 16px}
+.section-note{text-align:center;font-style:italic;color:var(--muted);font-size:.85rem;margin:-6px 0 14px}
+.sections{column-count:2;column-gap:56px;column-rule:1px solid var(--soft);margin-top:30px}
+.section{break-inside:avoid;margin:0 0 30px}
+.story{padding:0 0 16px;margin:0 0 16px;border-bottom:1px solid var(--soft)}
+.story:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.story h4{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:1.15rem;line-height:1.2;margin:0 0 .35em}
+.story p{margin:.35em 0;font-size:.94rem}
 blockquote.pull{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:clamp(1.3rem,3vw,1.8rem);line-height:1.3;text-align:center;margin:30px 6%;padding:14px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 blockquote.pull cite{display:block;font:normal .78rem 'Source Serif 4',Georgia,serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:8px}
-.briefs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0 28px}
-.brief{padding:10px 0;border-bottom:1px solid var(--soft);font-size:.9rem}
-.brief b{font-family:'Playfair Display',Georgia,serif;font-size:1rem}
-.nav{margin:.6em 0 0}.nav a{margin:0 .7em}
-.archive{list-style:none;margin:0;padding:0}.archive li{display:grid;grid-template-columns:minmax(11em,16em) 1fr;gap:12px;padding:9px 0;border-bottom:1px solid var(--soft)}.archive span{color:var(--muted);font-style:italic}
-@media (max-width:820px){.archive li{grid-template-columns:1fr;gap:2px}}
-footer{margin-top:36px;padding-top:10px;border-top:3px double var(--rule);font-size:.78rem;color:var(--muted);text-align:center}
-@media (max-width:820px){
-.sheet{padding:16px 16px 40px}
-.front{grid-template-columns:1fr}
-.rail{border-left:0;padding-left:0;border-top:1px solid var(--soft);padding-top:16px}
-.lead .text{column-count:1}
-.feature,.feature:first-child,.feature:last-child{border-left:0;padding:14px 0;border-top:1px solid var(--soft)}
-.feature:first-child{border-top:0}
-}
+.briefs{column-count:2;column-gap:56px;column-rule:1px solid var(--soft)}
+.brief{break-inside:avoid;padding:0 0 11px;margin:0 0 11px;border-bottom:1px solid var(--soft);font-size:.9rem;line-height:1.5}
+.brief b{font-family:'Playfair Display',Georgia,serif;font-size:.98rem}
+.nav{margin:.8em 0 0}.nav a{margin:0 .7em}
+.archive{list-style:none;margin:0;padding:0}.archive li{display:grid;grid-template-columns:minmax(11em,16em) 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--soft)}.archive span{color:var(--muted);font-style:italic}
+footer{margin-top:40px;padding-top:12px;border-top:3px double var(--rule);font-size:.78rem;line-height:1.5;color:var(--muted);text-align:center}
 mjx-container{max-width:100%}
 mjx-container[display="true"]{overflow-x:auto;overflow-y:hidden;margin:.7em 0!important}
-.hd mjx-container,.deck mjx-container{font-size:inherit}
-@media print{:root{--paper:#fff;--ink:#000}.sheet{max-width:none;padding:0}.story,.feature{break-inside:avoid}}
+.hd mjx-container{font-size:inherit}
+@media (max-width:900px){
+.sheet{padding:16px 18px 40px}
+.dateline{grid-template-columns:1fr;gap:2px;text-align:center}
+.dateline span,.dateline span:first-child,.dateline span:nth-child(2),.dateline span:last-child{text-align:center}
+.front{grid-template-columns:1fr}
+.lead{padding-right:0}
+.rail{border-left:0;border-top:1px solid var(--soft);padding:18px 0 0}
+.features{grid-auto-flow:row;grid-auto-columns:auto}
+.feature,.feature:first-child,.feature:last-child{border-left:0;padding:16px 0;border-top:1px solid var(--soft)}
+.feature:first-child{border-top:0}
+.sections,.briefs{column-count:1;column-rule:0}
+.archive li{grid-template-columns:1fr;gap:2px}
+}
+@media print{:root{--page:#fff;--paper:#fff;--ink:#000}.sheet{max-width:none;padding:0;box-shadow:none}.story,.feature,.section{break-inside:avoid}}
 """
 
 HEAD_LINKS = (
@@ -113,9 +123,13 @@ def kicker(s):
 
 def render_lead(s):
     why = f'<div class="whymatters"><b>{e(s.get("why_label", "Why it matters."))}</b> {e(s["why_it_matters"])}</div>' if s.get("why_it_matters") else ""
-    deck = f'<p class="deck">{e(s["deck"])}</p>' if s.get("deck") else ""
-    return (f'<article class="lead">{kicker(s)}<h2 class="hd">{e(s["headline"])}</h2>{deck}'
-            f'<div class="text">{paras(s.get("body", []))}</div>{why}{source(s)}</article>')
+    note = (s.get("deck") or "").strip()
+    meta = f'<p class="meta">Authors’ note: {e(note[:200])}{"…" if len(note) > 200 else ""}</p>' if note else ""
+    body = s.get("body", [])
+    first = (body[0] if body and not isinstance(body, str) else str(body)).lstrip()[:1]
+    drop = " drop" if first.isalpha() else ""   # a drop cap on "$" or a digit looks broken, especially before MathJax runs
+    return (f'<article class="lead">{kicker(s)}<h2 class="hd">{e(s["headline"])}</h2>{meta}'
+            f'<div class="text{drop}">{paras(body)}</div>{why}{source(s)}</article>')
 
 
 def render_rail(d):
@@ -151,7 +165,7 @@ def render_section(sec):
         for s in sec.get("stories", [])
     )
     note = f'<p class="section-note">{e(sec["note"])}</p>' if sec.get("note") else ""
-    return f'<h2 class="section-title">{e(sec["name"])}</h2>{note}<div class="columns">{stories}</div>'
+    return f'<section class="section"><h2 class="section-title">{e(sec["name"])}</h2>{note}{stories}</section>'
 
 
 def render_pull(q):
@@ -172,7 +186,7 @@ def render_briefs(items):
             link = f' <a href="https://arxiv.org/abs/{i}" target="_blank" rel="noopener">[{i}]</a>'
         sep = "" if b["headline"][-1:] in ".?!" else "."
         cells.append(f'<div class="brief"><b>{e(b["headline"])}{sep}</b> {e(b.get("text", ""))}{link}</div>')
-    return f'<h2 class="section-title">In Brief</h2><div class="briefs">{"".join(cells)}</div>'
+    return f'<h2 class="section-title wide">In Brief</h2><div class="briefs">{"".join(cells)}</div>'
 
 
 def render_nav(items):
@@ -191,6 +205,8 @@ def build_archive(title, editions, home_href="../index.html"):
     return f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f6f1e7">
 <title>{e(title)} — Past editions</title>{HEAD_LINKS}<style>{CSS}</style></head>
 <body><div class="sheet">
 <h1 class="nameplate">{e(title)}</h1>
@@ -206,11 +222,14 @@ def build(d):
     cats = " · ".join(d.get("categories", []))
     pull_after = d.get("pullquote_position", 0)  # insert pullquote after Nth section
     sections = d.get("sections", [])
-    body = []
+    body, run = [], []
     for idx, sec in enumerate(sections):
-        body.append(render_section(sec))
+        run.append(render_section(sec))
         if d.get("pullquote") and idx == min(pull_after, len(sections) - 1):
-            body.append(render_pull(d["pullquote"]))
+            body.append(f'<div class="sections">{"".join(run)}</div>' + render_pull(d["pullquote"]))
+            run = []
+    if run:
+        body.append(f'<div class="sections">{"".join(run)}</div>')
     footer = d.get("footer") or (
         "Compiled from arXiv listings. Summaries are based on paper abstracts and have not been peer reviewed; "
         "results are as reported by the authors. Follow the links for the full papers."
@@ -218,6 +237,8 @@ def build(d):
     return f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f6f1e7">
 <title>{e(title)} — {e(date)}</title>{HEAD_LINKS}<style>{CSS}</style>{MATHJAX if needs_math(d) else ''}</head>
 <body><div class="sheet">
 <div class="dateline"><span>{e(date)}</span><span>{e(d.get("edition", ""))}</span><span>{e(cats)}</span></div>
