@@ -21,17 +21,10 @@ RESULT_PATTERNS = [re.compile(p, re.I) for p in (
     r"\b(?:bounds?|constraints?|upper limit|lower limit)\b",
 )]
 W_VENUE, W_PAGES, W_CROSS, W_RESULT, P_SHORT, P_LOW = 2.0, 1.0, 0.5, 0.5, 1.0, 2.0
-W_AUTHOR = 1.0   # paper score += W_AUTHOR * author score (0-12, see authors.py); 1.0 makes the authors the strongest signal
 
 
 def score(p):
     s, why = 0.0, []
-    a = p.get("_author_score", 0.0)
-    if a:
-        hits = p.get("_authors_hit", [])
-        more = f" and {len(hits) - 1} more listed" if len(hits) > 1 else ""
-        s += W_AUTHOR * a
-        why.append(f"by {hits[0][0]}{more} (author score {a:g})")
     comment = p.get("comment", "")
     if VENUE.search(comment):
         s += W_VENUE
@@ -56,10 +49,12 @@ def score(p):
 
 
 def rank(papers):
-    ps = sorted(papers, key=lambda p: p["published"], reverse=True)  # newest first, then stable sort by score
+    """Order: the most prominent listed author first (authors.py; papers with no listed author last), and within
+    the same author score the simple signals above, then newest first. Author scores are never added to anything."""
+    ps = sorted(papers, key=lambda p: p["published"], reverse=True)  # newest first, then stable sort by the keys
     for p in ps:
         p["_score"], p["_why"] = score(p)
-    return sorted(ps, key=lambda p: -p["_score"])
+    return sorted(ps, key=lambda p: (-p.get("_author_score", 0.0), -p["_score"]))
 
 
 # ---- text excerpts ---------------------------------------------------------------------------------
@@ -125,11 +120,6 @@ def _story(p, budget):
     return {"headline": p["title"], "body": excerpt(p["abstract"], budget), "authors": byline(p), "arxiv_id": p["id"]}
 
 
-def _tag(p):
-    """Names of listed authors for the byline marker, best first (max 3)."""
-    return [n for n, _ in p.get("_authors_hit", [])[:3]]
-
-
 def make_digest(papers, cfg):
     """Every paper passed in appears exactly once in the result: lead, feature, section story or brief."""
     size, cats = cfg["size"], cfg["categories"]
@@ -153,37 +143,27 @@ def make_digest(papers, cfg):
     # everything not already featured becomes a brief, so no paper is ever dropped
     brief_ps = sorted(rest[size["section_stories"]:] + sec[size["secondary_stories"]:], key=lambda p: -p["_score"])
 
-    why = "; ".join(lead_p["_why"]) or "no standout signal"
     lead = _story(lead_p, 750)
     lead.update({
         "kicker": f"Lead Story · {lead_p['primary_category']}",
         "deck": lead_p.get("comment", ""),
-        "why_label": "Why it leads.",
-        "why_it_matters": f"Highest score today ({lead_p['_score']:g}): {why}.",
-        "notable": _tag(lead_p),
     })
 
     features = []
     for p in feats:
         f = _story(p, 420)
         f["kicker"] = f"{p['_section']} · {p['primary_category']}"
-        f["notable"] = _tag(p)
         features.append(f)
 
     by_section, best = {}, {}
     for p in stories:
         st = _story(p, 260)
-        st["notable"] = _tag(p)
         by_section.setdefault(p["_section"], []).append(st)
         best[p["_section"]] = max(best.get(p["_section"], -math.inf), p["_score"])
     sections = [{"name": n, "stories": by_section[n]} for n in sorted(by_section, key=lambda n: -best[n])]
     border = "Across the Border"
     if sec_stories:
-        out = []
-        for p in sec_stories:
-            st = _story(p, 260)
-            st["notable"] = _tag(p)
-            out.append(st)
+        out = [_story(p, 260) for p in sec_stories]
         sections.append({
             "name": border,
             "note": f"Papers whose primary category is not {', '.join(cats)} (mostly {', '.join(cfg.get('cross_from', [])) or 'other fields'}), cross-listed into it",
@@ -194,16 +174,13 @@ def make_digest(papers, cfg):
         first = split_sentences(p["abstract"])[0]
         tag = f" (primary category {p['primary_category']})" if p["tier"] != "primary" else ""
         briefs.append({"headline": p["title"], "text": first + tag, "arxiv_id": p["id"], "authors": byline(p),
-                       "notable": _tag(p), "section": border if p["tier"] != "primary" else p["_section"]})
+                       "section": border if p["tier"] != "primary" else p["_section"]})
 
     got = [lead["arxiv_id"]] + [f["arxiv_id"] for f in features] + [s["arxiv_id"] for sec_ in sections for s in sec_["stories"]] + [b["arxiv_id"] for b in briefs]
     assert len(got) == len(set(got)) == len(ps) and set(got) == {p["id"] for p in ps}, "every paper must appear exactly once"
 
     return {
         "lead": lead, "features": features, "sections": sections, "briefs": briefs,
-        "editors_note": "No human or AI editor today: papers are ranked automatically by simple signals "
-                        "(authors on a fixed, scored list of prominent hep-th authors, a journal or acceptance noted, page count, "
-                        "cross-listing breadth, stated results). Every paper of the day is listed; the lowest-ranked appear under In Brief.",
-        "footer": "Text is excerpted verbatim from the authors’ abstracts as posted on arXiv; stories are chosen by an "
-                  "automatic ranking, not by an editor, and have not been peer reviewed. Follow the links for the full papers.",
+        "footer": "Text is excerpted verbatim from the authors’ abstracts as posted on arXiv and has not been peer reviewed. "
+                  "Follow the links for the full papers.",
     }

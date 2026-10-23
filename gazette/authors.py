@@ -1,8 +1,8 @@
 """Hard-coded, scored list of prominent hep-th authors, and a matcher for arXiv author strings.
 
 The list lives in hep_th_authors.txt, one "Given Family | score" per line (score 1-10, default 4). Each paper
-gets an *author score* from the listed authors it contains (see paper_score), and that score is added to the
-paper's ranking in extractive.py. An arXiv author matches an entry on family name AND given name:
+gets an *author score* = the score of its single most prominent listed author (scores are never added up), and
+extractive.py ranks papers by that first. An arXiv author matches an entry on family name AND given name:
 
   * if the arXiv name spells the given name out ("Edward Witten"), the given names must agree;
   * if it only has initials ("E. Witten", "J. M. Maldacena"), the first initial must agree, but only for
@@ -19,8 +19,6 @@ from pathlib import Path
 
 LIST_FILE = Path(__file__).with_name("hep_th_authors.txt")
 DEFAULT_SCORE = 4.0
-# author score of a paper = best author's score + this fraction of the next few listed authors' scores
-EXTRA_AUTHOR_WEIGHT, EXTRA_AUTHORS_COUNTED = 0.2, 5
 
 # Family names so common that an initial alone ("Y. Wang") is not evidence of identity.
 COMMON_FAMILY = {
@@ -138,12 +136,10 @@ class ProminentAuthors:
         return sorted(found.items(), key=lambda kv: -kv[1])
 
     def paper_score(self, paper):
-        """-> (author_score, [(name, score), ...]). 0 when no author is on the list."""
+        """-> (author_score, [(name, score), ...]). The author score is the best listed author's score, not a sum.
+        0 when no author is on the list."""
         hits = self.in_paper(paper)
-        if not hits:
-            return 0.0, []
-        rest = [s for _, s in hits[1:1 + EXTRA_AUTHORS_COUNTED]]
-        return hits[0][1] + EXTRA_AUTHOR_WEIGHT * sum(rest), hits
+        return (hits[0][1] if hits else 0.0), hits
 
 
 def names_in_file():

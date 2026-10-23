@@ -26,7 +26,6 @@ a{color:inherit;text-decoration:underline dotted;text-underline-offset:2px}a:hov
 .lead .text p{margin:0 0 .85em}
 .lead .text.drop p:first-child::first-letter{float:left;font-family:'Playfair Display',Georgia,serif;font-weight:900;font-size:3.5em;line-height:.82;padding:.05em .09em 0 0}
 .source{font-size:.8rem;color:var(--muted);font-style:italic;margin:.7em 0 0}
-.whymatters{background:var(--box);border-left:3px solid var(--accent);padding:10px 14px;margin:16px 0 0;font-size:.92rem;line-height:1.5}
 .rail{border-left:1px solid var(--soft);padding:4px 0 24px 26px}
 .box{margin-bottom:24px}.box:last-child{margin-bottom:0}
 .box h3{font-family:'Playfair Display',Georgia,serif;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;margin:0 0 9px;padding-bottom:5px;border-bottom:1px solid var(--rule)}
@@ -56,7 +55,6 @@ blockquote.pull cite{display:block;font:normal .78rem 'Source Serif 4',Georgia,s
 .brief{break-inside:avoid;padding:0 0 11px;margin:0 0 11px;border-bottom:1px solid var(--soft);font-size:.9rem;line-height:1.5}
 .brief b{font-family:'Playfair Display',Georgia,serif;font-size:.98rem}
 .brief .by{display:block;font-size:.76rem;color:var(--muted);font-style:italic;margin-top:2px}
-.star{color:var(--accent);font-style:normal;font-weight:700}
 .brief-group{font-family:'Playfair Display',Georgia,serif;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;margin:22px 0 10px;padding-bottom:4px;border-bottom:1px solid var(--rule)}
 .brief-group small,.section-title small{font-weight:400;letter-spacing:.06em;color:var(--muted);text-transform:none}
 .nav{margin:.8em 0 0}.nav a{margin:0 .7em}
@@ -114,8 +112,6 @@ def source(s):
     bits = []
     if s.get("authors"):
         bits.append(e(s["authors"]))
-    if s.get("notable"):
-        bits.append(f'<span class="star" title="On the prominent-authors list">★ {e(", ".join(s["notable"]))}</span>')
     if s.get("arxiv_id"):
         i = e(s["arxiv_id"])
         bits.append(f'<a href="https://arxiv.org/abs/{i}" target="_blank" rel="noopener">arXiv:{i}</a>')
@@ -128,14 +124,13 @@ def kicker(s):
 
 
 def render_lead(s):
-    why = f'<div class="whymatters"><b>{e(s.get("why_label", "Why it matters."))}</b> {e(s["why_it_matters"])}</div>' if s.get("why_it_matters") else ""
     note = (s.get("deck") or "").strip()
     meta = f'<p class="meta">Authors’ note: {e(note[:200])}{"…" if len(note) > 200 else ""}</p>' if note else ""
     body = s.get("body", [])
     first = (body[0] if body and not isinstance(body, str) else str(body)).lstrip()[:1]
     drop = " drop" if first.isalpha() else ""   # a drop cap on "$" or a digit looks broken, especially before MathJax runs
     return (f'<article class="lead">{kicker(s)}<h2 class="hd">{e(s["headline"])}</h2>{meta}'
-            f'<div class="text{drop}">{paras(body)}</div>{why}{source(s)}</article>')
+            f'<div class="text{drop}">{paras(body)}</div>{source(s)}</article>')
 
 
 def render_rail(d):
@@ -146,12 +141,10 @@ def render_rail(d):
         out.append(f'<div class="box"><h3>By the numbers</h3><dl>{rows}</dl></div>')
     names = [sec["name"] for sec in d.get("sections", [])]
     if d.get("briefs"):
-        names.append("In Brief: every other paper")
+        names.append("In Brief")
     if names:
         items = "".join(f"<li>{e(n)}</li>" for n in names)
         out.append(f'<div class="box"><h3>In this edition</h3><ol>{items}</ol></div>')
-    if d.get("editors_note"):
-        out.append(f'<div class="box"><h3>From the desk</h3><p class="note">{e(d["editors_note"])}</p></div>')
     return f'<aside class="rail">{"".join(out)}</aside>'
 
 
@@ -187,8 +180,6 @@ def _brief(b):
     who = []
     if b.get("authors"):
         who.append(e(b["authors"]))
-    if b.get("notable"):
-        who.append(f'<span class="star">★ {e(", ".join(b["notable"]))}</span>')
     if i:
         who.append(f'<a href="https://arxiv.org/abs/{i}" target="_blank" rel="noopener">{i}</a>')
     by = f'<span class="by">{" · ".join(who)}</span>' if who else ""
@@ -202,7 +193,7 @@ def render_briefs(items):
     groups = {}
     for b in items:
         groups.setdefault(b.get("section", ""), []).append(b)
-    out = [f'<h2 class="section-title wide">In Brief <small>· {len(items)} more papers</small></h2>']
+    out = [f'<h2 class="section-title wide">In Brief</h2>']
     for name, bs in groups.items():
         head = f'<h3 class="brief-group">{e(name)} <small>({len(bs)})</small></h3>' if name else ""
         out.append(f'{head}<div class="briefs">{"".join(_brief(b) for b in bs)}</div>')
@@ -250,10 +241,8 @@ def build(d):
             run = []
     if run:
         body.append(f'<div class="sections">{"".join(run)}</div>')
-    footer = d.get("footer") or (
-        "Compiled from arXiv listings. Summaries are based on paper abstracts and have not been peer reviewed; "
-        "results are as reported by the authors. Follow the links for the full papers."
-    )
+    footer = ("Text is excerpted verbatim from the authors’ abstracts as posted on arXiv and has not been peer reviewed. "
+              "Follow the links for the full papers.")
     return f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">

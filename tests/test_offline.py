@@ -44,7 +44,6 @@ def test_ranking_and_digest():
     ps = fixture()
     d = ex.make_digest(ps, CFG)
     assert d["lead"]["arxiv_id"] == "2610.00001", "accepted, long, cross-listed, results-rich paper leads"
-    assert "journal or acceptance" in d["lead"]["why_it_matters"] and "45 pages" in d["lead"]["why_it_matters"]
     assert len({i["arxiv_id"] for i in [d["lead"]] + d["features"] + [s for sec in d["sections"] for s in sec["stories"]] + d["briefs"]}) == len(ps), "no paper dropped"
     all_items = [d["lead"]] + d["features"] + [s for sec in d["sections"] for s in sec["stories"]] + d["briefs"]
     ids = [i["arxiv_id"] for i in all_items]
@@ -79,9 +78,9 @@ def test_authors():
         assert P.match(n), n
     for n in no:
         assert not P.match(n), n
-    assert P.match("E. Witten")[1] == 10 and P.match("Seok Kim")[1] >= 4
+    assert P.match("E. Witten")[1] == 10 and P.match("Seok Kim")[1] == 8
     s_two, hits = P.paper_score({"authors": ["Edward Witten", "Seok Kim", "Z. Nobody"]})
-    assert hits[0][0] == "Edward Witten" and abs(s_two - (10 + 0.2 * P.match("Seok Kim")[1])) < 1e-9
+    assert hits[0][0] == "Edward Witten" and s_two == 10, "paper score is the best author's score, never a sum"
     assert P.paper_score({"authors": ["Z. Nobody"]}) == (0.0, [])
     x = authors.ProminentAuthors(["Ada Lovelace | 9", "Charles Babbage"])
     assert x.match("A. Lovelace")[1] == 9 and x.match("Charles Babbage")[1] == 4
@@ -92,7 +91,6 @@ def test_ranking_and_digest():
     ps = fixture()
     d = ex.make_digest(ps, CFG)
     assert d["lead"]["arxiv_id"] == "2610.00001", "accepted, long, cross-listed, results-rich paper leads"
-    assert "journal or acceptance" in d["lead"]["why_it_matters"] and "45 pages" in d["lead"]["why_it_matters"]
     assert len({i["arxiv_id"] for i in [d["lead"]] + d["features"] + [s for sec in d["sections"] for s in sec["stories"]] + d["briefs"]}) == len(ps), "no paper dropped"
     all_items = [d["lead"]] + d["features"] + [s for sec in d["sections"] for s in sec["stories"]] + d["briefs"]
     ids = [i["arxiv_id"] for i in all_items]
@@ -132,27 +130,31 @@ def test_authors():
 
 
 def test_author_scores_rank_papers():
-    ps = fixture()
-    assert ex.make_digest(ps, CFG)["lead"]["arxiv_id"] == "2610.00001"
-    # a modest paper by a score-10 author overtakes the previous lead
-    ps[-2] = dict(ps[-2], authors=["Z. Nobody", "Edward Witten"])          # 2610.00019, "Unrelated musings"
-    d = ex.make_digest(ps, CFG)
-    assert d["lead"]["arxiv_id"] == ps[-2]["id"] and d["lead"]["notable"] == ["Edward Witten"]
-    assert "Edward Witten" in d["lead"]["why_it_matters"] and "author score 10" in d["lead"]["why_it_matters"]
-    # same paper with authors of different scores: tier 10 > tier 8 > tier 4 > unlisted
     P = authors.ProminentAuthors()
-    def paper_score_with(name):
-        q = dict(fixture()[-2], authors=[name])
-        q["_author_score"], q["_authors_hit"] = P.paper_score(q)
-        return ex.score(q)[0]
-    s10, s8, s4, s0 = (paper_score_with(n) for n in ("Edward Witten", "Seok Kim", "Kallol Sen", "Z. Nobody"))
-    assert s10 > s8 > s4 > s0, (s10, s8, s4, s0)
-    assert P.match("Kallol Sen")[1] == 4 and P.match("Seok Kim")[1] == 8
+    ps = fixture()
+    assert ex.make_digest(ps, CFG)["lead"]["arxiv_id"] == "2610.00001"        # no listed author: simple signals decide
+    # a modest paper by Witten leads, even though another paper has far stronger signals
+    ps[-2] = dict(ps[-2], authors=["Z. Nobody", "Edward Witten"])             # 2610.00019, "Unrelated musings"
+    assert ex.make_digest(ps, CFG)["lead"]["arxiv_id"] == ps[-2]["id"]
+    # scores are NOT added: one score-10 author beats a paper with many score-8 authors, and beats two score-6 authors
+    many = [n for n, s in P.in_paper({"authors": ["Seok Kim", "Xi Yin", "Hong Liu", "Zohar Komargodski", "Hirosi Ooguri", "Shiraz Minwalla"]})]
+    assert len(many) == 6 and P.paper_score({"authors": many})[0] == 8 == max(s for _, s in P.in_paper({"authors": many}))
+    qs = fixture()
+    qs[-2] = dict(qs[-2], authors=["Edward Witten"])                          # 10 alone
+    qs[-3] = dict(qs[-3], authors=many)                                       # six 8s, plus every other signal equal or better
+    qs[-3]["comment"] = "60 pages; accepted in JHEP"
+    assert ex.make_digest(qs, CFG)["lead"]["arxiv_id"] == qs[-2]["id"], "one 10 beats any number of 8s"
+    # ties on author score fall back to the simple signals
+    qt = fixture()
+    qt[-2] = dict(qt[-2], authors=["Seok Kim"]); qt[-3] = dict(qt[-3], authors=["Xi Yin"], comment="60 pages; accepted in JHEP")
+    assert ex.make_digest(qt, CFG)["lead"]["arxiv_id"] == qt[-3]["id"]
+    # tiers: 10 > 8 > 4 > unlisted
+    assert [P.paper_score({"authors": [n]})[0] for n in ("Edward Witten", "Seok Kim", "Kallol Sen", "Z. Nobody")] == [10, 8, 4, 0]
     # secondary (cross-listed) papers never lead, even with a score-10 author
     ps2 = fixture()
     ps2[2] = dict(ps2[2], authors=["Juan Maldacena"])
     assert ex.make_digest(ps2, CFG)["lead"]["arxiv_id"] == "2610.00001"
-    print("author-score ranking ok")
+    print("author ranking ok")
 
 
 def test_nothing_dropped():
@@ -167,7 +169,7 @@ def test_nothing_dropped():
     html = render.build(dict(d, title="T", date="d", edition="e", categories=["hep-th"], stats={}, nav=[]))
     for p in ps:
         assert f"arxiv.org/abs/{p['id']}" in html, p["id"]
-    assert "more papers" in html and "brief-group" in html
+    assert "brief-group" in html
     print("nothing dropped ok:", len(ps), "papers ->", len(items))
 
 
@@ -180,6 +182,9 @@ def test_render_light_and_layout():
     assert "prefers-color-scheme" not in html and "data-theme" not in html and "dark" not in html.lower().replace("darkness", "")
     assert 'name="color-scheme" content="light"' in html and "color-scheme:light only" in html
     assert 'class="text drop"' not in html, "no drop cap when the abstract starts with LaTeX"
+    low = html.lower()
+    for bad in ("why it leads", "from the desk", "score", "ranked", "ranking", "★", "lower-ranked", "automatic"):
+        assert bad not in low, bad
     assert "Authors’ note: v2: 45 pages" in html and 'class="deck"' not in html
     d["lead"]["body"] = ["We show things."]
     assert 'class="text drop"' in render.build(dict(d, nav=[]))
@@ -203,7 +208,7 @@ def test_pipeline():
         base = ["--papers-file", str(pf), "--docs-dir", str(t / "docs"), "--data-dir", str(t / "data"), "--root-dir", str(t / "root")]
         rc, out = call(*base, "--now", "2026-10-22T11:30"); print(" ", out)
         html = (t / "docs" / "index.html").read_text()
-        assert "No. 1" in html and "Past editions" in html and "verbatim" in html and "Why it leads." in html
+        assert "No. 1" in html and "Past editions" in html and "verbatim" in html and "Why it leads" not in html
         assert (t / "docs" / "archive" / "2026-10-22.html").exists()
         top = (t / "root" / "index.html").read_text()
         assert 'href="docs/archive/"' in top and 'href="archive/"' not in top and 'href="archive/"' in html, "root and docs copies differ only in the archive link"
