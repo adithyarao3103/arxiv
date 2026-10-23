@@ -7,16 +7,15 @@
   "cross_from": [
     "gr-qc"
   ],
-  "include_other_crosslists": false,
+  "include_other_crosslists": true,
   "timezone": "Europe/Amsterdam",
-  "max_per_category": 200,
+  "max_per_category": 600,
   "window_hours": 48,
   "min_new_papers": 5,
   "size": {
     "features": 3,
     "section_stories": 8,
-    "secondary_stories": 3,
-    "briefs": 8
+    "secondary_stories": 3
   },
   "sections": [
     {

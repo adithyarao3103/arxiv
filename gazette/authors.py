@@ -1,7 +1,8 @@
-"""Hard-coded list of prominent hep-th authors, and a matcher for arXiv author strings.
+"""Hard-coded, scored list of prominent hep-th authors, and a matcher for arXiv author strings.
 
-The list lives in hep_th_authors.txt (one "Given Family" per line). A paper "has a prominent author" when
-any of its authors matches an entry on family name AND given name:
+The list lives in hep_th_authors.txt, one "Given Family | score" per line (score 1-10, default 4). Each paper
+gets an *author score* from the listed authors it contains (see paper_score), and that score is added to the
+paper's ranking in extractive.py. An arXiv author matches an entry on family name AND given name:
 
   * if the arXiv name spells the given name out ("Edward Witten"), the given names must agree;
   * if it only has initials ("E. Witten", "J. M. Maldacena"), the first initial must agree, but only for
@@ -17,6 +18,9 @@ from functools import lru_cache
 from pathlib import Path
 
 LIST_FILE = Path(__file__).with_name("hep_th_authors.txt")
+DEFAULT_SCORE = 4.0
+# author score of a paper = best author's score + this fraction of the next few listed authors' scores
+EXTRA_AUTHOR_WEIGHT, EXTRA_AUTHORS_COUNTED = 0.2, 5
 
 # Family names so common that an initial alone ("Y. Wang") is not evidence of identity.
 COMMON_FAMILY = {
@@ -68,17 +72,29 @@ def _load_file():
     return tuple(names)
 
 
+def split_entry(line):
+    """'Edward Witten | 10' -> ('Edward Witten', 10.0); no score -> DEFAULT_SCORE."""
+    name, _, sc = line.partition("|")
+    try:
+        score = float(sc) if sc.strip() else DEFAULT_SCORE
+    except ValueError:
+        score = DEFAULT_SCORE
+    return name.strip(), score
+
+
 def build_index(extra=()):
-    """family -> list of (given, display_name). Given is a full first name (hyphens removed)."""
+    """family -> {given: score}; display[(family, given)] = name. `extra` entries may carry '| score' too."""
     index, display = {}, {}
-    for name in list(_load_file()) + list(extra or ()):
+    for line in list(_load_file()) + list(extra or ()):
+        name, score = split_entry(line)
         p = parse(name)
         if not p or p[2]:
             continue
         family, given, _ = p
         if family in COMMON_FAMILY and len(given) <= 4 and name not in ALLOW_COMMON:
             continue
-        index.setdefault(family, set()).add(given)
+        index.setdefault(family, {})
+        index[family][given] = max(score, index[family].get(given, 0.0))
         display[(family, given)] = name
     return index, display
 
@@ -91,7 +107,7 @@ class ProminentAuthors:
         return sum(len(v) for v in self.index.values())
 
     def match(self, author):
-        """Return the list entry that this arXiv author string refers to, or None."""
+        """(name, score) of the list entry this arXiv author string refers to, or None."""
         p = parse(author)
         if not p:
             return None
@@ -102,22 +118,32 @@ class ProminentAuthors:
         if is_initial:
             if family in COMMON_FAMILY:
                 return None
-            for k in sorted(known):
-                if k[0] == given:
-                    return self.display[(family, k)]
+            hits = [k for k in known if k[0] == given]
+            if not hits:
+                return None
+            k = max(hits, key=lambda g: known[g])
+        elif given in known:
+            k = given
+        else:
             return None
-        if given in known:
-            return self.display[(family, given)]
-        return None
+        return self.display[(family, k)], known[k]
 
     def in_paper(self, paper):
-        """Distinct list entries (display names) among the paper's authors, in author order."""
-        found = []
+        """Distinct (name, score) pairs among the paper's authors, best score first."""
+        found = {}
         for a in paper.get("authors") or []:
             m = self.match(a)
-            if m and m not in found:
-                found.append(m)
-        return found
+            if m:
+                found[m[0]] = m[1]
+        return sorted(found.items(), key=lambda kv: -kv[1])
+
+    def paper_score(self, paper):
+        """-> (author_score, [(name, score), ...]). 0 when no author is on the list."""
+        hits = self.in_paper(paper)
+        if not hits:
+            return 0.0, []
+        rest = [s for _, s in hits[1:1 + EXTRA_AUTHORS_COUNTED]]
+        return hits[0][1] + EXTRA_AUTHOR_WEIGHT * sum(rest), hits
 
 
 def names_in_file():

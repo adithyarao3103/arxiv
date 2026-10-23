@@ -123,7 +123,9 @@ def main():
     stats = {"Papers scanned": str(len(fresh)), f"{'/'.join(cfg['categories'])} primary": str(tiers["primary"])}
     if tiers["secondary"]:
         stats[f"{'/'.join(cfg['cross_from'])} cross-lists"] = str(tiers["secondary"])
-    stats["Items selected"] = str(n_stories)
+    if tiers["crosslist"]:
+        stats["Other cross-lists"] = str(tiers["crosslist"])
+    stats["Papers covered"] = str(n_stories)
     digest.update({
         "title": cfg["title"], "tagline": cfg.get("tagline", ""), "date": date_label,
         "edition": f"No. {len(others) + 1} · Morning Edition",

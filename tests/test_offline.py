@@ -45,6 +45,7 @@ def test_ranking_and_digest():
     d = ex.make_digest(ps, CFG)
     assert d["lead"]["arxiv_id"] == "2610.00001", "accepted, long, cross-listed, results-rich paper leads"
     assert "journal or acceptance" in d["lead"]["why_it_matters"] and "45 pages" in d["lead"]["why_it_matters"]
+    assert len({i["arxiv_id"] for i in [d["lead"]] + d["features"] + [s for sec in d["sections"] for s in sec["stories"]] + d["briefs"]}) == len(ps), "no paper dropped"
     all_items = [d["lead"]] + d["features"] + [s for sec in d["sections"] for s in sec["stories"]] + d["briefs"]
     ids = [i["arxiv_id"] for i in all_items]
     assert len(ids) == len(set(ids)), "no paper appears twice"
@@ -54,7 +55,55 @@ def test_ranking_and_digest():
     assert "2610.00002" not in [d["lead"]["arxiv_id"]], "lecture notes are demoted"
     names = [s["name"] for s in d["sections"]]
     assert any("Strings" in n for n in names) and any("Field Theory" in n for n in names), names
-    assert len(d["features"]) <= CFG["size"]["features"] and len(d["briefs"]) <= CFG["size"]["briefs"]
+    assert len(d["features"]) <= CFG["size"]["features"]
+    # nothing is invented: every body paragraph is verbatim abstract text, and headlines are real titles
+    by = {p["id"]: p for p in ps}
+    norm = lambda x: re.sub(r"\s+", " ", x)
+    for it in all_items:
+        p = by[it["arxiv_id"]]
+        assert it["headline"] == p["title"]
+        for para in it.get("body", []):
+            assert norm(para) in norm(p["abstract"]), (it["arxiv_id"], para)
+        if "text" in it:
+            assert norm(it["text"].split(" (primary category")[0]) in norm(p["abstract"])
+    print("ranking/digest ok:", d["lead"]["headline"], "|", names)
+
+
+def test_authors():
+    P = authors.ProminentAuthors()
+    assert len(P) > 500, len(P)
+    yes = ["Edward Witten", "E. Witten", "J. M. Maldacena", "Juan Martin Maldacena", "Dieter Lüst", "Yu-Tin Huang",
+           "Gerard 't Hooft", "G. 't Hooft", "J. de Boer", "Eric D'Hoker", "Iñaki García Etxebarria", "Xi Yin", "A. Strominger"]
+    no = ["Y. Wang", "Yi Wang", "S. Kim", "B. Strominger", "Edwin Witten", "A. N. Other", "Madonna"]
+    for n in yes:
+        assert P.match(n), n
+    for n in no:
+        assert not P.match(n), n
+    assert P.match("E. Witten")[1] == 10 and P.match("Seok Kim")[1] >= 4
+    s_two, hits = P.paper_score({"authors": ["Edward Witten", "Seok Kim", "Z. Nobody"]})
+    assert hits[0][0] == "Edward Witten" and abs(s_two - (10 + 0.2 * P.match("Seok Kim")[1])) < 1e-9
+    assert P.paper_score({"authors": ["Z. Nobody"]}) == (0.0, [])
+    x = authors.ProminentAuthors(["Ada Lovelace | 9", "Charles Babbage"])
+    assert x.match("A. Lovelace")[1] == 9 and x.match("Charles Babbage")[1] == 4
+    print("authors ok:", len(P), "entries")
+
+
+def test_ranking_and_digest():
+    ps = fixture()
+    d = ex.make_digest(ps, CFG)
+    assert d["lead"]["arxiv_id"] == "2610.00001", "accepted, long, cross-listed, results-rich paper leads"
+    assert "journal or acceptance" in d["lead"]["why_it_matters"] and "45 pages" in d["lead"]["why_it_matters"]
+    assert len({i["arxiv_id"] for i in [d["lead"]] + d["features"] + [s for sec in d["sections"] for s in sec["stories"]] + d["briefs"]}) == len(ps), "no paper dropped"
+    all_items = [d["lead"]] + d["features"] + [s for sec in d["sections"] for s in sec["stories"]] + d["briefs"]
+    ids = [i["arxiv_id"] for i in all_items]
+    assert len(ids) == len(set(ids)), "no paper appears twice"
+    border = [s for s in d["sections"] if s["name"] == "Across the Border"]
+    assert border and {s["arxiv_id"] for s in border[0]["stories"]} <= {"2610.00003", "2610.00030"}
+    assert all(i not in ("2610.00003", "2610.00030") for i in [d["lead"]["arxiv_id"]] + [f["arxiv_id"] for f in d["features"]]), "secondary papers never lead or feature"
+    assert "2610.00002" not in [d["lead"]["arxiv_id"]], "lecture notes are demoted"
+    names = [s["name"] for s in d["sections"]]
+    assert any("Strings" in n for n in names) and any("Field Theory" in n for n in names), names
+    assert len(d["features"]) <= CFG["size"]["features"]
     # nothing is invented: every body paragraph is verbatim abstract text, and headlines are real titles
     by = {p["id"]: p for p in ps}
     norm = lambda x: re.sub(r"\s+", " ", x)
@@ -82,30 +131,44 @@ def test_authors():
     print("authors ok:", len(P), "entries")
 
 
-def test_prominent_lead():
+def test_author_scores_rank_papers():
     ps = fixture()
-    base = ex.make_digest(ps, CFG)["lead"]["arxiv_id"]
-    assert base == "2610.00001"
-    # a modest paper by Witten beats the otherwise top-scoring paper
-    ps[-2] = dict(ps[-2], authors=["Z. Nobody", "Edward Witten"])          # 2610.00019, "Unrelated musings", score ~1
+    assert ex.make_digest(ps, CFG)["lead"]["arxiv_id"] == "2610.00001"
+    # a modest paper by a score-10 author overtakes the previous lead
+    ps[-2] = dict(ps[-2], authors=["Z. Nobody", "Edward Witten"])          # 2610.00019, "Unrelated musings"
     d = ex.make_digest(ps, CFG)
-    assert d["lead"]["arxiv_id"] == ps[-2]["id"], d["lead"]
-    assert "Edward Witten" in d["lead"]["why_it_matters"] and "prominent" in d["lead"]["why_it_matters"]
-    ids = [d["lead"]["arxiv_id"]] + [f["arxiv_id"] for f in d["features"]] + [s["arxiv_id"] for sec in d["sections"] for s in sec["stories"]] + [b["arxiv_id"] for b in d["briefs"]]
-    assert len(ids) == len(set(ids)) and base in ids, "former lead must still appear somewhere, once"
-    # a prominent author on a gr-qc cross-list (secondary tier) must NOT take the lead
+    assert d["lead"]["arxiv_id"] == ps[-2]["id"] and d["lead"]["notable"] == ["Edward Witten"]
+    assert "Edward Witten" in d["lead"]["why_it_matters"] and "author score 10" in d["lead"]["why_it_matters"]
+    # same paper with authors of different scores: tier 10 > tier 8 > tier 4 > unlisted
+    P = authors.ProminentAuthors()
+    def paper_score_with(name):
+        q = dict(fixture()[-2], authors=[name])
+        q["_author_score"], q["_authors_hit"] = P.paper_score(q)
+        return ex.score(q)[0]
+    s10, s8, s4, s0 = (paper_score_with(n) for n in ("Edward Witten", "Seok Kim", "Kallol Sen", "Z. Nobody"))
+    assert s10 > s8 > s4 > s0, (s10, s8, s4, s0)
+    assert P.match("Kallol Sen")[1] == 4 and P.match("Seok Kim")[1] == 8
+    # secondary (cross-listed) papers never lead, even with a score-10 author
     ps2 = fixture()
-    ps2[2] = dict(ps2[2], authors=["Juan Maldacena"])                       # 2610.00003, tier=secondary
-    assert ex.make_digest(ps2, CFG)["lead"]["arxiv_id"] == base
-    # two prominent papers: the better-scoring one leads
-    ps3 = fixture()
-    ps3[3] = dict(ps3[3], authors=["Cumrun Vafa"])                          # "Tiny note", negative score
-    ps3[1] = dict(ps3[1], authors=["Andrew Strominger"])                    # lecture notes, also demoted
-    lead3 = ex.make_digest(ps3, CFG)["lead"]["arxiv_id"]
-    assert lead3 in ("2610.00002", "2610.00004")
-    s = {p["id"]: ex.score(p)[0] for p in ps3}
-    assert s[lead3] == max(s["2610.00002"], s["2610.00004"])
-    print("prominent-author lead ok")
+    ps2[2] = dict(ps2[2], authors=["Juan Maldacena"])
+    assert ex.make_digest(ps2, CFG)["lead"]["arxiv_id"] == "2610.00001"
+    print("author-score ranking ok")
+
+
+def test_nothing_dropped():
+    ps = fixture()
+    for k in range(100, 400):                                  # a realistic hep-th day: ~300 papers
+        ps.append(paper(k, f"Paper number {k} on strings", "We show a result about strings. More text follows here.",
+                        tier=("primary" if k % 3 else "crosslist"), prim=("hep-th" if k % 3 else "math-ph"), cats=["hep-th"] if k % 3 else ["math-ph", "hep-th"]))
+    d = ex.make_digest(ps, CFG)
+    items = [d["lead"]] + d["features"] + [s for sec in d["sections"] for s in sec["stories"]] + d["briefs"]
+    assert sorted(i["arxiv_id"] for i in items) == sorted(p["id"] for p in ps), "every paper appears exactly once"
+    assert len(d["briefs"]) > 200 and all(b.get("section") for b in d["briefs"])
+    html = render.build(dict(d, title="T", date="d", edition="e", categories=["hep-th"], stats={}, nav=[]))
+    for p in ps:
+        assert f"arxiv.org/abs/{p['id']}" in html, p["id"]
+    assert "more papers" in html and "brief-group" in html
+    print("nothing dropped ok:", len(ps), "papers ->", len(items))
 
 
 def test_render_light_and_layout():
@@ -167,4 +230,4 @@ def test_pipeline():
 
 
 if __name__ == "__main__":
-    test_split(); test_authors(); test_ranking_and_digest(); test_prominent_lead(); test_render_light_and_layout(); test_pipeline(); print("ALL PASSED")
+    test_split(); test_authors(); test_ranking_and_digest(); test_author_scores_rank_papers(); test_nothing_dropped(); test_render_light_and_layout(); test_pipeline(); print("ALL PASSED")

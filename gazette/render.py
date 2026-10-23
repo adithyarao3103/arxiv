@@ -55,6 +55,10 @@ blockquote.pull cite{display:block;font:normal .78rem 'Source Serif 4',Georgia,s
 .briefs{column-count:2;column-gap:56px;column-rule:1px solid var(--soft)}
 .brief{break-inside:avoid;padding:0 0 11px;margin:0 0 11px;border-bottom:1px solid var(--soft);font-size:.9rem;line-height:1.5}
 .brief b{font-family:'Playfair Display',Georgia,serif;font-size:.98rem}
+.brief .by{display:block;font-size:.76rem;color:var(--muted);font-style:italic;margin-top:2px}
+.star{color:var(--accent);font-style:normal;font-weight:700}
+.brief-group{font-family:'Playfair Display',Georgia,serif;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;margin:22px 0 10px;padding-bottom:4px;border-bottom:1px solid var(--rule)}
+.brief-group small,.section-title small{font-weight:400;letter-spacing:.06em;color:var(--muted);text-transform:none}
 .nav{margin:.8em 0 0}.nav a{margin:0 .7em}
 .archive{list-style:none;margin:0;padding:0}.archive li{display:grid;grid-template-columns:minmax(11em,16em) 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--soft)}.archive span{color:var(--muted);font-style:italic}
 footer{margin-top:40px;padding-top:12px;border-top:3px double var(--rule);font-size:.78rem;line-height:1.5;color:var(--muted);text-align:center}
@@ -110,6 +114,8 @@ def source(s):
     bits = []
     if s.get("authors"):
         bits.append(e(s["authors"]))
+    if s.get("notable"):
+        bits.append(f'<span class="star" title="On the prominent-authors list">★ {e(", ".join(s["notable"]))}</span>')
     if s.get("arxiv_id"):
         i = e(s["arxiv_id"])
         bits.append(f'<a href="https://arxiv.org/abs/{i}" target="_blank" rel="noopener">arXiv:{i}</a>')
@@ -140,7 +146,7 @@ def render_rail(d):
         out.append(f'<div class="box"><h3>By the numbers</h3><dl>{rows}</dl></div>')
     names = [sec["name"] for sec in d.get("sections", [])]
     if d.get("briefs"):
-        names.append("In Brief")
+        names.append("In Brief: every other paper")
     if names:
         items = "".join(f"<li>{e(n)}</li>" for n in names)
         out.append(f'<div class="box"><h3>In this edition</h3><ol>{items}</ol></div>')
@@ -175,18 +181,32 @@ def render_pull(q):
     return f'<blockquote class="pull">{e(q["text"])}{cite}</blockquote>'
 
 
+def _brief(b):
+    i = e(b["arxiv_id"]) if b.get("arxiv_id") else ""
+    sep = "" if b["headline"][-1:] in ".?!" else "."
+    who = []
+    if b.get("authors"):
+        who.append(e(b["authors"]))
+    if b.get("notable"):
+        who.append(f'<span class="star">★ {e(", ".join(b["notable"]))}</span>')
+    if i:
+        who.append(f'<a href="https://arxiv.org/abs/{i}" target="_blank" rel="noopener">{i}</a>')
+    by = f'<span class="by">{" · ".join(who)}</span>' if who else ""
+    return f'<div class="brief"><b>{e(b["headline"])}{sep}</b> {e(b.get("text", ""))}{by}</div>'
+
+
 def render_briefs(items):
+    """All papers not given a story, grouped by topic (groups ordered by their best-ranked paper)."""
     if not items:
         return ""
-    cells = []
+    groups = {}
     for b in items:
-        link = ""
-        if b.get("arxiv_id"):
-            i = e(b["arxiv_id"])
-            link = f' <a href="https://arxiv.org/abs/{i}" target="_blank" rel="noopener">[{i}]</a>'
-        sep = "" if b["headline"][-1:] in ".?!" else "."
-        cells.append(f'<div class="brief"><b>{e(b["headline"])}{sep}</b> {e(b.get("text", ""))}{link}</div>')
-    return f'<h2 class="section-title wide">In Brief</h2><div class="briefs">{"".join(cells)}</div>'
+        groups.setdefault(b.get("section", ""), []).append(b)
+    out = [f'<h2 class="section-title wide">In Brief <small>· {len(items)} more papers</small></h2>']
+    for name, bs in groups.items():
+        head = f'<h3 class="brief-group">{e(name)} <small>({len(bs)})</small></h3>' if name else ""
+        out.append(f'{head}<div class="briefs">{"".join(_brief(b) for b in bs)}</div>')
+    return "".join(out)
 
 
 def render_nav(items):

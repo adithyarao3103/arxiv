@@ -1,851 +1,853 @@
-# Prominent hep-th authors, one per line as "Given Family". Lines starting with # are comments.
-# Matching is by family name + given name (see gazette/authors.py); accents and hyphens are ignored.
-# Edit freely: add or remove names, then re-run the tests.
+# Prominent hep-th authors with a prominence score.  Format:  Given Family | score   (score 1-10; default 4 if omitted)
+# The score of a paper's authors feeds straight into the paper's ranking (see gazette/authors.py and extractive.py).
+# Tiers used below: 10 = field-defining figures, 8 = leading senior researchers, 6 = very well known, 4 = established/default.
+# The scores are a subjective, hand-made judgement. Edit freely: change a number, add a name, delete a line.
+# Matching is by family name + given name; accents and hyphens are ignored.
 
 # --- Giants and senior figures -------------------------------------------------------------------
-Edward Witten
-Juan Maldacena
-Andrew Strominger
-Cumrun Vafa
-Nathan Seiberg
-Joseph Polchinski
-Steven Weinberg
-Gerard 't Hooft
-Stephen Hawking
-David Gross
-Frank Wilczek
-Leonard Susskind
-Michael Green
-John Schwarz
-Alexander Polyakov
-Ashoke Sen
-Shiraz Minwalla
-Sandip Trivedi
-Spenta Wadia
-Atish Dabholkar
-Rajesh Gopakumar
-Gautam Mandal
-Sunil Mukhi
-Justin David
-Suvrat Raju
-Alok Laddha
-Chethan Krishnan
-Shamit Kachru
-Sumit Das
-Anirban Basu
-Debashis Ghoshal
-Dileep Jatkar
-Nemani Suryanarayana
-Avinash Dhar
-Loganayagam Rajagopal
-Ashok Das
-Sujay Ashok
-Aninda Sinha
-Joan Simon
-Sayantani Bhattacharyya
-Subhroneel Chakrabarti
-Arnab Rudra
-Pranjal Nayak
-Nilay Kundu
-Sachin Jain
-Kallol Sen
-Shubho Roy
-Sudhakar Panda
-Parameswaran Nair
-Diptarka Das
-Pallab Basu
-Jyotirmoy Bhattacharya
-Shouvik Datta
-Matthew Kleban
-Vijay Balasubramanian
-Per Kraus
-Finn Larsen
-Frederik Denef
-Andrew Neitzke
-Davide Gaiotto
-Gregory Moore
-Jeffrey Harvey
-Emil Martinec
-Eric Sharpe
-Ronen Plesser
-David Morrison
-Brian Greene
-Paul Aspinwall
-Mirjam Cvetic
-Burt Ovrut
-Ron Donagi
-Tony Pantev
-Lara Anderson
-James Gray
-Yang-Hui He
-Andre Lukas
-Philip Candelas
-Xenia de la Ossa
-Volker Braun
-Washington Taylor
-Jim Halverson
-Fabian Ruehle
-Challenger Mishra
-Sven Krippendorf
-Mehmet Demirtas
-Liam McAllister
-Manki Kim
-Cody Long
-Naomi Gendler
-Ben Heidenreich
-Matthew Reece
-Tom Rudelius
-Irene Valenzuela
-Eran Palti
-Miguel Montero
-Hirosi Ooguri
-Arthur Hebecker
-Timo Weigand
-Stefan Vandoren
-Thomas Grimm
-Damian van de Heisteeg
-Max Wiesner
-Jeroen Monnee
-Muldrow Etheredge
-Alberto Castellano
-Alvaro Herraez
-Luis Ibanez
-Angel Uranga
-Fernando Marchesano
-Gary Shiu
-Pablo Soler
-Ivano Basile
-Dieter Lust
-Alessandro Tomasiello
-Fernando Quevedo
-Joseph Conlon
-Michele Cicoli
-Shanta de Alwis
-Renata Kallosh
-Andrei Linde
-Eva Silverstein
-Alexander Westphal
-Sergei Dubovsky
-Raphael Flauger
-Daniel Green
-Daniel Baumann
-Enrico Pajer
-Paolo Creminelli
-Guilherme Pimentel
-Sebastian Cespedes
-Austin Joyce
-Lam Hui
-Kurt Hinterbichler
-Rachel Rosen
-Claudia de Rham
-Andrew Tolley
-Sebastien Renaux-Petel
-Gianmassimo Tasinato
-David Wands
-Marco Zaldarriaga
-Nima Arkani-Hamed
-Simeon Hellerman
-Alexander Zhiboedov
-Slava Rychkov
-Sheer El-Showk
-David Poland
-David Simmons-Duffin
-Balt van Rees
-Leonardo Rastelli
-Pedro Liendo
-Madalena Lemos
-Carlo Meneghelli
-Joao Penedones
-Miguel Paulos
-Marten Reehorst
-Zohar Komargodski
-Ofer Aharony
-Shai Chester
-Silviu Pufu
-Xi Yin
-Ying-Hsuan Lin
-Shu-Heng Shao
-Yifan Wang
-Yuya Kusuki
-Hiroshi Ooguri
-Alexander Zamolodchikov
-Sergei Gukov
-Anton Kapustin
-Nikita Nekrasov
-Andrei Losev
-Alexei Morozov
-Andrei Mironov
-Dmitri Vassilevich
-Andrei Smilga
-Igor Klebanov
-Arkady Tseytlin
-Simone Giombi
-Grigory Tarnopolsky
-Fedor Popov
-Himanshu Khanchandani
-Kenan Diab
-Daniel Jafferis
-Zohar Nussinov
-Anatoly Dymarsky
-Alexander Maloney
-Edward Mazenc
-Nathan Benjamin
-Nabil Iqbal
-Sean Hartnoll
-Subir Sachdev
-Xiao-Liang Qi
-Dam Thanh Son
-Andrei Starinets
-Pavel Kovtun
-Paul Chesler
-Laurence Yaffe
-Krishna Rajagopal
-Amos Yarom
-Michael Haack
-Johanna Erdmenger
-Martin Ammon
-Ioannis Papadimitriou
-Kostas Skenderis
-Marika Taylor
-Sebastian de Haro
-Jan de Boer
-Erik Verlinde
-Herman Verlinde
-Robbert Dijkgraaf
-Jan Manschot
-Boris Pioline
-Sameer Murthy
-Gabriel Lopes Cardoso
-Bernard de Wit
-Thomas Mohaupt
-Stefan Hohenegger
-Kimyeong Lee
-Seok Kim
-Hee-Cheol Kim
-Joonho Kim
-Chiung Hwang
-Sungjay Lee
-Piljin Yi
-Dongmin Gang
-Heeyeon Kim
-Jaewon Song
-Sung-Soo Kim
-Futoshi Yagi
-Babak Haghighat
-Amir-Kian Kashani-Poor
-Albrecht Klemm
-Murad Alim
-Sheldon Katz
-Rahul Pandharipande
-Kentaro Hori
-Mina Aganagic
-Andrei Okounkov
-Vasily Pestun
-Jaume Gomis
-Jacques Distler
-Willy Fischler
-Vladimir Kazakov
-Ivan Kostov
-Didina Serban
-Nikolay Gromov
-Pedro Vieira
-Benjamin Basso
-Amit Sever
-Alexandre Belin
-Andrei Belitsky
-Johan Henriksson
-Jan Plefka
-Matthias Staudacher
-Niklas Beisert
-Burkhard Eden
-Charlotte Kristjansen
-Konstantin Zarembo
-Marius de Leeuw
-Sergey Frolov
-Gleb Arutyunov
-Romuald Janik
-Zoltan Bajnok
-Balazs Pozsgay
-Fedor Smirnov
-Stijn van Tongeren
-Alessandro Torrielli
-Bogdan Stefanski
-Lisa Dixon
-Lance Dixon
-Zvi Bern
-Henrik Johansson
-John Joseph Carrasco
-Radu Roiban
-Michael Kiermaier
-Johannes Henn
-Jaroslav Trnka
-Freddy Cachazo
-Song He
-Yu-tin Huang
-Bo Feng
-Congkao Wen
-Jacob Bourjaily
-Alexander Postnikov
-Paul Heslop
-Andrew Hodges
-Lionel Mason
-David Skinner
-Tim Adamo
-Eduardo Casali
-Yvonne Geyer
-Ricardo Monteiro
-Donal O'Connell
-Mariana Carrillo Gonzalez
-Alexander Ochirov
-Justin Vines
-Chris White
-Ruth Britto
-Kasper Larsen
-Simon Caron-Huot
-Enrico Herrmann
-Julio Parra-Martinez
-Nick Geiser
-Clifford Cheung
-Grant Remmen
-Ira Rothstein
-Walter Goldberger
-Zhengwen Liu
-Alberto Guevara
-Alfredo Guevara
-Mikhail Solon
-Gustav Mogull
-Mark Trodden
-Kirill Krasnov
-Carlo Rovelli
-Lee Smolin
-Abhay Ashtekar
-Thomas Thiemann
-Hermann Nicolai
-Jorge Pullin
-Rodolfo Gambini
-Laurent Freidel
-Jerzy Lewandowski
-Bianca Dittrich
-Daniele Oriti
-Aristide Baratin
-Etera Livine
-Simone Speziale
-Hal Haggard
-Eugenio Bianchi
-Fotini Markopoulou
-Renate Loll
-Jan Ambjorn
-Stefan Hollands
-Robert Wald
-Ted Jacobson
-Aron Wall
-Sean Carroll
-Ning Bao
+Edward Witten | 10
+Juan Maldacena | 10
+Andrew Strominger | 10
+Cumrun Vafa | 10
+Nathan Seiberg | 10
+Joseph Polchinski | 10
+Steven Weinberg | 10
+Gerard 't Hooft | 10
+Stephen Hawking | 10
+David Gross | 10
+Frank Wilczek | 10
+Leonard Susskind | 10
+Michael Green | 10
+John Schwarz | 10
+Alexander Polyakov | 10
+Ashoke Sen | 10
+Shiraz Minwalla | 8
+Sandip Trivedi | 8
+Spenta Wadia | 8
+Atish Dabholkar | 8
+Rajesh Gopakumar | 8
+Gautam Mandal | 8
+Sunil Mukhi | 8
+Justin David | 6
+Suvrat Raju | 6
+Alok Laddha | 6
+Chethan Krishnan | 6
+Shamit Kachru | 8
+Sumit Das | 6
+Anirban Basu | 6
+Debashis Ghoshal | 4
+Dileep Jatkar | 4
+Nemani Suryanarayana | 4
+Avinash Dhar | 4
+Loganayagam Rajagopal | 4
+Ashok Das | 4
+Sujay Ashok | 4
+Aninda Sinha | 6
+Joan Simon | 4
+Sayantani Bhattacharyya | 4
+Subhroneel Chakrabarti | 4
+Arnab Rudra | 4
+Pranjal Nayak | 4
+Nilay Kundu | 4
+Sachin Jain | 4
+Kallol Sen | 4
+Shubho Roy | 4
+Sudhakar Panda | 4
+Parameswaran Nair | 4
+Diptarka Das | 4
+Pallab Basu | 4
+Jyotirmoy Bhattacharya | 4
+Shouvik Datta | 6
+Matthew Kleban | 4
+Vijay Balasubramanian | 4
+Per Kraus | 8
+Finn Larsen | 8
+Frederik Denef | 6
+Andrew Neitzke | 6
+Davide Gaiotto | 10
+Gregory Moore | 8
+Jeffrey Harvey | 8
+Emil Martinec | 4
+Eric Sharpe | 4
+Ronen Plesser | 4
+David Morrison | 4
+Brian Greene | 4
+Paul Aspinwall | 4
+Mirjam Cvetic | 6
+Burt Ovrut | 6
+Ron Donagi | 6
+Tony Pantev | 4
+Lara Anderson | 6
+James Gray | 6
+Yang-Hui He | 6
+Andre Lukas | 6
+Philip Candelas | 6
+Xenia de la Ossa | 4
+Volker Braun | 4
+Washington Taylor | 6
+Jim Halverson | 4
+Fabian Ruehle | 4
+Challenger Mishra | 4
+Sven Krippendorf | 4
+Mehmet Demirtas | 6
+Liam McAllister | 8
+Manki Kim | 4
+Cody Long | 4
+Naomi Gendler | 4
+Ben Heidenreich | 6
+Matthew Reece | 6
+Tom Rudelius | 6
+Irene Valenzuela | 8
+Eran Palti | 8
+Miguel Montero | 6
+Hirosi Ooguri | 8
+Arthur Hebecker | 6
+Timo Weigand | 6
+Stefan Vandoren | 6
+Thomas Grimm | 6
+Damian van de Heisteeg | 4
+Max Wiesner | 4
+Jeroen Monnee | 4
+Muldrow Etheredge | 4
+Alberto Castellano | 4
+Alvaro Herraez | 4
+Luis Ibanez | 6
+Angel Uranga | 6
+Fernando Marchesano | 6
+Gary Shiu | 6
+Pablo Soler | 4
+Ivano Basile | 4
+Dieter Lust | 6
+Alessandro Tomasiello | 6
+Fernando Quevedo | 6
+Joseph Conlon | 6
+Michele Cicoli | 6
+Shanta de Alwis | 4
+Renata Kallosh | 6
+Andrei Linde | 6
+Eva Silverstein | 8
+Alexander Westphal | 6
+Sergei Dubovsky | 4
+Raphael Flauger | 4
+Daniel Green | 4
+Daniel Baumann | 8
+Enrico Pajer | 4
+Paolo Creminelli | 8
+Guilherme Pimentel | 4
+Sebastian Cespedes | 4
+Austin Joyce | 4
+Lam Hui | 4
+Kurt Hinterbichler | 4
+Rachel Rosen | 4
+Claudia de Rham | 4
+Andrew Tolley | 4
+Sebastien Renaux-Petel | 4
+Gianmassimo Tasinato | 4
+David Wands | 4
+Marco Zaldarriaga | 8
+Nima Arkani-Hamed | 10
+Simeon Hellerman | 6
+Alexander Zhiboedov | 8
+Slava Rychkov | 8
+Sheer El-Showk | 6
+David Poland | 6
+David Simmons-Duffin | 8
+Balt van Rees | 6
+Leonardo Rastelli | 8
+Pedro Liendo | 6
+Madalena Lemos | 6
+Carlo Meneghelli | 4
+Joao Penedones | 8
+Miguel Paulos | 6
+Marten Reehorst | 4
+Zohar Komargodski | 8
+Ofer Aharony | 8
+Shai Chester | 6
+Silviu Pufu | 6
+Xi Yin | 8
+Ying-Hsuan Lin | 8
+Shu-Heng Shao | 8
+Yifan Wang | 4
+Yuya Kusuki | 4
+Hiroshi Ooguri | 4
+Alexander Zamolodchikov | 10
+Sergei Gukov | 8
+Anton Kapustin | 8
+Nikita Nekrasov | 10
+Andrei Losev | 4
+Alexei Morozov | 4
+Andrei Mironov | 4
+Dmitri Vassilevich | 4
+Andrei Smilga | 4
+Igor Klebanov | 10
+Arkady Tseytlin | 4
+Simone Giombi | 6
+Grigory Tarnopolsky | 4
+Fedor Popov | 4
+Himanshu Khanchandani | 4
+Kenan Diab | 4
+Daniel Jafferis | 8
+Zohar Nussinov | 4
+Anatoly Dymarsky | 4
+Alexander Maloney | 8
+Edward Mazenc | 4
+Nathan Benjamin | 4
+Nabil Iqbal | 6
+Sean Hartnoll | 8
+Subir Sachdev | 8
+Xiao-Liang Qi | 4
+Dam Thanh Son | 8
+Andrei Starinets | 8
+Pavel Kovtun | 4
+Paul Chesler | 4
+Laurence Yaffe | 4
+Krishna Rajagopal | 4
+Amos Yarom | 4
+Michael Haack | 4
+Johanna Erdmenger | 4
+Martin Ammon | 4
+Ioannis Papadimitriou | 4
+Kostas Skenderis | 4
+Marika Taylor | 4
+Sebastian de Haro | 4
+Jan de Boer | 8
+Erik Verlinde | 8
+Herman Verlinde | 8
+Robbert Dijkgraaf | 8
+Jan Manschot | 4
+Boris Pioline | 8
+Sameer Murthy | 4
+Gabriel Lopes Cardoso | 4
+Bernard de Wit | 4
+Thomas Mohaupt | 4
+Stefan Hohenegger | 4
+Kimyeong Lee | 6
+Seok Kim | 8
+Hee-Cheol Kim | 4
+Joonho Kim | 4
+Chiung Hwang | 4
+Sungjay Lee | 6
+Piljin Yi | 6
+Dongmin Gang | 4
+Heeyeon Kim | 4
+Jaewon Song | 6
+Sung-Soo Kim | 4
+Futoshi Yagi | 4
+Babak Haghighat | 4
+Amir-Kian Kashani-Poor | 4
+Albrecht Klemm | 6
+Murad Alim | 4
+Sheldon Katz | 4
+Rahul Pandharipande | 4
+Kentaro Hori | 4
+Mina Aganagic | 8
+Andrei Okounkov | 8
+Vasily Pestun | 8
+Jaume Gomis | 8
+Jacques Distler | 4
+Willy Fischler | 4
+Vladimir Kazakov | 4
+Ivan Kostov | 4
+Didina Serban | 4
+Nikolay Gromov | 8
+Pedro Vieira | 8
+Benjamin Basso | 4
+Amit Sever | 4
+Alexandre Belin | 6
+Andrei Belitsky | 4
+Johan Henriksson | 4
+Jan Plefka | 4
+Matthias Staudacher | 8
+Niklas Beisert | 8
+Burkhard Eden | 4
+Charlotte Kristjansen | 4
+Konstantin Zarembo | 8
+Marius de Leeuw | 4
+Sergey Frolov | 8
+Gleb Arutyunov | 4
+Romuald Janik | 4
+Zoltan Bajnok | 4
+Balazs Pozsgay | 4
+Fedor Smirnov | 4
+Stijn van Tongeren | 4
+Alessandro Torrielli | 4
+Bogdan Stefanski | 4
+Lisa Dixon | 4
+Lance Dixon | 8
+Zvi Bern | 8
+Henrik Johansson | 8
+John Joseph Carrasco | 4
+Radu Roiban | 8
+Michael Kiermaier | 4
+Johannes Henn | 8
+Jaroslav Trnka | 8
+Freddy Cachazo | 8
+Song He | 8
+Yu-tin Huang | 8
+Bo Feng | 6
+Congkao Wen | 6
+Jacob Bourjaily | 8
+Alexander Postnikov | 4
+Paul Heslop | 6
+Andrew Hodges | 4
+Lionel Mason | 6
+David Skinner | 6
+Tim Adamo | 6
+Eduardo Casali | 4
+Yvonne Geyer | 4
+Ricardo Monteiro | 4
+Donal O'Connell | 4
+Mariana Carrillo Gonzalez | 4
+Alexander Ochirov | 4
+Justin Vines | 6
+Chris White | 4
+Ruth Britto | 6
+Kasper Larsen | 4
+Simon Caron-Huot | 8
+Enrico Herrmann | 4
+Julio Parra-Martinez | 6
+Nick Geiser | 4
+Clifford Cheung | 6
+Grant Remmen | 4
+Ira Rothstein | 6
+Walter Goldberger | 6
+Zhengwen Liu | 6
+Alberto Guevara | 4
+Alfredo Guevara | 4
+Mikhail Solon | 4
+Gustav Mogull | 4
+Mark Trodden | 4
+Kirill Krasnov | 4
+Carlo Rovelli | 8
+Lee Smolin | 8
+Abhay Ashtekar | 8
+Thomas Thiemann | 4
+Hermann Nicolai | 4
+Jorge Pullin | 4
+Rodolfo Gambini | 4
+Laurent Freidel | 6
+Jerzy Lewandowski | 4
+Bianca Dittrich | 4
+Daniele Oriti | 4
+Aristide Baratin | 4
+Etera Livine | 4
+Simone Speziale | 4
+Hal Haggard | 4
+Eugenio Bianchi | 4
+Fotini Markopoulou | 4
+Renate Loll | 4
+Jan Ambjorn | 4
+Stefan Hollands | 4
+Robert Wald | 8
+Ted Jacobson | 8
+Aron Wall | 8
+Sean Carroll | 4
+Ning Bao | 4
 
 # --- Holography, black holes, quantum information and gravity -----------------------------------
-Xi Dong
-Daniel Harlow
-Douglas Stanford
-Stephen Shenker
-Edgar Shaghoulian
-Netta Engelhardt
-Don Marolf
-Raphael Bousso
-Ahmed Almheiri
-Henry Maxfield
-Thomas Hartman
-Veronika Hubeny
-Mukund Rangamani
-Matthew Headrick
-Tadashi Takayanagi
-Shinsei Ryu
-Hong Liu
-Mark Van Raamsdonk
-Brian Swingle
-Patrick Hayden
-John Preskill
-Alexei Kitaev
-Gary Horowitz
-Jorge Santos
-Harvey Reall
-Roberto Emparan
-Oscar Dias
-Vitor Cardoso
-Luis Lehner
-Robert Myers
-Aitor Lewkowycz
-Eric Perlmutter
-Alexei Zhiboedov
-Pawel Caputa
-Masahiro Nozaki
-Shinji Hirano
-Julian Sonner
-Antonio Rotundo
-Nikolay Bobev
-Jorrit Kruthoff
-Gautam Satishchandran
-Alexandru Lupsasca
-Kyriakos Papadodimas
-Samir Mathur
-Steven Giddings
-Monica Guica
-Geoffrey Compere
-Daniel Grumiller
-Max Riegler
-Hamid Afshar
-Stephane Detournay
-Blagoje Oblak
-Arjun Bagchi
-Rudranil Basu
-Shahin Sheikh-Jabbari
-Mohammad Sheikh-Jabbari
-Alejandra Castro
-Joan Camps
-Pau Figueras
-Jorge Casalderrey-Solana
-Ruth Gregory
-Toby Wiseman
-Benson Way
-Hari Kunduri
-James Lucietti
-Eanna Flanagan
-Samuel Gralla
-Prahar Mitra
-Temple He
-Sabrina Pasterski
-Monica Pate
-Ana-Maria Raclariu
-Marc Henneaux
-Cedric Troessaert
-Glenn Barnich
-Andrea Campoleoni
-Stefan Fredenhagen
-Matthias Gaberdiel
-Roberto Volpato
-Sarah Harrison
-Natalie Paquette
-Miranda Cheng
-John Duncan
-Kazuhiro Sakai
-Terry Gannon
-Anne Taormina
-Katrin Wendland
-Yasuaki Hikida
-Tohru Eguchi
-Yuji Tachikawa
-Tomoki Nosaka
-Kazuo Hosomichi
-Masazumi Honda
-Yosuke Imamura
-Takuya Okuda
-Tatsuma Nishioka
-Yoshiki Sato
-Kazumi Okuyama
-Masaki Shigemori
-Yu Nakayama
-Shinobu Hikami
-Yasuyuki Hatsuda
-Hiroyuki Fuji
-Masahito Yamazaki
-Kantaro Ohmori
-Ken Kikuchi
-Tadashi Okazaki
-Yuji Okawa
-Masaki Murata
-Nobuyoshi Ohta
-Nobuyuki Ishibashi
-Hikaru Kawai
-Yoshihisa Kitazawa
-Satoshi Iso
-Hiroshi Itoyama
-Koji Hashimoto
-Shigeki Sugimoto
-Tatsuo Kobayashi
-Keiju Murata
-Tomoyoshi Yoneya
-Hajime Otsuka
-Yasuhiro Sekino
-Yoshifumi Hyakutake
-Taro Kimura
-Shun'ya Mizoguchi
-Takeshi Morita
-Yoshinori Matsuo
-Kazuya Yonekura
-Shin Nakamura
-Ho-Ung Yee
-Sang-Jin Sin
-Seungjoon Hyun
-Soo-Jong Rey
-Dongsu Bak
-Sangmin Lee
-Jaemo Park
-Yi Pang
-Rong-Gen Cai
-Bin Chen
-Wei Song
-Hong Lu
-Yi Wang
-Chris Pope
-Christopher Pope
-Gary Gibbons
-Malcolm Perry
-Dan Xie
-Shing-Tung Yau
-Dan Freed
-Michael Hopkins
-Constantin Teleman
-Nick Manton
-Nicholas Manton
-Paul Sutcliffe
-Mikhail Shifman
-Arkady Vainshtein
-Alexei Yung
-Alexander Gorsky
-Kenichi Konishi
-Stefano Bolognesi
-Adi Armoni
-Dmitri Kharzeev
-Matthew Strassler
-Kenneth Intriligator
-Philip Argyres
-Matthew Martone
-Mario Martone
-Mathew Bub
-Sergio Cecotti
-Michele Del Zotto
-Iñaki Garcia Etxebarria
-Inaki Garcia Etxebarria
-Hector Parra de Freitas
-Ibrahima Bah
-Federico Bonetti
-Ruben Minasian
-Raffaele Savelli
-Gabi Zafrir
-Oren Bergman
-Amihay Hanany
-Rodolfo Russo
-Jacob Sonnenschein
-Shimon Yankielowicz
-David Kutasov
-Amit Giveon
-Micha Berkooz
-Nissan Itzhaki
-Oleg Evnin
-Dmitri Belov
-Vladimir Rosenhaus
-Gregory Gur-Ari
-Raghu Mahajan
-Jinwu Ye
-Jeffrey Murugan
-Jeff Murugan
-Moshe Rozali
-Vishnu Jejjala
-David Berenstein
-Robert de Mello Koch
-Sanjaye Ramgoolam
-Hai Lin
-Horatiu Nastase
-Nick Evans
-Andrew Karch
-Jose Edelstein
-Carlos Nunez
-Daniel Areán
-Daniel Arean
-Alfonso Ramallo
-Angel Paredes
-Javier Mas
-Elias Kiritsis
-Francesco Nitti
-Umut Gursoy
-Ioannis Iatrakis
-Juan Pedraza
-Aristomenis Donos
-Jerome Gauntlett
-Christiana Pantelidou
-Benjamin Withers
-Toby Crisford
-Andrea Amoretti
-Daniel Musso
-Blaise Gouteraux
-Richard Davison
-Sašo Grozdanov
-Saso Grozdanov
-Andrei Parnachev
-Dmitri Khveshchenko
+Xi Dong | 6
+Daniel Harlow | 8
+Douglas Stanford | 8
+Stephen Shenker | 8
+Edgar Shaghoulian | 6
+Netta Engelhardt | 8
+Don Marolf | 8
+Raphael Bousso | 8
+Ahmed Almheiri | 8
+Henry Maxfield | 6
+Thomas Hartman | 8
+Veronika Hubeny | 8
+Mukund Rangamani | 8
+Matthew Headrick | 8
+Tadashi Takayanagi | 8
+Shinsei Ryu | 4
+Hong Liu | 8
+Mark Van Raamsdonk | 8
+Brian Swingle | 4
+Patrick Hayden | 4
+John Preskill | 4
+Alexei Kitaev | 4
+Gary Horowitz | 8
+Jorge Santos | 4
+Harvey Reall | 6
+Roberto Emparan | 6
+Oscar Dias | 6
+Vitor Cardoso | 6
+Luis Lehner | 6
+Robert Myers | 8
+Aitor Lewkowycz | 6
+Eric Perlmutter | 6
+Alexei Zhiboedov | 4
+Pawel Caputa | 6
+Masahiro Nozaki | 6
+Shinji Hirano | 4
+Julian Sonner | 4
+Antonio Rotundo | 4
+Nikolay Bobev | 6
+Jorrit Kruthoff | 4
+Gautam Satishchandran | 4
+Alexandru Lupsasca | 4
+Kyriakos Papadodimas | 6
+Samir Mathur | 6
+Steven Giddings | 6
+Monica Guica | 8
+Geoffrey Compere | 6
+Daniel Grumiller | 6
+Max Riegler | 4
+Hamid Afshar | 4
+Stephane Detournay | 4
+Blagoje Oblak | 4
+Arjun Bagchi | 4
+Rudranil Basu | 4
+Shahin Sheikh-Jabbari | 4
+Mohammad Sheikh-Jabbari | 4
+Alejandra Castro | 6
+Joan Camps | 4
+Pau Figueras | 4
+Jorge Casalderrey-Solana | 4
+Ruth Gregory | 4
+Toby Wiseman | 4
+Benson Way | 4
+Hari Kunduri | 4
+James Lucietti | 4
+Eanna Flanagan | 4
+Samuel Gralla | 4
+Prahar Mitra | 6
+Temple He | 6
+Sabrina Pasterski | 6
+Monica Pate | 4
+Ana-Maria Raclariu | 4
+Marc Henneaux | 6
+Cedric Troessaert | 4
+Glenn Barnich | 4
+Andrea Campoleoni | 4
+Stefan Fredenhagen | 4
+Matthias Gaberdiel | 6
+Roberto Volpato | 4
+Sarah Harrison | 4
+Natalie Paquette | 4
+Miranda Cheng | 6
+John Duncan | 6
+Kazuhiro Sakai | 4
+Terry Gannon | 4
+Anne Taormina | 4
+Katrin Wendland | 4
+Yasuaki Hikida | 4
+Tohru Eguchi | 4
+Yuji Tachikawa | 8
+Tomoki Nosaka | 4
+Kazuo Hosomichi | 4
+Masazumi Honda | 4
+Yosuke Imamura | 4
+Takuya Okuda | 4
+Tatsuma Nishioka | 4
+Yoshiki Sato | 4
+Kazumi Okuyama | 4
+Masaki Shigemori | 4
+Yu Nakayama | 4
+Shinobu Hikami | 4
+Yasuyuki Hatsuda | 4
+Hiroyuki Fuji | 4
+Masahito Yamazaki | 4
+Kantaro Ohmori | 6
+Ken Kikuchi | 4
+Tadashi Okazaki | 4
+Yuji Okawa | 4
+Masaki Murata | 4
+Nobuyoshi Ohta | 4
+Nobuyuki Ishibashi | 4
+Hikaru Kawai | 4
+Yoshihisa Kitazawa | 4
+Satoshi Iso | 4
+Hiroshi Itoyama | 4
+Koji Hashimoto | 4
+Shigeki Sugimoto | 4
+Tatsuo Kobayashi | 4
+Keiju Murata | 4
+Tomoyoshi Yoneya | 4
+Hajime Otsuka | 4
+Yasuhiro Sekino | 4
+Yoshifumi Hyakutake | 4
+Taro Kimura | 4
+Shun'ya Mizoguchi | 4
+Takeshi Morita | 4
+Yoshinori Matsuo | 4
+Kazuya Yonekura | 4
+Shin Nakamura | 4
+Ho-Ung Yee | 4
+Sang-Jin Sin | 4
+Seungjoon Hyun | 4
+Soo-Jong Rey | 4
+Dongsu Bak | 4
+Sangmin Lee | 4
+Jaemo Park | 4
+Yi Pang | 4
+Rong-Gen Cai | 4
+Bin Chen | 4
+Wei Song | 4
+Hong Lu | 6
+Yi Wang | 4
+Chris Pope | 6
+Christopher Pope | 4
+Gary Gibbons | 6
+Malcolm Perry | 6
+Dan Xie | 4
+Shing-Tung Yau | 4
+Dan Freed | 4
+Michael Hopkins | 4
+Constantin Teleman | 4
+Nick Manton | 4
+Nicholas Manton | 4
+Paul Sutcliffe | 4
+Mikhail Shifman | 4
+Arkady Vainshtein | 4
+Alexei Yung | 4
+Alexander Gorsky | 4
+Kenichi Konishi | 4
+Stefano Bolognesi | 4
+Adi Armoni | 4
+Dmitri Kharzeev | 4
+Matthew Strassler | 4
+Kenneth Intriligator | 4
+Philip Argyres | 4
+Matthew Martone | 4
+Mario Martone | 4
+Mathew Bub | 4
+Sergio Cecotti | 4
+Michele Del Zotto | 4
+Iñaki Garcia Etxebarria | 4
+Inaki Garcia Etxebarria | 4
+Hector Parra de Freitas | 4
+Ibrahima Bah | 4
+Federico Bonetti | 4
+Ruben Minasian | 4
+Raffaele Savelli | 4
+Gabi Zafrir | 4
+Oren Bergman | 4
+Amihay Hanany | 4
+Rodolfo Russo | 4
+Jacob Sonnenschein | 4
+Shimon Yankielowicz | 4
+David Kutasov | 4
+Amit Giveon | 4
+Micha Berkooz | 4
+Nissan Itzhaki | 4
+Oleg Evnin | 4
+Dmitri Belov | 4
+Vladimir Rosenhaus | 4
+Gregory Gur-Ari | 4
+Raghu Mahajan | 4
+Jinwu Ye | 4
+Jeffrey Murugan | 4
+Jeff Murugan | 4
+Moshe Rozali | 4
+Vishnu Jejjala | 4
+David Berenstein | 4
+Robert de Mello Koch | 4
+Sanjaye Ramgoolam | 4
+Hai Lin | 4
+Horatiu Nastase | 4
+Nick Evans | 4
+Andrew Karch | 4
+Jose Edelstein | 4
+Carlos Nunez | 4
+Daniel Areán | 4
+Daniel Arean | 4
+Alfonso Ramallo | 4
+Angel Paredes | 4
+Javier Mas | 4
+Elias Kiritsis | 4
+Francesco Nitti | 4
+Umut Gursoy | 4
+Ioannis Iatrakis | 4
+Juan Pedraza | 4
+Aristomenis Donos | 4
+Jerome Gauntlett | 4
+Christiana Pantelidou | 4
+Benjamin Withers | 4
+Toby Crisford | 4
+Andrea Amoretti | 4
+Daniel Musso | 4
+Blaise Gouteraux | 4
+Richard Davison | 4
+Sašo Grozdanov | 4
+Saso Grozdanov | 4
+Andrei Parnachev | 4
+Dmitri Khveshchenko | 4
 
 # --- QFT, SUSY, generalized symmetries, bootstrap, mathematical physics --------------------------
-Michael Douglas
-David Tong
-Jonathan Heckman
-Clay Cordova
-Thomas Dumitrescu
-Po-Shen Hsin
-Ho Tat Lam
-Theo Johnson-Freyd
-Ryan Thorngren
-Sakura Schafer-Nameki
-Lakshya Bhardwaj
-Thomas Vandermeulen
-Diego Delmastro
-Justin Kaidi
-Francesco Benini
-Sergio Benvenuti
-Chris Beem
-Wolfger Peelaers
-Mykola Dedushenko
-Yiwen Pan
-Carlos Mafra
-Oliver Schlotterer
-Stephan Stieberger
-Tomasz Taylor
-Eric D'Hoker
-Michael Gutperle
-Pierre Vanhove
-Francis Brown
-Claude Duhr
-Falko Dulat
-Federico Zerbini
-Matthias Wilhelm
-Cristian Vergu
-Lorenzo Di Pietro
-Alessandro Vichi
-Petr Kravchuk
-Johan Kaplan
-Jared Kaplan
-Walter Landry
-Fernando Alday
-Agnese Bissi
-Tobias Hansen
-Luis Fernando Alday
-Xinan Zhou
-Gregory Korchemsky
-Emery Sokatchev
-Alexander Belitsky
-Jean-Michel Maillet
-Ivan Todorov
-Marco Serone
-Riccardo Rattazzi
-Giuseppe Mussardo
-Giovanni Villadoro
-Gabriele Veneziano
-Massimo Porrati
-Andrea Puhm
-Howard Georgi
-Raman Sundrum
-Lisa Randall
-Csaba Csaki
-Yuri Shirman
-Takemichi Okui
-Yasunori Nomura
-Ann Nelson
-Markus Luty
-Martin Schmaltz
-Jay Wacker
-Tim Cohen
-Matthew Schwartz
-Iain Stewart
-Thomas Becher
-Matthias Neubert
-Gavin Salam
-Ben Allanach
-Andrew Larkoski
-Jesse Thaler
-Duff Neill
-Hua-Xing Zhu
-Yuri Dokshitzer
-Lev Lipatov
-Ludvig Faddeev
-Fedor Bezrukov
-Mikhail Shaposhnikov
-Valery Rubakov
-Dmitry Gorbunov
-Sergei Troitsky
-Igor Tkachev
-Alexei Smirnov
-Anton Ilderton
-Gerald Dunne
-Mithat Unsal
-Aleksey Cherman
-Inês Aniceto
-Ines Aniceto
-Ricardo Schiappa
-Marcos Marino
-Ricardo Couso-Santamaria
-Ricardo Couso-Santamaría
-Jie Gu
-Maxim Kontsevich
-Sergei Lukyanov
-Vladimir Bazhanov
-Boris Feigin
-Edward Frenkel
-Dennis Gaitsgory
-Alexander Braverman
-Roman Bezrukavnikov
-Davesh Maulik
-Andrei Neguț
-Andrei Negut
-Tudor Dimofte
-Justin Hilburn
-Niklas Garner
-Sam Gunningham
-Philsang Yoo
-Kevin Costello
-Si Li
-Owen Gwilliam
-Brian Williams
-Surya Raghavendran
-Ingmar Saberi
-Mathew Bullimore
-Lorenzo Bianchi
-Edoardo Lauria
-Martina Gallo
-Joao Caetano
-Miguel Costa
-Vasco Goncalves
-Vasco Gonçalves
-Aleix Gimenez-Grau
-Aleix Gimenez Grau
-Ivan Burić
-Ivan Buric
-Volker Schomerus
-Ben Hoare
-Alessandro Sfondrini
-Dmytro Volin
-Rob Klabbers
-Nick Dorey
-Timothy Hollowood
-Prem Kumar
-Matthew Buican
-Takahiro Nishinaka
-Heng-Yu Chen
-Chi-Ming Chang
-Yunqin Zheng
-Weiguang Cao
-Hirotaka Hayashi
-Hiroki Wada
-Jun Nishimura
-Masanori Hanada
-Dario Benedetti
-Razvan Gurau
-Sylvain Carrozza
-Valentin Bonzom
-Vincent Rivasseau
-Adrian Tanasa
-Joseph Ben Geloun
-Naoki Sasakura
-Sinya Aoki
+Michael Douglas | 8
+David Tong | 8
+Jonathan Heckman | 8
+Clay Cordova | 8
+Thomas Dumitrescu | 8
+Po-Shen Hsin | 6
+Ho Tat Lam | 6
+Theo Johnson-Freyd | 6
+Ryan Thorngren | 4
+Sakura Schafer-Nameki | 8
+Lakshya Bhardwaj | 6
+Thomas Vandermeulen | 4
+Diego Delmastro | 4
+Justin Kaidi | 6
+Francesco Benini | 6
+Sergio Benvenuti | 4
+Chris Beem | 6
+Wolfger Peelaers | 4
+Mykola Dedushenko | 6
+Yiwen Pan | 4
+Carlos Mafra | 6
+Oliver Schlotterer | 6
+Stephan Stieberger | 4
+Tomasz Taylor | 4
+Eric D'Hoker | 6
+Michael Gutperle | 4
+Pierre Vanhove | 6
+Francis Brown | 6
+Claude Duhr | 6
+Falko Dulat | 4
+Federico Zerbini | 4
+Matthias Wilhelm | 4
+Cristian Vergu | 4
+Lorenzo Di Pietro | 4
+Alessandro Vichi | 4
+Petr Kravchuk | 6
+Johan Kaplan | 4
+Jared Kaplan | 4
+Walter Landry | 4
+Fernando Alday | 6
+Agnese Bissi | 6
+Tobias Hansen | 4
+Luis Fernando Alday | 4
+Xinan Zhou | 4
+Gregory Korchemsky | 6
+Emery Sokatchev | 4
+Alexander Belitsky | 4
+Jean-Michel Maillet | 4
+Ivan Todorov | 4
+Marco Serone | 8
+Riccardo Rattazzi | 8
+Giuseppe Mussardo | 4
+Giovanni Villadoro | 4
+Gabriele Veneziano | 4
+Massimo Porrati | 4
+Andrea Puhm | 4
+Howard Georgi | 4
+Raman Sundrum | 4
+Lisa Randall | 4
+Csaba Csaki | 4
+Yuri Shirman | 4
+Takemichi Okui | 4
+Yasunori Nomura | 4
+Ann Nelson | 4
+Markus Luty | 4
+Martin Schmaltz | 4
+Jay Wacker | 4
+Tim Cohen | 4
+Matthew Schwartz | 4
+Iain Stewart | 4
+Thomas Becher | 4
+Matthias Neubert | 4
+Gavin Salam | 4
+Ben Allanach | 4
+Andrew Larkoski | 4
+Jesse Thaler | 4
+Duff Neill | 4
+Hua-Xing Zhu | 4
+Yuri Dokshitzer | 4
+Lev Lipatov | 4
+Ludvig Faddeev | 4
+Fedor Bezrukov | 4
+Mikhail Shaposhnikov | 4
+Valery Rubakov | 4
+Dmitry Gorbunov | 4
+Sergei Troitsky | 4
+Igor Tkachev | 4
+Alexei Smirnov | 4
+Anton Ilderton | 4
+Gerald Dunne | 6
+Mithat Unsal | 6
+Aleksey Cherman | 4
+Inês Aniceto | 4
+Ines Aniceto | 4
+Ricardo Schiappa | 4
+Marcos Marino | 6
+Ricardo Couso-Santamaria | 4
+Ricardo Couso-Santamaría | 4
+Jie Gu | 4
+Maxim Kontsevich | 10
+Sergei Lukyanov | 4
+Vladimir Bazhanov | 4
+Boris Feigin | 4
+Edward Frenkel | 8
+Dennis Gaitsgory | 4
+Alexander Braverman | 4
+Roman Bezrukavnikov | 4
+Davesh Maulik | 4
+Andrei Neguț | 4
+Andrei Negut | 4
+Tudor Dimofte | 8
+Justin Hilburn | 4
+Niklas Garner | 4
+Sam Gunningham | 4
+Philsang Yoo | 4
+Kevin Costello | 8
+Si Li | 4
+Owen Gwilliam | 4
+Brian Williams | 4
+Surya Raghavendran | 4
+Ingmar Saberi | 4
+Mathew Bullimore | 4
+Lorenzo Bianchi | 4
+Edoardo Lauria | 4
+Martina Gallo | 4
+Joao Caetano | 4
+Miguel Costa | 4
+Vasco Goncalves | 4
+Vasco Gonçalves | 4
+Aleix Gimenez-Grau | 4
+Aleix Gimenez Grau | 4
+Ivan Burić | 4
+Ivan Buric | 4
+Volker Schomerus | 4
+Ben Hoare | 4
+Alessandro Sfondrini | 4
+Dmytro Volin | 4
+Rob Klabbers | 4
+Nick Dorey | 6
+Timothy Hollowood | 4
+Prem Kumar | 4
+Matthew Buican | 4
+Takahiro Nishinaka | 4
+Heng-Yu Chen | 4
+Chi-Ming Chang | 4
+Yunqin Zheng | 4
+Weiguang Cao | 4
+Hirotaka Hayashi | 4
+Hiroki Wada | 4
+Jun Nishimura | 4
+Masanori Hanada | 4
+Dario Benedetti | 4
+Razvan Gurau | 4
+Sylvain Carrozza | 4
+Valentin Bonzom | 4
+Vincent Rivasseau | 4
+Adrian Tanasa | 4
+Joseph Ben Geloun | 4
+Naoki Sasakura | 4
+Sinya Aoki | 4
 
 # --- Supergravity, string field theory, cosmology, entanglement, random matrices -----------------
-David Politzer
-Curtis Callan
-Stanley Deser
-Roman Jackiw
-Peter West
-Chris Hull
-Christopher Hull
-Paul Townsend
-Michael Duff
-Kellogg Stelle
-Ergin Sezgin
-Pierre Ramond
-Pran Nath
-Sergio Ferrara
-Daniel Freedman
-Peter van Nieuwenhuizen
-Mary Gaillard
-Jonathan Bagger
-John Ellis
-Graham Ross
-Luis Alvarez-Gaume
-Cesar Gomez
-Gia Dvali
-Sergey Sibiryakov
-Nathaniel Craig
-Savas Dimopoulos
-Gregory Gabadadze
-Barton Zwiebach
-Harold Erbin
-Carlo Maccaferri
-Martin Schnabl
-Theodore Erler
-Michael Kroyter
-Ivo Sachs
-Nathan Berkovits
-Warren Siegel
-Olaf Hohm
-Ulf Lindstrom
-Martin Rocek
-Dionysios Anninos
-Tarek Anous
-Beatrix Muhlmann
-Victor Gorbenko
-Leonardo Senatore
-Dalimil Mazac
-Matthew Dodelson
-Cynthia Keeler
-Gim Seng Ng
-Phil Saad
-Zhenbin Yang
-Clifford Johnson
-Jim Hartle
-Thomas Hertog
-Neil Turok
-Jean-Luc Lehners
-Cliff Burgess
-Ana Achucarro
-Gonzalo Palma
-Hiranya Peiris
-Latham Boyle
-Paul Steinhardt
-Anna Ijjas
-Robert Brandenberger
-Jerome Martin
-Vincent Vennin
-Viatcheslav Mukhanov
-Thomas Faulkner
-Mark Srednicki
-Horacio Casini
-Marina Huerta
-Pablo Bueno
-Javier Magan
-Christoph Uhlemann
-Andreas Karch
-Alex Buchel
-Steven Gubser
-Amanda Peet
-Leopoldo Pando Zayas
-Nick Halmagyi
-Dario Martelli
-James Sparks
-Michael Atiyah
-Nigel Hitchin
-Simon Donaldson
-Mark Gross
-Bernd Siebert
-Alessio Corti
-Duiliu-Emanuel Diaconescu
-Emanuel Diaconescu
-Jan Troost
-Sylvain Ribault
-Xiao-Gang Wen
-Ashvin Vishwanath
-Senthil Todadri
-Max Metlitski
-Cenke Xu
-Chong Wang
-Zhen Bi
-Meng Cheng
-Michael Levin
-Dominic Else
-Nathanan Tantivasadakorn
-Ruben Verresen
-Kevin Walker
-Zhenghan Wang
-Lukasz Fidkowski
-Eric Rowell
-Zhengwei Liu
-Du Pei
-Pavel Putrov
-Monica Jinwoo Kang
-Amitabh Virmani
-Sridip Pal
+David Politzer | 4
+Curtis Callan | 4
+Stanley Deser | 4
+Roman Jackiw | 4
+Peter West | 6
+Chris Hull | 6
+Christopher Hull | 4
+Paul Townsend | 6
+Michael Duff | 6
+Kellogg Stelle | 6
+Ergin Sezgin | 6
+Pierre Ramond | 4
+Pran Nath | 4
+Sergio Ferrara | 4
+Daniel Freedman | 4
+Peter van Nieuwenhuizen | 4
+Mary Gaillard | 4
+Jonathan Bagger | 4
+John Ellis | 4
+Graham Ross | 4
+Luis Alvarez-Gaume | 6
+Cesar Gomez | 4
+Gia Dvali | 8
+Sergey Sibiryakov | 4
+Nathaniel Craig | 4
+Savas Dimopoulos | 4
+Gregory Gabadadze | 4
+Barton Zwiebach | 6
+Harold Erbin | 4
+Carlo Maccaferri | 4
+Martin Schnabl | 4
+Theodore Erler | 4
+Michael Kroyter | 4
+Ivo Sachs | 4
+Nathan Berkovits | 6
+Warren Siegel | 4
+Olaf Hohm | 4
+Ulf Lindstrom | 4
+Martin Rocek | 4
+Dionysios Anninos | 6
+Tarek Anous | 4
+Beatrix Muhlmann | 4
+Victor Gorbenko | 6
+Leonardo Senatore | 6
+Dalimil Mazac | 4
+Matthew Dodelson | 4
+Cynthia Keeler | 4
+Gim Seng Ng | 4
+Phil Saad | 4
+Zhenbin Yang | 4
+Clifford Johnson | 4
+Jim Hartle | 6
+Thomas Hertog | 6
+Neil Turok | 6
+Jean-Luc Lehners | 4
+Cliff Burgess | 6
+Ana Achucarro | 4
+Gonzalo Palma | 4
+Hiranya Peiris | 4
+Latham Boyle | 6
+Paul Steinhardt | 6
+Anna Ijjas | 4
+Robert Brandenberger | 4
+Jerome Martin | 4
+Vincent Vennin | 4
+Viatcheslav Mukhanov | 4
+Thomas Faulkner | 6
+Mark Srednicki | 4
+Horacio Casini | 6
+Marina Huerta | 6
+Pablo Bueno | 6
+Javier Magan | 4
+Christoph Uhlemann | 4
+Andreas Karch | 6
+Alex Buchel | 4
+Steven Gubser | 8
+Amanda Peet | 4
+Leopoldo Pando Zayas | 4
+Nick Halmagyi | 4
+Dario Martelli | 4
+James Sparks | 4
+Michael Atiyah | 4
+Nigel Hitchin | 4
+Simon Donaldson | 4
+Mark Gross | 4
+Bernd Siebert | 4
+Alessio Corti | 4
+Duiliu-Emanuel Diaconescu | 4
+Emanuel Diaconescu | 4
+Jan Troost | 4
+Sylvain Ribault | 4
+Xiao-Gang Wen | 6
+Ashvin Vishwanath | 6
+Senthil Todadri | 4
+Max Metlitski | 4
+Cenke Xu | 4
+Chong Wang | 4
+Zhen Bi | 4
+Meng Cheng | 4
+Michael Levin | 4
+Dominic Else | 4
+Nathanan Tantivasadakorn | 4
+Ruben Verresen | 4
+Kevin Walker | 4
+Zhenghan Wang | 4
+Lukasz Fidkowski | 4
+Eric Rowell | 4
+Zhengwei Liu | 4
+Du Pei | 4
+Pavel Putrov | 4
+Monica Jinwoo Kang | 4
+Amitabh Virmani | 4
+Sridip Pal | 4
