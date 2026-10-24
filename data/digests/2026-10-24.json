@@ -22,24 +22,24 @@
    "kicker": "Holography & Gauge/Gravity · hep-th"
   },
   {
-   "headline": "Five-loop static two-body potential in massless scalar-tensor gravity",
+   "headline": "Surface Defects in the $\\mathcal{N}=2$ Lens Space Index and Elliptic Integrability",
    "body": [
-    "We compute the static contribution to the conservative two-body potential in massless scalar-tensor theories through fifth post-Newtonian (5PN) order, with the strong-field scalar responses of the compact objects encoded in scalar-dependent masses. Within post-Newtonian effective field theory (EFT), evaluating the 1PN-5PN static terms requires one- through five-loop massless two-point Feynman integrals.",
-    "Although the additional scalar modifies both source couplings and integrand numerators, the required scalar master topologies remain those of the corresponding static problem in general relativity."
+    "We determine the surface-defect difference operators of the 4d $\\mathcal{N}=2$ lens space index for class $\\mathcal{S}$ theories of type $A_{N-1}$ on $(\\mathbb{S}^3/\\mathbb{Z}_r)\\times\\mathbb{S}^1$. For generic fugacities $(p,q,t)$ and arbitrary rank $N$, orbifold order $r$ and discrete holonomies, their coefficients are finite products of theta functions with nomes $p^r$ and $q^r$.",
+    "After an explicit gauge transformation, Gaussian in the holonomies, each operator factorizes into two elliptic Ruijsenaars--Schneider-type operators with step $pq$, one with nome $p^r$ and one with nome $q^r$, acting on variables glued along a lattice."
    ],
-   "authors": "Gabriel Luz Almeida et al.",
-   "arxiv_id": "2610.30972",
+   "authors": "Masahito Yamazaki",
+   "arxiv_id": "2610.30849",
    "kicker": "Field Theory & Symmetry · hep-th"
   },
   {
-   "headline": "Higher-Loop Vacuum Integrals on $S^D$",
+   "headline": "Quasinormal modes, complex null geodesics and singularity resolution in regular AdS black holes",
    "body": [
-    "We develop a new framework for evaluating higher-loop integrals for scalar fields on $S^D$. Starting from a Schwinger-parametric form for general higher-loop integrals on the sphere, it combines total-derivative identities with edge-contraction relations into a coupled linear system.",
-    "To illustrate our method, we solve for all vacuum graphs through two loops. This includes, in particular, the two-loop three-melon, for which we construct the analytic solution for general $D$ and obtain explicit dimensionally regularized results at all integer dimensions."
+    "The black hole singularity is hidden behind its horizon, and it is difficult to determine whether it is resolved by quantum gravity or stringy effects. For an AdS-Schwarzschild black hole, it is known that the two-point function of the dual conformal field theory has a singularity associated with a null geodesic that bounces off the black hole singularity.",
+    "In this paper, we investigate how the resolution of the black hole singularity is encoded in the dual conformal field theory by considering regular AdS black holes as regularized geometries."
    ],
-   "authors": "Varun Lochab and Frederik Denef",
-   "arxiv_id": "2610.30489",
-   "kicker": "Also in hep-th · hep-th"
+   "authors": "Heng-Yu Chen et al.",
+   "arxiv_id": "2610.30915",
+   "kicker": "Gravity & Cosmology · hep-th"
   }
  ],
  "sections": [
@@ -47,26 +47,34 @@
    "name": "Field Theory & Symmetry",
    "stories": [
     {
-     "headline": "Surface Defects in the $\\mathcal{N}=2$ Lens Space Index and Elliptic Integrability",
-     "body": [
-      "We determine the surface-defect difference operators of the 4d $\\mathcal{N}=2$ lens space index for class $\\mathcal{S}$ theories of type $A_{N-1}$ on $(\\mathbb{S}^3/\\mathbb{Z}_r)\\times\\mathbb{S}^1$. For generic fugacities $(p,q,t)$ and arbitrary rank $N$, orbifold order $r$ and discrete holonomies, their coefficients are finite products of theta functions with nomes $p^r$ and $q^r$."
-     ],
-     "authors": "Masahito Yamazaki",
-     "arxiv_id": "2610.30849"
-    },
-    {
      "headline": "Quantum field theory and four-manifolds: Perspectives from physics and geometry",
      "body": [
       "These lecture notes are based on lecture series by the authors for the Summer School 2025 on ``Physical mathematics of quantum field theory\" at the University of Massachusetts Amherst organized by Owen Gwilliam, Chris Elliott, and Matteo Lotito. The lectures centred around algebraic structures arising from twists of supersymmetric quantum field theories, correlation functions of topologically twisted supersymmetric gauge theories, and their mathematical counterparts as intersection-theoretic invariants associated to moduli spaces of instantons, semistable sheaves, or Higgs sheaves on four-manifolds or complex projective surfaces."
      ],
      "authors": "Niklas Garner et al.",
      "arxiv_id": "2610.30288"
+    },
+    {
+     "headline": "Five-loop static two-body potential in massless scalar-tensor gravity",
+     "body": [
+      "We compute the static contribution to the conservative two-body potential in massless scalar-tensor theories through fifth post-Newtonian (5PN) order, with the strong-field scalar responses of the compact objects encoded in scalar-dependent masses. Within post-Newtonian effective field theory (EFT), evaluating the 1PN-5PN static terms requires one- through five-loop massless two-point Feynman integrals."
+     ],
+     "authors": "Gabriel Luz Almeida et al.",
+     "arxiv_id": "2610.30972"
     }
    ]
   },
   {
    "name": "Holography & Gauge/Gravity",
    "stories": [
+    {
+     "headline": "Amplified EFT corrections near exceptional QNMs",
+     "body": [
+      "We show that the ordinary expansion of EFT corrections to individual QNM frequencies breaks down at an exceptional QNM, and that these corrections become enhanced for near-exceptional QNMs. We give a brief argument for why this should generally happen, before numerically demonstrating this behaviour by calculating the $α'^3$ corrections to QNMs of equal-spin Myers--Perry-AdS$_5$ black holes."
+     ],
+     "authors": "William L. Boyce and Jorge E. Santos",
+     "arxiv_id": "2610.30311"
+    },
     {
      "headline": "The Spectral Edge at Large Central Charge and Black Hole Statistics",
      "body": [
@@ -82,27 +90,27 @@
      ],
      "authors": "Byoungjoon Ahn et al.",
      "arxiv_id": "2610.30572"
-    },
-    {
-     "headline": "Amplified EFT corrections near exceptional QNMs",
-     "body": [
-      "We show that the ordinary expansion of EFT corrections to individual QNM frequencies breaks down at an exceptional QNM, and that these corrections become enhanced for near-exceptional QNMs. We give a brief argument for why this should generally happen, before numerically demonstrating this behaviour by calculating the $α'^3$ corrections to QNMs of equal-spin Myers--Perry-AdS$_5$ black holes."
-     ],
-     "authors": "William L. Boyce and Jorge E. Santos",
-     "arxiv_id": "2610.30311"
     }
    ]
   },
   {
-   "name": "Gravity & Cosmology",
+   "name": "Also in hep-th",
    "stories": [
     {
-     "headline": "Quasinormal modes, complex null geodesics and singularity resolution in regular AdS black holes",
+     "headline": "Higher-Loop Vacuum Integrals on $S^D$",
      "body": [
-      "The black hole singularity is hidden behind its horizon, and it is difficult to determine whether it is resolved by quantum gravity or stringy effects. For an AdS-Schwarzschild black hole, it is known that the two-point function of the dual conformal field theory has a singularity associated with a null geodesic that bounces off the black hole singularity."
+      "We develop a new framework for evaluating higher-loop integrals for scalar fields on $S^D$. Starting from a Schwinger-parametric form for general higher-loop integrals on the sphere, it combines total-derivative identities with edge-contraction relations into a coupled linear system."
      ],
-     "authors": "Heng-Yu Chen et al.",
-     "arxiv_id": "2610.30915"
+     "authors": "Varun Lochab and Frederik Denef",
+     "arxiv_id": "2610.30489"
+    },
+    {
+     "headline": "Krylov Complexity and Entropy of Composite Quantum Systems",
+     "body": [
+      "We investigate the behaviour of Krylov complexity as the number of degrees of freedom of a quantum system increases. Specifically, we show that for tensor products of commuting subsystems, the leading excess complexity is controlled by a weighted variance of the subsystem Lanczos coefficients."
+     ],
+     "authors": "Jeff Murugan et al.",
+     "arxiv_id": "2610.31394"
     }
    ]
   },
@@ -116,19 +124,6 @@
      ],
      "authors": "Yuta Hamada et al.",
      "arxiv_id": "2610.30273"
-    }
-   ]
-  },
-  {
-   "name": "Also in hep-th",
-   "stories": [
-    {
-     "headline": "Krylov Complexity and Entropy of Composite Quantum Systems",
-     "body": [
-      "We investigate the behaviour of Krylov complexity as the number of degrees of freedom of a quantum system increases. Specifically, we show that for tensor products of commuting subsystems, the leading excess complexity is controlled by a weighted variance of the subsystem Lanczos coefficients."
-     ],
-     "authors": "Jeff Murugan et al.",
-     "arxiv_id": "2610.31394"
     }
    ]
   },
