@@ -79,3 +79,14 @@ python -m gazette.run --rerender   # rebuild all pages from saved editions after
 ## Cost and data
 
 Free: the arXiv API needs no key, and the job takes seconds of GitHub Actions time (public repos get free minutes; check GitHub's limits for private ones). Please keep the schedule modest, as arXiv asks API users to be gentle.
+
+## If the page doesn't change after a run
+
+A green run does **not** always mean a new edition. Open Actions, click the run, then the **Generate edition** step: its last line (also shown as a banner at the top of the run page) says what happened.
+
+- **Blue notice "edition … written"**: a new edition was created. If the site still looks old, check the next step, **Commit changes** ("nothing to commit" or a push error), then Settings → Pages (branch and folder), and give GitHub Pages a minute and your browser a hard refresh.
+- **Yellow warning "only N papers … not already covered … current edition was kept"**: arXiv has no announcement newer than the one already shown. This is normal on weekends, since arXiv announces Sunday to Thursday evenings (US Eastern). Run the workflow with **force** to rebuild from the latest announcement anyway.
+- **"skipping this trigger" / "already exists"**: a scheduled trigger that fired before 11:00 local time, or today's edition is already there.
+- **Red cross**: the error is in the log (for example arXiv not answering); re-run the workflow.
+
+`force` rebuilds from the latest announcement regardless of what was shown before. While the front page is still the placeholder, and for saved editions whose pages no longer exist, the script treats everything as new, so a hand-made reset never blocks the next run.

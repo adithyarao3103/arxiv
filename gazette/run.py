@@ -11,6 +11,7 @@ No API key or AI is involved: the edition is built from verbatim abstract excerp
 """
 import argparse
 import json
+import os
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -30,6 +31,27 @@ def save_json(path, obj):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+PLACEHOLDER_MARK = "first edition appears"
+
+
+def say(msg, level="notice"):
+    """Print a status line; inside GitHub Actions also make it a visible annotation and a run-summary entry."""
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        print(f"::{level}::{msg}")
+        summary = os.environ.get("GITHUB_STEP_SUMMARY")
+        if summary:
+            with open(summary, "a", encoding="utf-8") as f:
+                f.write(f"- **{level}**: {msg}\n")
+    else:
+        print(msg)
+
+
+def is_placeholder(path):
+    """True if the front page does not exist yet or is still the 'first edition appears...' placeholder."""
+    path = Path(path)
+    return (not path.exists()) or PLACEHOLDER_MARK in path.read_text(encoding="utf-8", errors="ignore")
 
 
 def write_pages(docs, cfg, digest, date, latest, root=None):
@@ -53,6 +75,7 @@ def write_pages(docs, cfg, digest, date, latest, root=None):
 
 
 def write_archive_index(docs, cfg, editions):
+    (docs / "archive").mkdir(parents=True, exist_ok=True)
     (docs / "archive" / "index.html").write_text(render.build_archive(cfg["title"], editions), encoding="utf-8")
 
 
@@ -88,19 +111,28 @@ def main():
             if d:
                 write_pages(docs, cfg, d, ed["date"], latest=(i == len(eds) - 1), root=root_index)
         write_archive_index(docs, cfg, eds)
-        print(f"re-rendered {len(eds)} editions")
+        if eds:
+            say(f"re-rendered {len(eds)} editions")
+        else:
+            say("nothing to re-render: no editions are saved yet (run without 'rerender' to create the first one)", "warning")
         return 0
+
+    # Saved editions are trusted only while their pages still exist (they may have been deleted by hand), and
+    # while the front page is still the placeholder nothing counts as already covered: a fresh start.
+    state["editions"] = [e for e in state["editions"] if (docs / "archive" / f"{e['date']}.html").exists()]
+    cold_start = is_placeholder(docs / "index.html")
 
     if not (args.force or args.papers_file):
         if args.not_before_hour is not None and now.hour < args.not_before_hour:
-            print(f"it is {now:%H:%M} in {cfg['timezone']}, before {args.not_before_hour}:00; skipping this trigger")
+            say(f"it is {now:%H:%M} in {cfg['timezone']}, before {args.not_before_hour}:00; skipping this trigger")
             return 0
         if any(e["date"] == today for e in state["editions"]):
-            print(f"edition for {today} already exists; nothing to do")
+            say(f"edition for {today} already exists; nothing to do")
             return 0
 
     others = [e for e in state["editions"] if e["date"] != today]
-    covered = {i for e in others[-14:] for i in e.get("ids", [])}
+    # --force means "rebuild from the current announcement, whatever was shown before"
+    covered = set() if (args.force or cold_start) else {i for e in others[-14:] for i in e.get("ids", [])}
 
     if args.papers_file:
         raw = load_json(args.papers_file, [])
@@ -119,7 +151,9 @@ def main():
             print(f"warning: {meta['possibly_truncated']} may have hit max_per_category; consider raising it")
     fresh = [p for p in papers if p["id"] not in covered]
     if len(fresh) < cfg["min_new_papers"]:
-        print(f"only {len(fresh)} papers not already covered (minimum {cfg['min_new_papers']}); keeping the current edition")
+        say(f"only {len(fresh)} papers in this announcement are not already covered (minimum {cfg['min_new_papers']}), "
+            f"so the current edition was kept and index.html did not change. This is normal on weekends; "
+            f"run with 'force' to rebuild anyway.", "warning")
         return 0
 
     digest = extractive.make_digest(fresh, cfg)
@@ -147,7 +181,7 @@ def main():
     write_pages(docs, cfg, digest, today, latest=True, root=root_index)
     write_archive_index(docs, cfg, editions)
     save_json(data / "state.json", {"editions": editions})
-    print(f"edition {today}: {n_stories} items from {len(fresh)} papers; lead: {digest['lead']['headline']}")
+    say(f"edition {today} written: {n_stories} items from {len(fresh)} papers; lead: {digest['lead']['headline']}")
     return 0
 
 

@@ -216,7 +216,7 @@ def test_pipeline():
         assert (t / "root" / ".nojekyll").exists()
         before = html
         rc, out = call(*base, "--now", "2026-10-23T11:30"); print(" ", out)
-        assert "keeping the current edition" in out and (t / "docs" / "index.html").read_text() == before
+        assert "current edition was kept" in out and (t / "docs" / "index.html").read_text() == before
         newp = fixture()
         for p in newp: p["id"] = "2611" + p["id"][4:]
         pf.write_text(json.dumps(newp))
@@ -293,5 +293,35 @@ def test_fetch_window_and_crosslists():
     print("fetch window/cross-list filtering ok")
 
 
+def test_force_and_fresh_start():
+    place = "<html><body>The first edition appears after the workflow runs for the first time.</body></html>"
+    with tempfile.TemporaryDirectory() as t:
+        t = Path(t); docs, data, pf = t / "docs", t / "data", t / "p.json"
+        pf.write_text(json.dumps(fixture()))
+        g = ["--papers-file", str(pf), "--docs-dir", str(docs), "--data-dir", str(data)]
+        call(*g, "--now", "2026-10-23T11:00")
+        assert "No. 1" in (docs / "index.html").read_text()
+        # the same papers again are not news: the edition is kept (normal weekend behaviour)...
+        assert "current edition was kept" in call(*g, "--now", "2026-10-24T11:00")[1]
+        assert "Friday, October 23" in (docs / "index.html").read_text()
+        # ...but FORCE rebuilds from them anyway, so running the workflow with force always changes the page
+        out = call(*g, "--force", "--now", "2026-10-24T11:00")[1]
+        assert "written" in out and "Saturday, October 24" in (docs / "index.html").read_text(), out
+        # leftover state + placeholder front page (e.g. after a manual reset) is a fresh start, even without force
+        (docs / "index.html").write_text(place)
+        out = call(*g, "--now", "2026-10-25T11:00")[1]
+        assert "written" in out and "first edition appears" not in (docs / "index.html").read_text(), out
+        # saved editions whose pages were deleted are forgotten instead of blocking the next run
+        import shutil; shutil.rmtree(docs)
+        out = call(*g, "--now", "2026-10-26T11:00")[1]
+        st = json.loads((data / "state.json").read_text())["editions"]
+        assert "written" in out and len(st) == 1 and "No. 1" in (docs / "index.html").read_text(), (out, st)
+        # rerender with nothing saved says so instead of silently doing nothing
+        with tempfile.TemporaryDirectory() as t2:
+            r = call("--rerender", "--docs-dir", str(Path(t2) / "d"), "--data-dir", str(Path(t2) / "x"))[1]
+            assert "nothing to re-render" in r, r
+    print("force / fresh start ok")
+
+
 if __name__ == "__main__":
-    test_split(); test_authors(); test_ranking_and_digest(); test_author_scores_rank_papers(); test_nothing_dropped(); test_render_light_and_layout(); test_pipeline(); test_announcement_window(); test_fetch_window_and_crosslists(); print("ALL PASSED")
+    test_split(); test_authors(); test_ranking_and_digest(); test_author_scores_rank_papers(); test_nothing_dropped(); test_render_light_and_layout(); test_pipeline(); test_announcement_window(); test_fetch_window_and_crosslists(); test_force_and_fresh_start(); print("ALL PASSED")

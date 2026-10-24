@@ -35,6 +35,7 @@ jobs:
           cache: pip
       - run: pip install -r requirements.txt
       - name: Generate edition
+        shell: bash
         env:
           EVENT: ${{ github.event_name }}
           FORCE: ${{ inputs.force }}
@@ -50,6 +51,7 @@ jobs:
             python -m gazette.run --not-before-hour 11
           fi
       - name: Commit changes
+        shell: bash
         run: |
           git config user.name "gazette-bot"
           git config user.email "gazette-bot@users.noreply.github.com"
@@ -58,5 +60,5 @@ jobs:
             echo "nothing to commit"
           else
             git commit -m "Edition $(date -u +%F)"
-            git push
+            git push || { git pull --rebase && git push; }
           fi
