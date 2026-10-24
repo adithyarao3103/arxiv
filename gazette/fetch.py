@@ -8,9 +8,12 @@ import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 
 API = "https://export.arxiv.org/api/query"
+US_EASTERN = ZoneInfo("America/New_York")
+_ANNOUNCE_WEEKDAYS = {6, 0, 1, 2, 3}  # arXiv announces Sunday to Thursday at 20:00 ET
 NS = {"a": "http://www.w3.org/2005/Atom", "x": "http://arxiv.org/schemas/atom"}
 
 
@@ -72,8 +75,35 @@ def classify(papers, cats, cross_from, keep_other=False):
     return papers
 
 
-def fetch_papers(categories, cross_from=(), keep_other=False, max_per_category=200, window_hours=48):
-    """Return (papers, meta). Raises RuntimeError if nothing could be fetched."""
+def _cutoff(day):
+    """End of the submission window announced on `day`: 14:00 ET that day (Friday 14:00 ET for Sunday's)."""
+    d = day - timedelta(days=2) if day.weekday() == 6 else day
+    return datetime(d.year, d.month, d.day, 14, 0, tzinfo=US_EASTERN)
+
+
+def announcement_window(now=None):
+    """The submission window of the latest arXiv announcement made before `now`.
+
+    arXiv announces new papers Sun-Thu at 20:00 ET; each announcement contains what was submitted between the
+    previous 14:00 ET cutoff and this one (Monday's announcement therefore covers the whole weekend).
+    Returns (start, end, announcement_date) with start/end as UTC datetimes.
+    """
+    now = (now or datetime.now(timezone.utc)).astimezone(US_EASTERN)
+    day = now.date()
+    while not (day.weekday() in _ANNOUNCE_WEEKDAYS and now >= datetime(day.year, day.month, day.day, 20, 15, tzinfo=US_EASTERN)):
+        day -= timedelta(days=1)
+    prev = day - timedelta(days=1)
+    while prev.weekday() not in _ANNOUNCE_WEEKDAYS:
+        prev -= timedelta(days=1)
+    return _cutoff(prev).astimezone(timezone.utc), _cutoff(day).astimezone(timezone.utc), day
+
+
+def fetch_papers(categories, cross_from=(), keep_other=False, max_per_category=200, window_hours=48, window=None):
+    """Return (papers, meta). Raises RuntimeError if nothing could be fetched.
+
+    `window=(start, end)` (UTC datetimes, see announcement_window) keeps exactly the papers first submitted in
+    that interval; without it the last `window_hours` before the newest paper are kept (older behaviour).
+    """
     seen, found, truncated_at = set(), [], {}
     for i, cat in enumerate(categories):
         if i:
@@ -91,9 +121,13 @@ def fetch_papers(categories, cross_from=(), keep_other=False, max_per_category=2
                 found.append(p)
     if not found:
         raise RuntimeError("arXiv returned no papers")
-    newest = max(_ts(p["published"]) for p in found)
-    cutoff = newest - timedelta(hours=window_hours)
-    papers = [p for p in found if _ts(p["published"]) >= cutoff]
+    if window:
+        cutoff, newest = window
+        papers = [p for p in found if cutoff < _ts(p["published"]) <= newest]
+    else:
+        newest = max(_ts(p["published"]) for p in found)
+        cutoff = newest - timedelta(hours=window_hours)
+        papers = [p for p in found if _ts(p["published"]) >= cutoff]
     in_window = len(papers)
     papers = classify(papers, list(categories), list(cross_from), keep_other)
     meta = {

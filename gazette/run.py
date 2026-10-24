@@ -106,9 +106,15 @@ def main():
         raw = load_json(args.papers_file, [])
         papers, meta = (raw["papers"] if isinstance(raw, dict) else raw), {}
     else:
+        window = None
+        if cfg.get("window_mode", "announcement") == "announcement":
+            start, end, announced = fetch.announcement_window(now)
+            window = (start, end)
+            print(f"latest arXiv announcement: {announced:%A %d %B} 20:00 ET; submissions "
+                  f"{start:%a %d %b %H:%M} to {end:%a %d %b %H:%M} UTC")
         papers, meta = fetch.fetch_papers(
             cfg["categories"], cfg.get("cross_from", []), cfg.get("include_other_crosslists", False),
-            cfg["max_per_category"], cfg["window_hours"])
+            cfg["max_per_category"], cfg["window_hours"], window=window)
         if meta["possibly_truncated"]:
             print(f"warning: {meta['possibly_truncated']} may have hit max_per_category; consider raising it")
     fresh = [p for p in papers if p["id"] not in covered]

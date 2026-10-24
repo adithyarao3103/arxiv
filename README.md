@@ -23,6 +23,8 @@ GitHub cron is UTC and ignores daylight saving, so the workflow has two triggers
 
 arXiv announces new papers Sunday to Thursday evenings (US Eastern), so there is no new batch for Saturday or Sunday morning. On those days nothing new is found and the previous edition stays up. Papers shown in an earlier edition are never repeated.
 
+**What counts as "today".** An edition contains exactly one arXiv announcement (`window_mode: "announcement"`): the papers first submitted between the previous and the latest 14:00 ET cutoff, i.e. what arXiv announced at 20:00 ET (Sunday to Thursday). The script works this out itself (including US daylight saving), so there is no hour count to tune. Two consequences: Monday evening's announcement covers the whole weekend, so the Tuesday-morning edition is legitimately about three days of submissions (arXiv's own "new" page does the same); every other day it is about one. Set `window_mode` to `"hours"` to get the old behaviour (everything within `window_hours` of the newest paper).
+
 ## How the "editor" works (no AI)
 
 Every word on the page is either a paper's title or a **verbatim excerpt of the authors' abstract** (whole leading sentences). Nothing is paraphrased, so nothing can be misreported. What the code decides is *which* papers go where.
@@ -40,7 +42,7 @@ Within the same author score, each paper gets a score from these signals (weight
 
 **Author scores (ranking).** `gazette/hep_th_authors.txt` is a fixed list of well-known hep-th authors, one `Given Family | score` per line (score 1-10; 10 = field-defining, 8 = leading senior researchers, 6 = very well known, 4 = established, which is also the default when no score is given). The scores are a subjective, hand-made judgement: edit freely, or add names under `extra_prominent_authors` in `config.json` (also as `"Given Family | score"`). A paper's rank comes from its **single most prominent listed author**: scores are never added up, so one score-10 author outranks any number of score-8 authors. Papers are ordered by that best-author score first; papers with the same best-author score (and papers with no listed author) are ordered by the simple signals in the table below, then newest first. The page itself never mentions scores or ranking. Names match on family name plus given name, ignoring accents and hyphens; a bare initial ("E. Witten") matches too, except for very common family names ("Y. Wang"), which need the full given name.
 
-**No paper is dropped.** The ranked list is split by position: the lead, a few features, a set of section stories (with abstract excerpts), and then *every remaining paper* as an In Brief entry (title, first sentence of the abstract, authors, link), grouped by topic. `size.briefs` no longer exists; only `features`, `section_stories` and `secondary_stories` limit the longer entries. Cross-lists from other fields are included (`include_other_crosslists: true`) under "Across the Border". The code asserts that every fetched paper appears exactly once. `max_per_category` is 600 so a busy two-day window is not cut off; the run warns if it ever is.
+**No paper is dropped.** The ranked list is split by position: the lead, a few features, a set of section stories (with abstract excerpts), and then *every remaining paper* as an In Brief entry (title, first sentence of the abstract, authors, link), grouped by topic. `size.briefs` no longer exists; only `features`, `section_stories` and `secondary_stories` limit the longer entries. Only two kinds of paper are included: hep-th primary papers and gr-qc papers cross-listed into hep-th (`include_other_crosslists: false`; the latter appear under "Across the Border"). The code asserts that every fetched paper appears exactly once. `max_per_category` is 600, far more than one batch needs; the run warns if it ever hits the cap before reaching the start of the window.
 
 The top-ranked **primary** paper leads, the next ones become features and section stories, and the rest become briefs. Sections are chosen by keyword matching (`sections` in config.json). Papers from `cross_from` categories form a separate "Across the Border" section and never lead. The footer notes that the text is verbatim from the abstracts and not peer reviewed.
 
@@ -52,7 +54,8 @@ The top-ranked **primary** paper leads, the next ones become features and sectio
 |---|---|
 | `categories` | arXiv categories to cover, e.g. `["hep-th"]` or `["cs.AI","cs.LG"]` |
 | `cross_from` | papers with these *primary* categories that are cross-listed into `categories` form the secondary section. Use `[]` to disable it |
-| `include_other_crosslists` | keep cross-lists from other fields as well (hep-ph, math-ph, ...) |
+| `include_other_crosslists` | keep cross-lists from other fields as well (hep-ph, math-ph, ...). Default `false` |
+| `window_mode` | `"announcement"` (default: exactly one arXiv announcement) or `"hours"` (everything within `window_hours` of the newest paper) |
 | `sections` | list of `{"name", "keywords"}`; a paper goes to the section whose keywords match most (title counts double). Remove the key to group by arXiv category instead |
 | `size` | how many features, section stories and secondary stories get a longer entry; everything else becomes a brief |
 | `timezone` | used for the edition date and the 11:00 rule |

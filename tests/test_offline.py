@@ -234,5 +234,64 @@ def test_pipeline():
     print("pipeline ok")
 
 
+# ---------------------------------------------------------------- announcement window / fetch filtering
+def test_announcement_window():
+    from datetime import datetime, timezone
+    from zoneinfo import ZoneInfo
+    from gazette import fetch
+    AMS = ZoneInfo("Europe/Amsterdam")
+    def win(t):
+        a, b, d = fetch.announcement_window(datetime.fromisoformat(t).replace(tzinfo=AMS))
+        return a.strftime("%a %H:%M"), b.strftime("%a %H:%M"), (b - a).total_seconds() / 3600, d.strftime("%a")
+    assert win("2026-10-23T11:00") == ("Wed 18:00", "Thu 18:00", 24, "Thu"), win("2026-10-23T11:00")
+    assert win("2026-10-24T11:00")[2:] == (24, "Thu") and win("2026-10-25T11:00")[3] == "Thu", "weekend mornings reuse Thursday's batch"
+    assert win("2026-10-26T11:00") == ("Thu 18:00", "Fri 18:00", 24, "Sun"), win("2026-10-26T11:00")
+    assert win("2026-10-27T11:00")[2:] == (72, "Mon"), "Monday's announcement covers the weekend (arXiv does the same)"
+    assert win("2026-11-04T11:00")[:2] == ("Mon 19:00", "Tue 19:00"), "after US daylight saving ends, 14:00 ET is 19:00 UTC"
+    print("announcement window ok")
+
+
+ATOM = """<feed xmlns="http://www.w3.org/2005/Atom" xmlns:arxiv="http://arxiv.org/schemas/atom">{}</feed>"""
+ENTRY = """<entry><id>http://arxiv.org/abs/{id}v1</id><published>{pub}</published><updated>{pub}</updated>
+<title>{id} title</title><summary>An abstract.</summary><author><name>A B</name></author>
+<arxiv:primary_category term="{prim}"/>{cats}</entry>"""
+
+
+def test_fetch_window_and_crosslists():
+    from datetime import datetime, timezone
+    from gazette import fetch
+    def e(i, pub, prim, *extra):
+        cats = "".join(f'<category term="{c}"/>' for c in (prim,) + extra)
+        return ENTRY.format(id=f"2610.{i:05d}", pub=pub, prim=prim, cats=cats)
+    entries = [
+        e(1, "2026-10-22T17:00:00Z", "hep-th"),                       # in the Thursday batch
+        e(2, "2026-10-22T17:59:58Z", "hep-th", "math-ph"),            # in (hep-th primary, cross-listed elsewhere)
+        e(3, "2026-10-22T10:00:00Z", "gr-qc", "hep-th"),              # in: gr-qc cross-list
+        e(4, "2026-10-22T10:30:00Z", "hep-ph", "hep-th"),             # in the window but an unwanted cross-list
+        e(5, "2026-10-22T18:00:01Z", "hep-th"),                       # after the cutoff -> next batch
+        e(6, "2026-10-21T17:59:00Z", "hep-th"),                       # before the window -> previous batch
+        e(7, "2026-10-20T12:00:00Z", "hep-th"),                       # two days earlier
+    ]
+    xml = ATOM.format("".join(entries)).encode()
+    orig = fetch._get
+    fetch._get = lambda url, retries=4: xml
+    try:
+        win = (datetime(2026, 10, 21, 18, 0, tzinfo=timezone.utc), datetime(2026, 10, 22, 18, 0, tzinfo=timezone.utc))
+        papers, meta = fetch.fetch_papers(["hep-th"], ["gr-qc"], False, 600, 48, window=win)
+        got = {p["id"][-1]: p["tier"] for p in papers}
+        assert got == {"1": "primary", "2": "primary", "3": "secondary"}, got
+        assert meta["dropped_crosslists"] == 1 and meta["possibly_truncated"] == []
+        papers, _ = fetch.fetch_papers(["hep-th"], ["gr-qc"], True, 600, 48, window=win)
+        assert {p["id"][-1] for p in papers} == {"1", "2", "3", "4"}, "include_other_crosslists keeps hep-ph"
+        # old behaviour (no window) is still available and shows why 48h was too wide: it pulls in several days
+        papers, _ = fetch.fetch_papers(["hep-th"], ["gr-qc"], False, 600, 48)
+        assert {"5", "6"} <= {p["id"][-1] for p in papers}
+        # config: other cross-lists are off
+        assert CFG["include_other_crosslists"] is False and CFG["window_mode"] == "announcement"
+    finally:
+        fetch._get = orig
+    print("fetch window/cross-list filtering ok")
+
+
 if __name__ == "__main__":
-    test_split(); test_authors(); test_ranking_and_digest(); test_author_scores_rank_papers(); test_nothing_dropped(); test_render_light_and_layout(); test_pipeline(); print("ALL PASSED")
+    test_split(); test_authors(); test_ranking_and_digest(); test_author_scores_rank_papers(); test_nothing_dropped(); test_render_light_and_layout(); test_pipeline(); test_announcement_window(); test_fetch_window_and_crosslists(); print("ALL PASSED")

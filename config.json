@@ -7,7 +7,7 @@
   "cross_from": [
     "gr-qc"
   ],
-  "include_other_crosslists": true,
+  "include_other_crosslists": false,
   "timezone": "Europe/Amsterdam",
   "max_per_category": 600,
   "window_hours": 48,
@@ -79,5 +79,6 @@
         "hawking"
       ]
     }
-  ]
+  ],
+  "window_mode": "announcement"
 }
