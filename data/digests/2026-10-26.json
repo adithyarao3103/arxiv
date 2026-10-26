@@ -1,0 +1,214 @@
+{
+ "lead": {
+  "headline": "Non-singlets and the phase diagram of Matrix Quantum Mechanics",
+  "body": [
+   "The quantum mechanics of one $N\\times N$ Hermitian matrix in the infinite $N$ limit is well known to define a two-dimensional string theory when the quartic coupling constant $g$ is tuned to a special negative value $g_*$. We study the thermodynamics of this Matrix Quantum Mechanics (MQM), treating the SU$(N)$ symmetry as a global symmetry.",
+   "Crucially, the non-singlets, i.e. states in non-trivial representations of SU$(N)$, implement the effects of vortices on the discretized worldsheets. This random lattice model has the low-temperature $c=1$ and high-temperature $c=0$ phases, with the Berezinskii-Kosterlitz-Thouless (BKT) transition separating them.",
+   "We map out the phase diagram in the coupling--temperature plane, which is separated by the critical stability curve $T_c(g)$ extending from $g_*< g <0$."
+  ],
+  "authors": "Igor R. Klebanov et al.",
+  "arxiv_id": "2610.32856",
+  "kicker": "Lead Story · hep-th",
+  "deck": "96 pages + references"
+ },
+ "features": [
+  {
+   "headline": "Fermions Scattering Off Non-Abelian Rotors",
+   "body": [
+    "We study the dynamics of $d=1+1$ chiral fermions interacting with a rotor impurity. The rotors are non-Abelian, taking values in either an $SU(N)$ group manifold, or an $SU(N)/SO(N)$ coset.",
+    "At low energies, the fermions pass through the impurity, seemingly unimpeded, but trailing a topological line that is necessary for current conservation. In certain cases, these topological lines exhibit non-Abelian fusion and braiding."
+   ],
+   "authors": "George Koundouros and David Tong",
+   "arxiv_id": "2610.31780",
+   "kicker": "Strings, Amplitudes & Supergravity · hep-th"
+  },
+  {
+   "headline": "Shear viscosity from complex light-cone expansion",
+   "body": [
+    "Near thermal equilibrium, the transverse momentum density in a fluid diffuses according to $ω(k) \\sim - i {\\cal D} k^2$ at small $k$, where the diffusion coefficient ${\\cal D}$ is proportional to the shear viscosity. In field theories with a holographic dual description in terms of classical gravity, the shear-mode frequency $ω(k)$ approaches the light cone at large imaginary wave vector.",
+    "We develop a WKB approach to study this limit."
+   ],
+   "authors": "Inês Aniceto et al.",
+   "arxiv_id": "2610.32892",
+   "kicker": "Holography & Gauge/Gravity · hep-th"
+  },
+  {
+   "headline": "Defects in Topological Symmetric Orbifolds and their String Dual",
+   "body": [
+    "We review defect topological field theories with finite gauge groups. We then concentrate on restriction and induction defects between symmetric orbifold theories and recall that the defects form an algebra.",
+    "This requires identifying the features of restriction and induction defects that are independent of the order of the symmetric group, which is natural in a grand canonical framework. The construction leads to Khovanov's categorification of the Heisenberg algebra."
+   ],
+   "authors": "Jan Troost",
+   "arxiv_id": "2610.32654",
+   "kicker": "Field Theory & Symmetry · hep-th"
+  }
+ ],
+ "sections": [
+  {
+   "name": "Also in hep-th",
+   "stories": [
+    {
+     "headline": "Gauge conditions in the perturbative quantization of quadratic gravity and its quantum Lagrangian",
+     "body": [
+      "In the perturbative formulation of the Hamiltonian of quadratic gravity, a specific gauge condition is required to hold the equivalence of the Hamiltonian equations of motion with the covariant field equations. Here we give robust evidence that this is an effect of perturbations, the exact nonperturbative equations of both formulations are equivalent, with no need of specific gauge conditions."
+     ],
+     "authors": "Jorge Bellorin et al.",
+     "arxiv_id": "2610.31839"
+    },
+    {
+     "headline": "Discontinuity at the Pole",
+     "body": [
+      "The exchange of a particle whose mass is taken to zero need not reproduce the exchange of a particle that is strictly massless from the outset. We derive a general on-shell diagnostic of the well-known discontinuity between the exchange of a massless particle and the massless limit of a massive-particle exchange, valid for a mediator of arbitrary integer spin S."
+     ],
+     "authors": "Dominik Haslehner et al.",
+     "arxiv_id": "2610.31759"
+    }
+   ]
+  },
+  {
+   "name": "Gravity & Cosmology",
+   "stories": [
+    {
+     "headline": "Gauge-field energy density in inflationary kinetic-coupling models: QFT regularization versus horizon cutoffs",
+     "body": [
+      "Coupling gauge fields to the inflaton can amplify their quantum fluctuations during inflation, with potential applications to a range of cosmological phenomena. A central challenge is to define finite and physically meaningful observables, such as the gauge-field energy density."
+     ],
+     "authors": "A. O. Naidenko et al.",
+     "arxiv_id": "2610.32599"
+    },
+    {
+     "headline": "Generalized Thermodynamics and Phase Transitions of Vaidya-adS Black Holes",
+     "body": [
+      "This work investigates the thermodynamics of non-stationary anti-de Sitter (adS) black holes and their gauge-gravity duals. To model a non-equilibrium process, we employ a time-dependent Vaidya-adS metric to describe the collapse of a null fluid and the subsequent thermalization of the dual field theory."
+     ],
+     "authors": "A. F. Cardona and C. Molina",
+     "arxiv_id": "2610.31760"
+    }
+   ]
+  },
+  {
+   "name": "Field Theory & Symmetry",
+   "stories": [
+    {
+     "headline": "Can Spontaneous Time-Translation Symmetry Breaking Be Quantized Without Explicit Branches?",
+     "body": [
+      "Can classically branched dynamics associated with spontaneous time-translation-symmetry breaking be quantized without explicitly retaining the branches of the Hamiltonian? We investigate this question using a reduced phase space. formulation in which the Hamiltonian is single-valued, while the critical structure of the classical Legendre map is encoded in a singular, momentum-dependent symplectic geometry."
+     ],
+     "authors": "Partha Nandi",
+     "arxiv_id": "2610.32030"
+    }
+   ]
+  },
+  {
+   "name": "Holography & Gauge/Gravity",
+   "stories": [
+    {
+     "headline": "Melonic ladder holography with a single free bulk field in AdS$_{d+1}$",
+     "body": [
+      "We derive a cylinder from the pair Casimir of a CFT$_d$: at zero centre momentum it depends only on relative dilations and rotations. Relative-coordinate radial quantisation then encodes exchanged family labels as cylinder energies.",
+      "For a melonic CFT$_d$ in the normalisable and stable range, the reduced ladder sum is the Robin boundary-to-boundary propagator of a single free scalar field in rigid AdS$_{d+1}$, with the cylinder as its conformal boundary."
+     ],
+     "authors": "Kok Hong Thong",
+     "arxiv_id": "2610.31989"
+    },
+    {
+     "headline": "Universal and nonuniversal pole-skipping points",
+     "body": [
+      "We study the pole-skipping phenomenon for a holographic superfluid/superconductor near the critical point using dual analytic Green's functions (arXiv:2605.20415 [hep-th]). (1) There is a hydrodynamic pole-skipping point that is common to all Green's functions: this point was obtained from the near-horizon analysis previously."
+     ],
+     "authors": "Makoto Natsuume",
+     "arxiv_id": "2610.31752"
+    }
+   ]
+  },
+  {
+   "name": "Strings, Amplitudes & Supergravity",
+   "stories": [
+    {
+     "headline": "All-multiplicity $\\textrm{AdS}_4$ correlators in the self-dual sector",
+     "body": [
+      "It was recently shown that tree-level gluon correlators of any multiplicity in $\\textrm{AdS}_4$ admit an expansion in terms of flat-space scattering amplitudes, where lower-point amplitudes in the expansion depend on merged external data. We derive here analogous formulae for correlators of scalar theories which encode the self-dual sectors of Yang-Mills theory and gravity in this background."
+     ],
+     "authors": "Humberto Gomez et al.",
+     "arxiv_id": "2610.32957"
+    }
+   ]
+  },
+  {
+   "name": "Across the Border",
+   "note": "Papers whose primary category is not hep-th (mostly gr-qc), cross-listed into it",
+   "stories": [
+    {
+     "headline": "First-Order Structure of the Linearised Einstein Equations: Constant-Curvature Backgrounds",
+     "body": [
+      "Teukolsky's decoupled equations and Wald's adjoint method of metric reconstruction are built from second-order operators: the linearised Einstein operator G, the curvature-extraction operator T, the decoupled operator O and the reconstruction operator S^*, related by SG=OT."
+     ],
+     "authors": "Kirill Krasnov and Adam Shaw",
+     "arxiv_id": "2610.32692"
+    },
+    {
+     "headline": "Stochastic dynamics of cosmological inflation in general relativity",
+     "body": [
+      "The theory of Inflation, supplemented by fluctuations of the quantum vacuum, is the leading paradigm to explain the correlations of inhomogeneities at very large distances in the Universe. Particle physics methods fail when strong non-linearity and non-perturbativity are involved, leaving a whole landscape of untestable scenarios of inflation."
+     ],
+     "authors": "Yoann L. Launay",
+     "arxiv_id": "2610.32592"
+    },
+    {
+     "headline": "Entanglement entropy of evolving wormholes",
+     "body": [
+      "We compute the entanglement entropy of a discretized scalar field in the fixed spacetime background of an evolving wormhole. Evolving wormholes are a class of time dependent and spherically symmetric wormhole geometries.",
+      "In both expanding and contracting models, we find dynamically generated entanglement."
+     ],
+     "authors": "Ben Kain and Hong Y. Ling",
+     "arxiv_id": "2610.32675"
+    }
+   ]
+  }
+ ],
+ "briefs": [
+  {
+   "headline": "Minkowski metric signature as a statistical prediction of piecewise-flat quantum gravity",
+   "text": "We study an ab initio calculation of the signature of the spacetime metric, within the framework of piecewise-flat models of quantum gravity. (primary category gr-qc)",
+   "arxiv_id": "2610.31776",
+   "authors": "Mihailo Djordjevic et al.",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "All Order Self-Dual Correlators From Symmetries",
+   "text": "We consider the scalar actions for self-dual Yang-Mills and self-dual gravity.",
+   "arxiv_id": "2610.32956",
+   "authors": "Chandramouli Chowdhury and Silvia Nagy",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Towards ${\\cal N}=8$ Supergravity in ${\\cal N}=1$ Superspace",
+   "text": "We study the possibility of constructing maximally supersymmetric supergravity in ${\\cal N}=1$ superspace.",
+   "arxiv_id": "2610.31953",
+   "authors": "Arvind Rajaraman",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Phase transitions of a cubic Casimir matrix model on the fuzzy sphere",
+   "text": "In this work, we analyse the phase transitions of a higher derivative matrix model on the fuzzy space, where the kinetic term is a cubic polynomial on the Casimir invariant.",
+   "arxiv_id": "2610.32552",
+   "authors": "Edgar Guzmán-González et al.",
+   "section": "Also in hep-th"
+  }
+ ],
+ "footer": "Text is excerpted verbatim from the authors’ abstracts as posted on arXiv and has not been peer reviewed. Follow the links for the full papers.",
+ "title": "The arXiv Gazette",
+ "tagline": "All the preprints fit to print",
+ "date": "Monday, October 26, 2026",
+ "edition": "No. 2 · Morning Edition",
+ "categories": [
+  "hep-th",
+  "gr-qc (cross-lists)"
+ ],
+ "stats": {
+  "Papers scanned": "19",
+  "hep-th primary": "15",
+  "gr-qc cross-lists": "4",
+  "Papers covered": "19"
+ }
+}
