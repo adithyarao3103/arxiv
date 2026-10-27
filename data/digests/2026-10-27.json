@@ -1,0 +1,301 @@
+{
+ "lead": {
+  "headline": "Lifshitz Phase of Quantum Gravity: The Infrared Fixed Point of the (2+1)D Unimodular Hořava-Chern-Simons Model",
+  "body": [
+   "We consider a nonrelativistic gravity theory in (2+1) dimensions with $w_\\infty$ gauge symmetry that we call unimodular Hořava-Chern-Simons gravity. The theory has three dimensionless couplings, one of which is the Chern-Simons level $κ$.",
+   "At large $|κ|$, the theory flows from an asymptotically free UV fixed point to an IR fixed point with anisotropic scale invariance characterized by a dynamical critical exponent $z=2-\\tfrac32|κ|^{-1}$. We speculate that unimodular Hořava-Chern-Simons gravity undergoes a phase transition from this scale-invariant phase to a confining phase when $κ$ drops below a critical value."
+  ],
+  "authors": "Maxim Zelenko and Dam Thanh Son",
+  "arxiv_id": "2610.34024",
+  "kicker": "Lead Story · hep-th",
+  "deck": "5 pages; Mathematica notebooks included as ancillary files"
+ },
+ "features": [
+  {
+   "headline": "Exact lattice bosonization of the double-scaled $c=1$ matrix model",
+   "body": [
+    "In a recent paper by two of us, it has been shown that entanglement entropy (EE) of matrix quantum mechanics (or, equivalently, of a non-relativistic fermion model) has a natural interpretation in terms of an exact bosonization of the fermion theory in terms of a lattice boson with lattice spacing $\\sim 1/N$ (where $N$ is the rank of the matrix, equal to the number of fermions). The theory of this lattice boson is distinct from a latticized version of the \"collective variable'' theory which is formulated in terms of the fermion density $ρ(λ)$ (\"collective variable''); it is, in fact, more closely related to the Wigner distribution of the fermions."
+   ],
+   "authors": "Adwait Gaikwad et al.",
+   "arxiv_id": "2610.34376",
+   "kicker": "Field Theory & Symmetry · hep-th"
+  },
+  {
+   "headline": "Holographic entropy inequalities & typical states",
+   "body": [
+    "As a consequence of the Ryu-Takayanagi formula, static semiclassical states in AdS quantum gravity share a set of special properties expressible as linear inequalities on their entanglement entropies. How general are these properties?",
+    "Do they still hold when we move away from the regime of validity of RT, i.e. static states in classical Einstein gravity? Do they perhaps hold even for some class of non-holographic states?"
+   ],
+   "authors": "Guglielmo Grimaldi and Matthew Headrick",
+   "arxiv_id": "2610.33905",
+   "kicker": "Holography & Gauge/Gravity · hep-th"
+  },
+  {
+   "headline": "On memory effects in odd spacetime dimensions",
+   "body": [
+    "We establish the existence of a new electromagnetic memory effect in all odd spacetime dimensions. This effect is a universal property of electromagnetic fields sourced by charged particles of constant momenta, appears at the Coulombic order and is directly related to the Weinberg soft theorem.",
+    "We provide a unified derivation of this effect in all higher dimensions by evaluating the Maxwell constraint on a null plane at large, finite distance."
+   ],
+   "authors": "Ana-Maria Raclariu and Binsong Xiong",
+   "arxiv_id": "2610.35283",
+   "kicker": "Gravity & Cosmology · hep-th"
+  }
+ ],
+ "sections": [
+  {
+   "name": "Field Theory & Symmetry",
+   "stories": [
+    {
+     "headline": "Construction of holomorphic SCFTs with minimal index",
+     "body": [
+      "It has been an open question whether there exist holomorphic VOAs with N=1 supersymmetry and Witten index 1 for any positive central charge c. The existence of such a theory with c=288 is closely related to the 576-periodicity of the TMF spectrum via the Segal-Stolz-Teichner conjecture."
+     ],
+     "authors": "Du Pei",
+     "arxiv_id": "2610.33165"
+    },
+    {
+     "headline": "Quantum Field Theory on the Tangent Bundle",
+     "body": [
+      "We develop a quantum-field-theoretical framework on the tangent bundle in which gravitational and internal gauge structures are associated with different sectors of an affine tangent-fiber geometry. The translational sector supplies the coframe and its relation to teleparallel gravity."
+     ],
+     "authors": "Joachim Herrmann",
+     "arxiv_id": "2610.35778"
+    },
+    {
+     "headline": "Perturbative Holonomy Potentials and Vacua in Chiral Supersymmetric Gauge Theories",
+     "body": [
+      "We establish global control of perturbative D-term data governing semiclassical vacuum sectors in chiral supersymmetric gauge theories on $\\mathbb{R}^3\\times S^1$. A closed-form, one-loop-exact D-term coefficient, including 4d Fayet--Iliopoulos (FI) parameters, gives a uniformly controlled leading potential away from massless thresholds and fixes local FI and Chern--Simons couplings near them."
+     ],
+     "authors": "Arash Arabi Ardehali",
+     "arxiv_id": "2610.34240"
+    }
+   ]
+  },
+  {
+   "name": "Also in hep-th",
+   "stories": [
+    {
+     "headline": "Compositional Operational Rank, Smooth Realizability, and Dimensional Reduction",
+     "body": [
+      "Higher-dimensional theories distinguish the dimensionality of a microscopic description from the number of directions accessible to a physical observer. Relating these notions requires not only dimensional reduction, but also a consistent preservation of operational independence across different levels of description."
+     ],
+     "authors": "Nikolay D. Tulupov and Alexander M. Tishin",
+     "arxiv_id": "2610.35764"
+    }
+   ]
+  },
+  {
+   "name": "Gravity & Cosmology",
+   "stories": [
+    {
+     "headline": "Relating Dark Dimension Size with Dark Energy via 5D Quintessence Potential and Casimir Energy",
+     "body": [
+      "We explore effective field theory (EFT) realizations of the dark dimension (DD) scenario in which the size of the DD is determined by the competition between a 5D quintessence potential and the Casimir energy. When only contributions from massless fields are considered, the Casimir energy does not have a typical energy scale, and the 4D dark energy (DE) scale is set by the height of the 5D quintessence potential."
+     ],
+     "authors": "Rashmikanta Mantry and Kazuyuki Furuuchi",
+     "arxiv_id": "2610.35124"
+    },
+    {
+     "headline": "Theory and Cosmology of Biverse Volume-Normalized Gravity",
+     "body": [
+      "This dissertation expounds the biverse volume-normalized gravity, a novel theoretical framework of classical and quantum gravity that provides an unusual solution to the cosmological constant problem, the 60-degree-of-magnitude discrepancy between the value of the vacuum energy density in our universe predicted by particle physics and that implied by cosmological data."
+     ],
+     "authors": "Siqing Yu",
+     "arxiv_id": "2610.35384"
+    }
+   ]
+  },
+  {
+   "name": "Strings, Amplitudes & Supergravity",
+   "stories": [
+    {
+     "headline": "Spin-Induced Coordinate Noncommutativity of the Covariant Centroid",
+     "body": [
+      "The Tulczyjew-Dixon centroid of a massive spinning particle, built as a composite of canonical Poincaré variables, carries the exact coordinate algebra $\\{X^μ,X^ν\\}=-S^{μν}/p^2$, whose noncommutativity bivector is the transverse spin tensor of the particle itself rather than an external background."
+     ],
+     "authors": "Daniel Guimaraes Tedesco and Luiz Paulo Colatto",
+     "arxiv_id": "2610.33236"
+    }
+   ]
+  },
+  {
+   "name": "Holography & Gauge/Gravity",
+   "stories": [
+    {
+     "headline": "Revisiting monodromy defects in $\\text{O}(N)$ conformal field theories",
+     "body": [
+      "Monodromy defects are fundamental objects in extended quantum systems with global symmetries. We study such defects in $\\text{O}(N)$ conformal field theories (CFT), which describe the universality class of $\\text{O}(N)$ spontaneous symmetry breaking transitions."
+     ],
+     "authors": "Jiechao Feng et al.",
+     "arxiv_id": "2610.33972"
+    }
+   ]
+  },
+  {
+   "name": "Across the Border",
+   "note": "Papers whose primary category is not hep-th (mostly gr-qc), cross-listed into it",
+   "stories": [
+    {
+     "headline": "From Specific Heat Bounds to Penrose-like Inequalities: A Unified Thermodynamic Perspective",
+     "body": [
+      "Under explicit and physically motivated assumptions, we identify a local-to-global thermodynamic mechanism that organizes several previously disconnected inequalities on black holes. We first focus on asymptotically flat, static, and spherically-symmetric black holes, and provide a unified thermodynamic perspective on various Penrose-like inequalities."
+     ],
+     "authors": "Kai-Peng Lu et al.",
+     "arxiv_id": "2610.35264"
+    },
+    {
+     "headline": "Exact spinning wormholes in five dimensions from Toda integrability",
+     "body": [
+      "We construct a new exact solution to the five-dimensional Einstein-phantom-scalar system that describes a rotating wormhole connecting two asymptotically flat regions. The solution represents a rotating generalization of the Ellis-Bronnikov wormhole with equal angular momenta."
+     ],
+     "authors": "Masato Nozawa",
+     "arxiv_id": "2610.34672"
+    },
+    {
+     "headline": "Decoupled asymmetric thin-shell wormholes",
+     "body": [
+      "We construct reflection-asymmetric thin-shell wormholes by joining a Schwarzschild exterior to its minimal geometric deformation, which shares the same mass and redshift function, so that the asymmetry is carried entirely by the gravitational-decoupling sector."
+     ],
+     "authors": "A. López-Hormazábal et al.",
+     "arxiv_id": "2610.35407"
+    }
+   ]
+  }
+ ],
+ "briefs": [
+  {
+   "headline": "Exact Stress Tensor Flows in Causal Electrodynamics: Courant-Hilbert Approach",
+   "text": "It has been shown that for theories whose Courant-Hilbert function depends on a single dimensionful coupling, the energy-momentum tensor is controlled by the two combinations $τ\\dot{\\ell}$ and $\\ell-τ\\dot{\\ell}$, so that the quadratic invariants $X=T_{μν}T^{μν}$ and $Y=(T^μ_μ)^2$ depend on a single auxiliary variable.",
+   "arxiv_id": "2610.33887",
+   "authors": "Zahra Pezhman et al.",
+   "section": "Also in hep-th"
+  },
+  {
+   "headline": "Fixed Points of the Yang-Mills Gradient Flow in the Vortex Sector",
+   "text": "We study the Yang-Mills gradient flow of center vortices in SU(2) gauge theory.",
+   "arxiv_id": "2610.33874",
+   "authors": "A. M. Silva",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Massive Scalar Quasinormal Modes and Quasibound States of Charged Black Holes with Logarithmic corrections",
+   "text": "We study how long-range deformations in a black-hole metric affect the oscillation, trapping, and decay of a neutral, minimally coupled massive scalar field. (primary category gr-qc)",
+   "arxiv_id": "2610.33883",
+   "authors": "Prosenjit Paul and Rickmoy Samanta",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "The topological vertex is finitely generated",
+   "text": "The topological vertex computes all genus amplitudes for the open topological A-model in $\\mathbb{C}^3$ with branes on three toric Lagrangians and, via gluing, both open and closed string amplitudes on any toric Calabi-Yau threefold.",
+   "arxiv_id": "2610.35719",
+   "authors": "Kunal Gupta and Pietro Longhi",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "The one-loop QCD scale anomaly on ADE orbifolds as an index",
+   "text": "We derive the one-loop scale anomaly of $\\SU(N)$ Yang--Mills on the orbifold $\\R^4/Γ$, with $Γ\\subset \\SU(2)$ a finite subgroup, from an equivariant index theorem on twistor space.",
+   "arxiv_id": "2610.35166",
+   "authors": "Herbie Warner",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Exact Stress Tensor Flows in Causal Electrodynamics: Auxiliary Field Formalism",
+   "text": "Causal self-dual nonlinear electrodynamics admits a simple auxiliary-field description: the Lagrangian is linear in the two Lorentz invariants of the field strength, and the dynamics is encoded in a potential $W(\\varphi)$ of a single auxiliary variable.",
+   "arxiv_id": "2610.35135",
+   "authors": "Zahra Pezhman et al.",
+   "section": "Also in hep-th"
+  },
+  {
+   "headline": "Graph-Based Algorithms for Worldline EFT Integrands",
+   "text": "We present novel graph-centered algorithms for the construction and representation of worldline effective field theory (WEFT) integrands that separate the topological and algebraic structure of loop integrands into independent graph-numerator pairs.",
+   "arxiv_id": "2610.35007",
+   "authors": "Gregor Kälin and Jungwon Lim",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Reparametrisation invariance, anomalies and pseudoscalar states in massless quantum electrodynamics",
+   "text": "In electrodynamics, and more generally in gauge theories, quantisation introduces an ambiguity whereby the vector current, the axial current, or both may acquire an anomalous divergence.",
+   "arxiv_id": "2610.34858",
+   "authors": "Joshua Cesca et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Spiralling into Dark Energy: Axio-Dilaton Attractors in Light of Current Data",
+   "text": "In string compactifications, dilaton-like moduli always come paired with axions, and the two fields interact through a curved field-space metric.",
+   "arxiv_id": "2610.34380",
+   "authors": "Mario Ramos-Hamud",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "The Free Scalar as a Thermal Envelope for Three-Dimensional CFTs",
+   "text": "We conjecture that every unitary three-dimensional conformal field theory obeys $c_S/C_T\\leq16πζ(3)$, where $s=c_ST^2$ is the thermal entropy density and $C_T$ the stress-tensor two-point coefficient, with equality for free scalars.",
+   "arxiv_id": "2610.33179",
+   "authors": "Christopher P. Herzog and Andreas Stergiou",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Bargmann-invariant witness of the graviton commutator",
+   "text": "We identify the phase of a Bargmann invariant of two matter-wave interferometers as a quantum gravity signature that cannot be reproduced by any branchwise-definite classical gravitational field. (primary category gr-qc)",
+   "arxiv_id": "2610.35253",
+   "authors": "Hiroki Matsui",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "Acoustic Schwarzschild-like black hole and analogous Hawking radiation in Einstein-bumblebee gravity",
+   "text": "We derive an acoustic Schwarzschild-like black hole and study its analogous Hawking radiation in Einstein-bumblebee theory by using Gross-Pitaevskii theory in the background of Schwarzschild-like spacetime. (primary category gr-qc)",
+   "arxiv_id": "2610.33481",
+   "authors": "Chikun Ding et al.",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "How to get an attractive model",
+   "text": "We give a fourth-order Calabi-Yau differential operator, which seems to have been missed by earlier tabulations.",
+   "arxiv_id": "2610.35798",
+   "authors": "Joseph McGovern",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "All-plus Yang--Mills and gravity wavefunctions in de Sitter space",
+   "text": "We present sewing representations for tree-level all-plus wavefunctions in four-dimensional de Sitter space.",
+   "arxiv_id": "2610.34261",
+   "authors": "Song He et al.",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Berends-Giele currents for higher derivative gauge theories",
+   "text": "We derive Berends-Giele (BG) currents for higher derivative scalar QED (HDQED) and Yang-Mills (HDYM).",
+   "arxiv_id": "2610.33693",
+   "authors": "Pratik Chattopadhyay",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Two-node Dualities from Elementary Dualities in 3d and 4d",
+   "text": "A new 3d $\\mathcal{N}=2$ two-node Seiberg-like duality, analogous to the 4d $\\mathcal{N}=1$ Intriligator--Leigh--Strassler~(ILS) duality, is proposed.",
+   "arxiv_id": "2610.34752",
+   "authors": "Yuanyuan Fang and Sungjoon Kim",
+   "section": "Also in hep-th"
+  },
+  {
+   "headline": "Nonlinear Higher-Spin Theory in $O(4,1)$ de Sitter Space",
+   "text": "Four versions of the higher-spin gauge theory compatible with $O(4,1)$ de Sitter geometry in presence of fermions are proposed.",
+   "arxiv_id": "2610.34475",
+   "authors": "O. A. Gelfond and M. A. Vasiliev",
+   "section": "Gravity & Cosmology"
+  }
+ ],
+ "footer": "Text is excerpted verbatim from the authors’ abstracts as posted on arXiv and has not been peer reviewed. Follow the links for the full papers.",
+ "title": "The arXiv Gazette",
+ "tagline": "All the preprints fit to print",
+ "date": "Tuesday, October 27, 2026",
+ "edition": "No. 3 · Morning Edition",
+ "categories": [
+  "hep-th",
+  "gr-qc (cross-lists)"
+ ],
+ "stats": {
+  "Papers scanned": "32",
+  "hep-th primary": "26",
+  "gr-qc cross-lists": "6",
+  "Papers covered": "32"
+ }
+}
