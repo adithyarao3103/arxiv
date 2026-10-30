@@ -1,0 +1,409 @@
+{
+ "lead": {
+  "headline": "Elliptic master integrals and the one-loop cosmological wavefunction",
+  "body": [
+   "Loop corrections to the cosmological wavefunction involve similar integrals to those required for scattering amplitudes. For the one-loop triangle of a conformally coupled scalar, the master integrals are elliptic, and so the triangle wavefunction coefficient was expected to be elliptic as well.",
+   "Using a bootstrap approach, we compute this triangle coefficient exactly and show that it is not: the elliptic periods cancel, and the flat-space wavefunction coefficient is a combination of dilogarithms. The cancellation occurs because the residue of the loop integrand on the elliptic sector is a flat-space amplitude, rational in the loop momentum.",
+   "The one-loop box, by contrast, is not polylogarithmic, even with a single external leg at each site. Its threshold discontinuity involves elliptic integrals, which we also give in closed form."
+  ],
+  "authors": "Amara McCune and Matthew D. Schwartz",
+  "arxiv_id": "2610.38725",
+  "kicker": "Lead Story · hep-th",
+  "deck": "46 pages, 5 figures, ancillary files included"
+ },
+ "features": [
+  {
+   "headline": "Bounds on the Diagonal Degree of the Biadjoint Scalar Amplitude Matrix",
+   "body": [
+    "Biadjoint scalar theory partial amplitudes, $m_n(α,β)$, define an $(n-1)!/2\\times (n-1)!/2$ matrix, $M_n$, with rows and columns labeled by orderings. The CHY construction of $M_n$ implies that its rank is $(n-3)!$.",
+    "Invertible submatrices of maximal rank enter in the KLT construction relating graviton amplitudes to gluon amplitudes. Motivated by finding the KLT formula with the smallest number of terms, one of the authors posed the question of whether there is a critical $n_c$ such that for all $n>n_c$ there exists a diagonal submatrix of $M_n$ of rank $(n-3)!$."
+   ],
+   "authors": "Freddy Cachazo and Rajbir Longia",
+   "arxiv_id": "2610.40355",
+   "kicker": "Strings, Amplitudes & Supergravity · hep-th"
+  },
+  {
+   "headline": "Superstring Field Theory with Double Background Independence",
+   "body": [
+    "A recently constructed superstring field theory has two decoupled sectors, the physical superstring and a shadow sector with a second copy of the superstring. These are both expanded around the same background conformal field theory and the theory is independent of marginal deformations of this common background.",
+    "A form of the action is presented that is symmetric between the two sectors. A generalisation of this theory is given in which the two sectors can be expanded around two different backgrounds, and the theory is independent under separate marginal deformations of the two background conformal field theories."
+   ],
+   "authors": "Chris Hull",
+   "arxiv_id": "2610.39594",
+   "kicker": "Strings, Amplitudes & Supergravity · hep-th"
+  },
+  {
+   "headline": "Carrollian CFTs and the Light Front",
+   "body": [
+    "Carrollian symmetries play an important role in building holographic duals to asymptotically flat spacetimes (AFS). This construction hinges on the isomorphism between the (asymptotic) isometries of AFS and the conformal Carroll algebra.",
+    "Carroll symmetries also naturally arise on the lightfront, as co-dimension one subalgebras in the Poincare algebra written in lightcone coordinates. In this paper, building on the isomorphism between four dimensional (4d) Poincare and 3d conformal Carroll algebras, we make a connection between physics on the lightfront and Carrollian CFTs."
+   ],
+   "authors": "Arjun Bagchi et al.",
+   "arxiv_id": "2610.39450",
+   "kicker": "Holography & Gauge/Gravity · hep-th"
+  }
+ ],
+ "sections": [
+  {
+   "name": "Field Theory & Symmetry",
+   "stories": [
+    {
+     "headline": "$\\mathcal{N}=4$ Super Yang-Mills Flux Tube in AdS",
+     "body": [
+      "We study a supersymmetric Wilson line on the boundary of $\\mathcal{N}=4$ super Yang-Mills theory in AdS$_4$, or equivalently on a half-space, as a model for exploring the connection between holographic strings and confining flux tubes. The boundary breaks four-dimensional conformal symmetry and is expected to remove integrability, bringing this system closer to a confining string while preserving enough supersymmetry to constrain its dynamics."
+     ],
+     "authors": "Victor Gorbenko et al.",
+     "arxiv_id": "2610.40156"
+    },
+    {
+     "headline": "virasoro_blocks: Software for the 2d bootstrap",
+     "body": [
+      "We introduce virasoro_blocks, software that computes Virasoro conformal blocks at any central charge in a form suitable for the numerical bootstrap. At each finite order in the elliptic nome, Zamolodchikov's recursion gives the block as a positive prefactor times a rational function of the exchanged weight."
+     ],
+     "authors": "David Poland",
+     "arxiv_id": "2610.39106"
+    },
+    {
+     "headline": "The Effective Field Theory Origin of the Fuzzy Sphere Method",
+     "body": [
+      "Fuzzy sphere Hamiltonians for (2+1)D conformal field theories are usually written directly on the lowest Landau level. We introduce a framework organizing them as descendants of local ``mother theories'' on $S^2\\times\\mathbb R$.",
+      "We start with the example of Ising mother theory built from two charged Dirac fermions coupled to a real mediator $φ$."
+     ],
+     "authors": "Mykola Dedushenko",
+     "arxiv_id": "2610.38702"
+    },
+    {
+     "headline": "Topological interfaces between universes and generalized families of 2d QFTs",
+     "body": [
+      "Two-dimensional quantum field theories with topological point operators decompose into universes. Just as fusion categories have played an important role in understanding non-invertible symmetries, multi-fusion categories play an analogous role for the symmetries of such decomposing theories."
+     ],
+     "authors": "Pinak Banerjee et al.",
+     "arxiv_id": "2610.38680"
+    },
+    {
+     "headline": "Generalized Symmetries of QED$_4$ on Non-Spin Manifolds",
+     "body": [
+      "Generalized symmetries are sensitive to the tangential structure of spacetime. We study this interplay for massless QED on oriented non-spin four-manifolds, where the photon becomes a spin$^c$ connection and the path integral sums over spin$^c$ structures.",
+      "The shifted flux quantization extends the magnetic 1-form symmetry into a $w_2$-twisted 1-form symmetry: its $2π$ rotation acts as a gravitational sign, fixed by the normal bundle of the surface the operator wraps."
+     ],
+     "authors": "Michele Del Zotto and Vivek Saxena",
+     "arxiv_id": "2610.38907"
+    },
+    {
+     "headline": "Ortho-symplectic interface line operators in $\\mathcal{N}=4$ SYM theories",
+     "body": [
+      "We study the line operators at the half-BPS interfaces in 4d $\\mathcal{N}=4$ super Yang-Mills (SYM) theories of orthogonal and symplectic gauge groups. For the NS5-type interfaces, line operators are labeled by pairs of electric or magnetic charges under the gauge groups on either side of the interface, whereas for the D5-type interfaces they are labeled by electric or magnetic charges under the single gauge group preserved by the interface."
+     ],
+     "authors": "Yasuyuki Hatsuda and Tadashi Okazaki",
+     "arxiv_id": "2610.39207"
+    }
+   ]
+  },
+  {
+   "name": "Gravity & Cosmology",
+   "stories": [
+    {
+     "headline": "Gravity between two masses beyond Newton's law",
+     "body": [
+      "Newton's law of universal gravitation describes the attraction between two masses through an inverse-distance potential. In Einstein's theory gravity gravitates: each mass reshapes the spacetime geometry through which the other acts.",
+      "More than a century later, extracting the two-body interaction from this coupled geometry remains a fundamental analytical challenge."
+     ],
+     "authors": "Zhengwen Liu and Xing-Bo Yuan",
+     "arxiv_id": "2610.40462"
+    }
+   ]
+  },
+  {
+   "name": "Holography & Gauge/Gravity",
+   "stories": [
+    {
+     "headline": "Quantum curves of 6d SCFTs on a -3 curve",
+     "body": [
+      "We study half-BPS defects and quantum Seiberg-Witten curves in 6d $ \\mathcal{N}=(1,0) $ SCFTs on a $ -3 $ curve. We compute the partition functions in the presence of codimension-4 and codimension-2 defects on $ \\mathbb{R}^4 \\times T^2 $ using generalized blowup equations."
+     ],
+     "authors": "Minsung Kim et al.",
+     "arxiv_id": "2610.40203"
+    }
+   ]
+  },
+  {
+   "name": "Across the Border",
+   "note": "Papers whose primary category is not hep-th (mostly gr-qc), cross-listed into it",
+   "stories": [
+    {
+     "headline": "Rotation overcharges vectorized black holes",
+     "body": [
+      "A charged black hole has a ceiling: extremality bounds the charge that a given mass and spin can support. Vector hair has so far only lowered it.",
+      "In the Einstein--Maxwell--Vector (EMV) model, where a massless vector field couples nonminimally to the electromagnetic invariant, the spherically symmetric vectorized Reissner--Nordström black holes are strictly undercharged: vector hair is paid for in charge."
+     ],
+     "authors": "Shengjun Guo et al.",
+     "arxiv_id": "2610.40179"
+    },
+    {
+     "headline": "Quasinormal-mode encounters: Pseudospectra near Kerr--Newman exceptional points",
+     "body": [
+      "Exceptional points (EPs), at which two quasinormal frequencies and their eigenvectors coalesce, can strongly enhance the spectral instability of black hole quasinormal modes. We investigate this behavior in Kerr--Newman spacetimes through pseudospectra and condition numbers for neutral massless scalar fields and coupled gravitoelectromagnetic (GE) perturbations."
+     ],
+     "authors": "Kyriakos Destounis",
+     "arxiv_id": "2610.40323"
+    },
+    {
+     "headline": "Gravitational-Wave Echoes and Greybody Cutoff from Logarithmic Throats at a Marginal-Trapping Threshold",
+     "body": [
+      "When a static, spherically symmetric configuration is brought close to a marginal-trapping threshold, it develops a long throat. As the nondegenerate minimum of $F=1-2m/r$ approaches zero, $F\\simeqΔ+β(r-R_M)^2$, the proper length across the throat grows as $-\\lnΔ/\\sqrtβ$, even though the local curvature stays finite."
+     ],
+     "authors": "Jahed Abedi",
+     "arxiv_id": "2610.40631"
+    }
+   ]
+  }
+ ],
+ "briefs": [
+  {
+   "headline": "Generalised $Ω$-backgrounds in twisted $N=4$ super Yang-Mills",
+   "text": "We introduce rigid supergravity backgrounds for 4d $\\mathcal{N}=4$ super Yang-Mills which deform its topological twists and generalise the $Ω$-deformation of $\\mathcal{N}=2$ gauge theories.",
+   "arxiv_id": "2610.40465",
+   "authors": "Elisa Iris Marieni and Itamar Yaakov",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Exact holographic superfluid at the Bogomolny point: transport, large charge, and Rényi entropies",
+   "text": "The Abelian Higgs model in AdS$_5$, in the probe limit, is a standard holographic model of a strongly coupled superfluid, usually solved numerically.",
+   "arxiv_id": "2610.40371",
+   "authors": "Siqing Yu",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Localization in Seven-Dimensional Supergravity",
+   "text": "Seven-dimensional supergravity provides holographic access to strongly coupled six-dimensional superconformal theories through its highest-dimensional supersymmetric AdS vacua.",
+   "arxiv_id": "2610.40514",
+   "authors": "Florian Gaar and Michèle Levi",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Unifying energy-entropy bounds in semiclassical gravity",
+   "text": "We revisit bounds on energy and entropy in semiclassical gravity, aiming to strengthen and unify established bounds, in particular the quantum focussing conjecture (QFC) and the smeared null energy condition (SNEC).",
+   "arxiv_id": "2610.38713",
+   "authors": "Jackson R. Fliss and Andrew Rolph",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Holographic duals of JT gravity at finite cutoff: the classical case",
+   "text": "We formulate JT gravity with finite-cutoff boundaries and end-of-the-world branes in the first-order BF formulation.",
+   "arxiv_id": "2610.40391",
+   "authors": "Andreas Belaey et al.",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "A density calculus for quantum field theory",
+   "text": "These notes provide an introduction to Haagerup noncommutative $L^p$ spaces for quantum field theorists.",
+   "arxiv_id": "2610.40174",
+   "authors": "Tanay Kibe and Pratik Roy",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Large-$N$ limit of chiral quiver theories: free energy, supersymmetric indices and operator counting",
+   "text": "We find the first analytic solution to the large-$N$ saddle point equations for the $S^3$ free energy of a chiral $\\mathcal N=2$ Chern-Simons-matter theory with an M-theory dual.",
+   "arxiv_id": "2610.39569",
+   "authors": "Edoardo Colombo et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Deformed Amplituhedra and Interpolating Anomalous Dimensions on the Coulomb Branch",
+   "text": "We study planar four-point scattering amplitudes on the Coulomb branch of $\\mathcal N=4$ super Yang--Mills theory, focusing on multi-parameter families of massive kinematics.",
+   "arxiv_id": "2610.39052",
+   "authors": "Francesco Calisto et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Are Black Hole and Cosmological Horizon Thermodynamics Necessarily Inequivalent?",
+   "text": "It has recently been argued that cosmological horizon thermodynamics and black hole thermodynamics are generically inequivalent in any consistent, UV complete theory of quantum gravity, where it was suggested that this could be falsified by the identification of a counterexample.",
+   "arxiv_id": "2610.39048",
+   "authors": "Zachary J. Hoelscher",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Collective Bootstrap for Matrix Quantum Mechanics",
+   "text": "We develop a collective bootstrap framework for large $N$ matrix quantum mechanics formulated directly in the loop space of single trace coordinate moments.",
+   "arxiv_id": "2610.38716",
+   "authors": "Xianlong Liu",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Bootstrapping Wilson lines in Critical Bosonic QED$_3$ Part 1: Large-$N$ endpoint correlators and CFT data",
+   "text": "We study the conformal Wilson line with general charge $q$ in critical bosonic QED$_3$ with $N$ complex scalar flavors by combining diagrammatic four-point calculations with endpoint crossing.",
+   "arxiv_id": "2610.38663",
+   "authors": "Jun Maeda et al.",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Absorption of bound supernova axion-like particles by the neutron star weakens the heating limits on their photon coupling",
+   "text": "Axion-like particles (ALPs) that couple to protons are produced in a core-collapse supernova, and the slow ones remain bound to the new neutron star.",
+   "arxiv_id": "2610.39402",
+   "authors": "Probit J Kalita et al.",
+   "section": "Also in hep-th"
+  },
+  {
+   "headline": "From pq-webs to magnetic quivers and back II: distributional indices and 5d theories breaking bad",
+   "text": "This is the second of two companion papers in which we study five-dimensional $\\mathcal{N}=1$ theories engineered by $(p,q)$ five-brane webs and their associated three-dimensional magnetic quivers.",
+   "arxiv_id": "2610.38770",
+   "authors": "Sebastiano Garavaglia et al.",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "On Geometric Observables in Gravity",
+   "text": "Measures of geometry like distance and time are staples of classical gravity.",
+   "arxiv_id": "2610.40615",
+   "authors": "Manthos Karydas et al.",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Breaking of integrability in elliptic deformations of AdS3 strings with mixed flux",
+   "text": "We construct elliptic deformations of the $AdS_3 \\times S^3 \\times T^4$ superstring supported by mixed NSNS and RR fluxes in type IIB supergravity and investigate their integrability.",
+   "arxiv_id": "2610.40386",
+   "authors": "Ian Le Meur and Fiona K. Seibold",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "$\\mathcal{N}=2$ conformal higher-spin actions in harmonic superspace",
+   "text": "We construct linearized $4D, \\mathcal{N}=2$ Weyl-type off-shell actions in harmonic superspace for the superconformal higher-spin gauge multiplets introduced in arXiv:2404.19016.",
+   "arxiv_id": "2610.40274",
+   "authors": "Evgeny Ivanov and Nikita Zaigraev",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "The Effective Kerr-Compton Tree Amplitude from Black Hole Perturbation Theory",
+   "text": "We develop a new method to construct the tree-level Compton amplitude for gravitational-wave scattering off a Kerr black hole in post-Minkowskian effective field theory.",
+   "arxiv_id": "2610.40101",
+   "authors": "N. Emil J. Bjerrum-Bohr et al.",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Schwinger--Keldysh worldline effective field theory for quantum black holes: dissipation, noise and decoherence",
+   "text": "We formulate a Schwinger--Keldysh worldline effective field theory for quantum black holes that treats dissipation, fluctuations, and decoherence within one real-time influence functional.",
+   "arxiv_id": "2610.39243",
+   "authors": "Hajime Kobayashi",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Gravitational Reconstruction in $AdS_{4}$",
+   "text": "We reconstruct linearized gravitational perturbations in $AdS_{4}$ from a conserved, traceless stress tensor on a fixed conformally flat boundary metric, extending our earlier real Lorentzian construction.",
+   "arxiv_id": "2610.38887",
+   "authors": "David A. Lowe et al.",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "From pq-webs to magnetic quivers and back I: dictionary and deformations",
+   "text": "This is the first of two companion papers in which we study five-dimensional $\\mathcal{N}=1$ theories engineered by $(p,q)$ five-brane webs and their associated three-dimensional $\\mathcal{N}=4$ magnetic quivers.",
+   "arxiv_id": "2610.38769",
+   "authors": "Sebastiano Garavaglia et al.",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Initial conditions leave IR imprints in quantum cosmology",
+   "text": "We investigate the gravitational path integral of $\\mathbb{R} \\times S^3$ geometries in Lorentzian signature along with the metric fluctuations which live on the $S^3$ hypersurfaces.",
+   "arxiv_id": "2610.39965",
+   "authors": "Manishankar Ailiga et al.",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "On functional classes in higher-spin theory",
+   "text": "The factorization over the ideal in the $d$-dimensional Vasiliev theory requires an accurate description of the higher-spin algebra $\\mathcal{A}$ and its twisted adjoint module $\\mathcal{A}^{tw}$ as certain functional spaces.",
+   "arxiv_id": "2610.39851",
+   "authors": "Yu. A. Tatarenko",
+   "section": "Also in hep-th"
+  },
+  {
+   "headline": "Quantum field theory with scale-dependent weighted measures: nonlinear momentum representations, vacuum fluctuations, and causal structure",
+   "text": "We reconsider the construction of free quantum fields through momentum-space weighted measures, introducing an independent energy scale that restores the conventional theory at low momenta.",
+   "arxiv_id": "2610.39285",
+   "authors": "S. González-Salud and R. Cartas-Fuentevilla",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Holography and localization in fractional field theory",
+   "text": "Fractional field theory is a promising framework wherein to quantize the gravitational interaction but the presence of nonlocal operators can make its handling difficult.",
+   "arxiv_id": "2610.38806",
+   "authors": "Gianluca Calcagni and Iván Salvador-García",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "HWF Analysis of TRN Black Holes",
+   "text": "We extend the horizon wave-function (HWF) formalism to a spherically symmetric, charged, spinless quantum source in $\\mathcal{D} + 1$ dimensional spacetime geometry and construct the HWFs associated with inner- as well as outer-horizons of the Tangherlini--Reissner--Nordström (TRN) black hole. (primary category gr-qc)",
+   "arxiv_id": "2610.39757",
+   "authors": "Ashfaque Ahmad et al.",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "Covariant phase space analysis of static spherical vacua in power-law $f(R)$ gravity",
+   "text": "We formulate the static, spherically symmetric vacuum equations of power-law metric $f(R)$ gravity as a covariant autonomous system using the $(1+1+2)$ formalism. (primary category gr-qc)",
+   "arxiv_id": "2610.39484",
+   "authors": "Mariam Campbell et al.",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "Thermodynamics of Swirling Black Holes and Kerr-Taub-NUT",
+   "text": "We establish the first law of black hole thermodynamics for the recently discovered Kerr swirling (KS) and accelerated Kerr swirling (AKS) black hole solutions.",
+   "arxiv_id": "2610.40529",
+   "authors": "Ernesto Frodden et al.",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "A Simplified Born Rule for Cosmological Correlators",
+   "text": "Cosmological correlators are natural observables of the primordial universe and are related to wavefunction coefficients by the Born rule.",
+   "arxiv_id": "2610.40412",
+   "authors": "Fan Zhu",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Does SO(2,2) symmetry lead to an additional U(1) symmetry in 5-dimensional Einstein-scalar theories?",
+   "text": "Solving Einstein equations including the matter fields in dimensions higher than four is computationally challenging.",
+   "arxiv_id": "2610.39400",
+   "authors": "Saeedeh Sadeghian",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Regularized Master-Field Approximation for Mass-Deformed Supersymmetric Yang-Mills Matrix Models",
+   "text": "The regularized master-field approximation (RMA) is an efficient computational method for large-$N$ reduced matrix models, including those with multiple matrices or complex integration weights.",
+   "arxiv_id": "2610.39101",
+   "authors": "Yue Lei and Reishi Maeta",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Emergence of an acoustic black hole in a lattice model",
+   "text": "We build an acoustic black hole in a lattice model: a draining vortex evolved by the local collide-and-stream rule of a lattice-Boltzmann model, with no acoustic metric imposed, the geometry being measured from the steady state. (primary category gr-qc)",
+   "arxiv_id": "2610.39369",
+   "authors": "Antonino Flachi",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "Competition and coexistence of baryonic condensates in AdS hardwall model",
+   "text": "Cold dense QCD admits several order parameters for baryon-number breaking, among them diquark and dibaryon condensates.",
+   "arxiv_id": "2610.40244",
+   "authors": "Akash Singh",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Majorana Neutrino Physics and Matter-Antimatter Asymmetry in Type IIA String Theory",
+   "text": "We study Majorana neutrino masses and the matter-antimatter asymmetry in Type IIA string theory on a $T^6/(\\mathbb{Z}_2 \\times \\mathbb{Z}_2)$ orientifold with intersecting D6-branes.",
+   "arxiv_id": "2610.39804",
+   "authors": "Yang Liu",
+   "section": "Strings, Amplitudes & Supergravity"
+  }
+ ],
+ "footer": "Text is excerpted verbatim from the authors’ abstracts as posted on arXiv and has not been peer reviewed. Follow the links for the full papers.",
+ "title": "The arXiv Gazette",
+ "tagline": "All the preprints fit to print",
+ "date": "Friday, October 30, 2026",
+ "edition": "No. 5 · Morning Edition",
+ "categories": [
+  "hep-th",
+  "gr-qc (cross-lists)"
+ ],
+ "stats": {
+  "Papers scanned": "48",
+  "hep-th primary": "42",
+  "gr-qc cross-lists": "6",
+  "Papers covered": "48"
+ }
+}
