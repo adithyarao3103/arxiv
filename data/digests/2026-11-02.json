@@ -1,0 +1,276 @@
+{
+ "lead": {
+  "headline": "Monopole-Fermion Scattering from Twisted Conformal Boundary States",
+  "body": [
+   "We derive monopole-fermion scattering correlators from conformal boundary states in twisted sectors. The key ingredient is that symmetry-preserving boundary conditions contain sectors twisted by topological symmetry lines.",
+   "Their overlaps determine correlators of operators attached to these lines, including the outgoing excitations required by charge conservation in the Callan-Rubakov effect. We construct the twisted boundary states of $N$ free Dirac fermions with $U(1)^N$-preserving boundary conditions, extending the familiar description in terms of charge lattices to shifted lattices describing twisted sectors.",
+   "Using cluster decomposition and open-closed duality, we determine their coefficients and fix their normalization relative to the untwisted boundary state."
+  ],
+  "authors": "Clay Córdova et al.",
+  "arxiv_id": "2610.40779",
+  "kicker": "Lead Story · hep-th",
+  "deck": "42 pages, 8 figures"
+ },
+ "features": [
+  {
+   "headline": "On Boundary State Screening via Solitons",
+   "body": [
+    "We present a coarse classification scheme for the boundary data of massive QFTs based on transitions of boundary states via soliton / kink profiles. Starting from the lattice of boundary states, we introduce the boundary screening group $\\mathbb{B}$: the equivalence classes of boundary states which cannot be connected by such transitions.",
+    "In string theory backgrounds which geometrically engineer an interacting QFT in the target space, $\\mathbb{B}$ computes the worldsheet analog of the target space defect group $\\mathbb{D}$."
+   ],
+   "authors": "Vivek Chakrabhavi et al.",
+   "arxiv_id": "2610.40777",
+   "kicker": "Holography & Gauge/Gravity · hep-th"
+  },
+  {
+   "headline": "Giant Gravitons in AdS$_5\\times$SE$_5$ and the Superconformal Index of Toric Quiver Gauge Theories",
+   "body": [
+    "We derive giant-graviton contributions to superconformal indices by quantizing probe D3-branes in type IIB backgrounds $\\mathrm{AdS}_{5}\\times SE_{5}$. For $SE_{5}=T^{1,1}$ and $Y^{p,q}$, we determine the scalar, vector, and fermionic fluctuations of maximal giant gravitons and extract their BPS spectra.",
+    "The resulting single-letter indices agree with those predicted by the giant-graviton expansions of the dual toric quiver gauge theories."
+   ],
+   "authors": "Evan Deddo et al.",
+   "arxiv_id": "2610.40773",
+   "kicker": "Field Theory & Symmetry · hep-th"
+  },
+  {
+   "headline": "Umbilic Observatories",
+   "body": [
+    "We study gravitational dynamics for the simplest example of an umbilic boundary in four-dimensional general relativity --- a three-dimensional de Sitter hypersurface embedded in a four-dimensional Minkowski world. Generally speaking, an umbilic surface has the property that its induced metric is proportional to its extrinsic curvature.",
+    "We consider the case of both conformal boundary conditions, as well as Dirichlet boundary conditions imposed at the timelike hypersurface."
+   ],
+   "authors": "Dionysios Anninos et al.",
+   "arxiv_id": "2610.40783",
+   "kicker": "Holography & Gauge/Gravity · hep-th"
+  }
+ ],
+ "sections": [
+  {
+   "name": "Field Theory & Symmetry",
+   "stories": [
+    {
+     "headline": "All Symmetries and Boundaries of the Two-Dimensional Free Scalar from Continuous Flat-Gauging",
+     "body": [
+      "We propose a remote detectability criterion for two-dimensional conformal field theories, which asserts that any local operator outside of the product of the left- and right-moving Virasoro algebras can be detected by some topological line defect. We discuss its relationship to existing results in the conformal net literature."
+     ],
+     "authors": "Yichul Choi et al.",
+     "arxiv_id": "2610.40818"
+    },
+    {
+     "headline": "Longitudinal electric corner modes in continuum quantum gauge theory with matter",
+     "body": [
+      "Subregions in gauge theories give rise to edge modes and corner charges supported on their boundaries. While this is well-established classically and in quantum lattice gauge theories, the fate of corner modes remains poorly understood in continuum quantum field theories owing to their distributional nature."
+     ],
+     "authors": "Goncalo Araujo-Regado et al.",
+     "arxiv_id": "2610.41240"
+    },
+    {
+     "headline": "Guaranteed Slater Conditions for the Numerical Conformal Bootstrap: Fixing Instabilities in SDPB, Navigator Methods, and Skydiving",
+     "body": [
+      "The semidefinite programs (SDPs) of the numerical conformal bootstrap, and of S-matrix and quantum-mechanics bootstraps, are solved with primal-dual interior-point methods whose convergence guarantees rest on primal and dual Slater conditions: the existence of strictly feasible points on both sides of the duality."
+     ],
+     "authors": "Marten Reehorst",
+     "arxiv_id": "2610.40764"
+    }
+   ]
+  },
+  {
+   "name": "Holography & Gauge/Gravity",
+   "stories": [
+    {
+     "headline": "Proof of the entropic $c$-theorem",
+     "body": [
+      "We prove an entropic $c$-theorem in two dimensions by constructing a $c$-function from the mutual information between spacelike separated wedges, defined through the relative entropy. The proof follows Casini and Huerta's, with strong subadditivity of entanglement entropy replaced by increasing differences of the mutual information, which we prove directly in the continuum from the split property and standard properties of relative entropy."
+     ],
+     "authors": "Jonah Kudler-Flam",
+     "arxiv_id": "2610.40874"
+    }
+   ]
+  },
+  {
+   "name": "Gravity & Cosmology",
+   "stories": [
+    {
+     "headline": "Quantum Cosmology at the Cusp",
+     "body": [
+      "In top-down quantum gravity constructions, saxionic directions typically lead to cusps in moduli space, where the scalar potential and the axion decay constant asymptotically behave as $V\\sim e^{-αφ}$ and $f\\sim e^{-γφ}$ in reduced Planck units. Such cusps admit axion-supported scaling cosmologies that expand faster than the corresponding solutions with the axion held fixed, for the same scalar potential."
+     ],
+     "authors": "Luis A. Anchordoqui et al.",
+     "arxiv_id": "2610.40763"
+    },
+    {
+     "headline": "Bootstrapping a Higher-Derivative Cosmological Collider: Borel-Laplace Resummation and Stokes Phenomena",
+     "body": [
+      "We develop a higher-derivative cosmological bootstrap for massive spectators with quartic dispersion, $ω^2\\propto k^4$, revealing a new boundary-value problem for inflationary correlators. The exchange equation becomes fourth order, and the collapsed limit becomes an irregular singular point, where collider and WKB branches coexist and exhibit Stokes phenomena."
+     ],
+     "authors": "Matheus C. Ferreira and Felipe T. Falciano",
+     "arxiv_id": "2610.42020"
+    }
+   ]
+  },
+  {
+   "name": "Also in hep-th",
+   "stories": [
+    {
+     "headline": "Induced Lorentzian geometry from the fermionic quantum metric",
+     "body": [
+      "Quantum geometry is conventionally understood in parameter or momentum space and need not be related to a geometry in configuration space. Here we show for Dirac fermions in a background electromagnetic field that an induced Lorentzian geometry is generated from the fermionic quantum metric."
+     ],
+     "authors": "Patrick Copinger and Pablo Morales",
+     "arxiv_id": "2610.41138"
+    }
+   ]
+  },
+  {
+   "name": "Strings, Amplitudes & Supergravity",
+   "stories": [
+    {
+     "headline": "Light-Transformed Carrollian OPEs and the Four-Gluon Spectral Bootstrap",
+     "body": [
+      "Scattering amplitudes of massless particles can be rewritten as correlation functions of light-transformed operators at null infinity, on which the Carrollian symmetries act. We ask how much of the four-gluon tree amplitude is determined by the operator product expansion of these operators."
+     ],
+     "authors": "Sourish Banerjee and Rudranil Basu",
+     "arxiv_id": "2610.41281"
+    }
+   ]
+  },
+  {
+   "name": "Across the Border",
+   "note": "Papers whose primary category is not hep-th (mostly gr-qc), cross-listed into it",
+   "stories": [
+    {
+     "headline": "Separation of variables for massive spin-2 fields on the Kerr black hole",
+     "body": [
+      "Massive spin-2 fields on the Kerr black hole generally obey coupled partial differential equations. We show that these equations separate through two commuting angular operators acting on five components of the field, its curl and its linearised Weyl tensor.",
+      "A joint angular eigenfunction fixes the relative profiles of the five polarisations and leaves one second-order radial equation."
+     ],
+     "authors": "Oscar J. C. Dias and Jorge E. Santos",
+     "arxiv_id": "2610.40780"
+    },
+    {
+     "headline": "From thermogravity to thermocosmology with a running non-conservation scale",
+     "body": [
+      "Thermogravity offers a novel approach to cosmic acceleration, deriving trace-free gravitational equations and matter non-conservation from thermodynamic processes in spacetime. We extend this framework towards thermocosmology by introducing a running non-conservation scale $L_2(H)$, while restricting non-conservation to cold dark matter."
+     ],
+     "authors": "Emmanuel N. Saridakis",
+     "arxiv_id": "2610.41780"
+    },
+    {
+     "headline": "Relating approaches to interacting quantum clocks and systems",
+     "body": [
+      "The problem of describing the dynamics of quantum systems relative to quantum clocks with which they interact is relevant to the physics of quantum reference frames and quantum gravity alike. There have been different approaches that derive a relational time-dependent Schrödinger equation for the system relative to the clock from a time-independent Hamiltonian constraint."
+     ],
+     "authors": "Artur Semião and Leonardo Chataignier",
+     "arxiv_id": "2610.40791"
+    }
+   ]
+  }
+ ],
+ "briefs": [
+  {
+   "headline": "$h/2e$ Flux Trapping without Superconductivity",
+   "text": "Recently, it was shown by Komargodski and Popov [arXiv:2601.09847] that ordinary metals threaded with an Aharonov-Bohm solenoid exclusively trap either 0 or h/2e flux.",
+   "arxiv_id": "2610.41058",
+   "authors": "Will Lancer",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "DiscKosky: Efficient Genealogical Constraints from Sector-By-Sector Critical Point Counting",
+   "text": "We present DiscKosky, a new Mathematica package for efficiently generating genealogical constraints on the sequential discontinuities of Feynman integrals.",
+   "arxiv_id": "2610.40772",
+   "authors": "Giulio Crisanti et al.",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Far-Zone Gravitational Interactions at the Sixth Post-Newtonian Order",
+   "text": "We compute the nonlinear far-zone dynamics of compact binaries at the sixth post-Newtonian (6PN) order in the effective field theory of general relativity.",
+   "arxiv_id": "2610.42057",
+   "authors": "Giacomo Brunello",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Hilbert space in the flat limit of AdS/CFT. II. Massless particles",
+   "text": "Building on Part I of this series, where we described the emergence of massive scattering states, we demonstrate how unitary lowest-weight representations $\\mathcal D(Δ,s)$ of the conformal group with fixed dimension $Δ$ and arbitrary integer spin $s$ contract to massless Poincaré particle representations.",
+   "arxiv_id": "2610.40878",
+   "authors": "Kevin Nguyen",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Facets of Gravity: A journey exploring spacetime from Planckian to cosmological scales",
+   "text": "What does it mean to quantize gravity, and what can a quantum theory of spacetime actually predict?",
+   "arxiv_id": "2610.40908",
+   "authors": "Agustín Silva",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Bounds on the minimum orbital period of general static spherical black holes: a sharp upper bound and a conditional lower bound",
+   "text": "We investigate bounds on the minimum orbital period around four-dimensional general static spherical black holes. (primary category gr-qc)",
+   "arxiv_id": "2610.40843",
+   "authors": "Yan Peng and Guohua Liu",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "New Effects in Multifield Cosmology Coupled to the Gauss-Bonnet Term",
+   "text": "We study the rapid-turn regime of multifield cosmology coupled to the Gauss-Bonnet term.",
+   "arxiv_id": "2610.41636",
+   "authors": "Lilia Anguelova and Sonia Paban",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "A Common Type II Origin of Galilean and Carroll Superstrings",
+   "text": "We show that the relativistic Type-II superalgebras, once the fundamental-string winding charge is retained alongside the momentum, admit a single non-Lorentzian contraction whose two translation ideals carry Galilean and magnetic-Carroll supersymmetry, respectively.",
+   "arxiv_id": "2610.41582",
+   "authors": "Mehmet Ozkan and Utku Zorba",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Gravitational Memory from AdS States in the Flat-Space Limit",
+   "text": "We study linearized gravitational reconstruction in global AdS$_4$ with dynamical scalar matter, building on vacuum Einstein perturbations with fixed boundary metric and nontrivial normalizable data.",
+   "arxiv_id": "2610.41247",
+   "authors": "David A. Lowe and Juanyi Yang",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Reconstructing Meson Parton Distributions from Mellin Moments with Artificial Neural Networks",
+   "text": "We address the inverse problem of reconstructing a meson parton distribution function (PDF) or parton distribution amplitude (PDA) at a fixed scale from a finite set of Mellin moments.",
+   "arxiv_id": "2610.41189",
+   "authors": "Pietro Dall'Olio et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "The running of Weyl gauged gravity: asymptotic freedom, its obstruction, and a way out",
+   "text": "We compute the one-loop beta functions of quadratic gravity in Weyl conformal geometry, the gauge theory of diffeomorphisms and dilatations with a dynamical Weyl gauge boson.",
+   "arxiv_id": "2610.40769",
+   "authors": "Diego Buccio et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Homogeneous Spectral Freedom and Hadamard Consistency of Perturbative Green Functions",
+   "text": "Perturbative mode equations often admit formally different particular solutions whose spectral sums appear to have different short-distance singularities. (primary category gr-qc)",
+   "arxiv_id": "2610.41777",
+   "authors": "Bekir Can Lütfüoğlu",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "Conformal boundaries and the photon sphere of AdS black holes",
+   "text": "We study linearized gravitational perturbations of four-dimensional Schwarzschild-AdS black holes with finite timelike boundaries subject to conformal boundary conditions.",
+   "arxiv_id": "2610.40778",
+   "authors": "Raúl Arias et al.",
+   "section": "Holography & Gauge/Gravity"
+  }
+ ],
+ "footer": "Text is excerpted verbatim from the authors’ abstracts as posted on arXiv and has not been peer reviewed. Follow the links for the full papers.",
+ "title": "The arXiv Gazette",
+ "tagline": "All the preprints fit to print",
+ "date": "Monday, November 2, 2026",
+ "edition": "No. 6 · Morning Edition",
+ "categories": [
+  "hep-th",
+  "gr-qc (cross-lists)"
+ ],
+ "stats": {
+  "Papers scanned": "28",
+  "hep-th primary": "23",
+  "gr-qc cross-lists": "5",
+  "Papers covered": "28"
+ }
+}
