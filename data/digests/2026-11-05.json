@@ -1,0 +1,250 @@
+{
+ "lead": {
+  "headline": "Conformal field theory from automorphic forms on a quantum group",
+  "body": [
+   "We reformulate two-dimensional conformal field theory (2d CFT) in the language of noncommutative geometry. To this end, we introduce automorphic forms for the von Neumann algebraic quantum group $\\mathrm{SL}^+_b(2,\\mathbb{R})$.",
+   "A quantum measure space is a von Neumann algebra equipped with a weight. We study such spaces carrying a weight-preserving action of $\\mathrm{SL}^+_b(2,\\mathbb{R})$.",
+   "We argue that every unitary bosonic 2d CFT with central charge $c=1+6(b+b^{-1})^2>1$ is equivalent to a quantum measure space with an action of $\\mathrm{SL}^+_b(2,\\mathbb{R})\\times\\mathrm{SL}^+_b(2,\\mathbb{R})$. In this dictionary, Virasoro primary operators are quantum automorphic forms and their scaling dimensions correspond to the spectrum of a quantum Laplace operator."
+  ],
+  "authors": "Dalimil Mazac",
+  "arxiv_id": "2611.06907",
+  "kicker": "Lead Story · hep-th",
+  "deck": ""
+ },
+ "features": [
+  {
+   "headline": "Striped phases of N=4 SYM at finite density",
+   "body": [
+    "We construct spatially modulated phases of strongly coupled $\\mathcal N=4$ supersymmetric Yang--Mills theory at finite $R$-charge density. Compactification on a three-torus and unequal background charges isolate an unstable charge-density mode.",
+    "Its static threshold seeds a nonlinear branch of striped black branes in the STU model. The striped states have higher entropy than homogeneous states with the same energy and conserved charges."
+   ],
+   "authors": "Alex Buchel",
+   "arxiv_id": "2611.06421",
+   "kicker": "Strings, Amplitudes & Supergravity · hep-th"
+  },
+  {
+   "headline": "Quasi-Normal Modes and thermalization in integrable Quantum Field Theories from the Thermodynamic Bethe Ansatz",
+   "body": [
+    "We propose a Thermodynamic Bethe Ansatz (TBA) approach for describing thermalization in integrable quantum field theories. The exponential damping and oscillations when approaching thermal equilibrium can be understood as the analogs of quasi-normal mode (QNM) frequencies of black hole perturbations within the framework of holography.",
+    "Holographic intuitions and some general properties of thermal Green's functions motivate the existence of such a TBA formulation, as well as lead to the imposition of a nonstandard analytical structure on the QNM TBA, while comparison with integrable form-factor expansions fixes the remaining ingredients."
+   ],
+   "authors": "Zoltan Bajnok and Romuald A. Janik",
+   "arxiv_id": "2611.06473",
+   "kicker": "Field Theory & Symmetry · hep-th"
+  },
+  {
+   "headline": "On phases of 4d $Spin/SO$ Yang-Mills theories",
+   "body": [
+    "We study the low-temperature phase diagrams of $Spin(N)/SO(N)_\\pm$ Yang-Mills theories as functions of the $θ$-parameter. In particular, for every even integer $N\\geq 4$, we find a phase diagram consistent with the center/CP mixed anomaly, via the technique of mixed gauge theory.",
+    "The resulting phase diagrams are in perfect agreement with the phase diagrams of $Spin(N)/SO(N)_\\pm$ super Yang-Mills theory softly broken by a small gaugino mass."
+   ],
+   "authors": "Ryo Hamachika and Takahiro Nishinaka",
+   "arxiv_id": "2611.06058",
+   "kicker": "Field Theory & Symmetry · hep-th"
+  }
+ ],
+ "sections": [
+  {
+   "name": "Strings, Amplitudes & Supergravity",
+   "stories": [
+    {
+     "headline": "Form Factors in AdS from the Worldsheet",
+     "body": [
+      "We study AdS form factors describing closed strings scattering off D-branes. Assuming that these form factors admit worldsheet integral representations in terms of multiple polylogarithms, we determine their leading curvature corrections around the flat-space limit by matching their pole structure to CFT data."
+     ],
+     "authors": "Luis F. Alday et al.",
+     "arxiv_id": "2611.06679"
+    },
+    {
+     "headline": "5-brane webs and generalised symmetries",
+     "body": [
+      "5-brane webs provide a powerful geometric description of five-dimensional quantum field theories, encoding data such as symmetries and dualities. Although the extraction of continuous 0-form symmetries from these systems is well understood, their higher-form symmetries have received less attention."
+     ],
+     "authors": "Mohammad Akhond et al.",
+     "arxiv_id": "2611.06794"
+    },
+    {
+     "headline": "Goldstone theory of gluon saturation in high energy QCD: From color glass to color superfluid condensate",
+     "body": [
+      "In the high energy Regge asymptotics of QCD, the rapid overpopulation of gluons leads to gluon saturation, characterized by nonperturbative semi-classical lumpy configurations of size $1/Q_S$, where $Q_S\\gg Λ_{\\rm QCD}$ is a dynamical semi-hard saturation scale."
+     ],
+     "authors": "V. P. Nair and Raju Venugopalan",
+     "arxiv_id": "2611.05498"
+    },
+    {
+     "headline": "Exact Splitting of Amplitudes and One-Loop Integrands: A Classical Origin of Zeros",
+     "body": [
+      "We introduce a recursion based on hidden zeros that reconstructs complete tree level scattering amplitudes and one-loop integrands at generic kinematics. The recursion takes a universal exact-splitting form: both tree amplitudes and one-loop surface integrands are expressed as sums of products of complete tree functions, with the chosen zero conditions manifest in every term."
+     ],
+     "authors": "Yang Li et al.",
+     "arxiv_id": "2611.06810"
+    }
+   ]
+  },
+  {
+   "name": "Field Theory & Symmetry",
+   "stories": [
+    {
+     "headline": "Anomaly effective actions for 4d $\\mathcal{N}=1$ superconformal field theories",
+     "body": [
+      "We present a comprehensive analysis of the Wess-Zumino anomaly effective action of four-dimensional $\\mathcal{N}=1$ superconformal field theories in components. After reviewing the coset construction of the Wess-Zumino action in the presence of an unbroken subgroup, the gauging of the conformal algebra and the Wess-Zumino effective action for non-supersymmetric conformal field theories with a U(1) symmetry in two and four dimensions, we revisit the superconformal anomalies of $\\mathcal{N}=1$ conformal supergravity."
+     ],
+     "authors": "Pantelis Panopoulos and Ioannis Papadimitriou",
+     "arxiv_id": "2611.06842"
+    },
+    {
+     "headline": "Spectral flow in AdS$\\mathbf{_3}$ revisited",
+     "body": [
+      "We revisit an old idea that spectral flow in WZW models can be associated with certain $G$-bundles over a worldsheet. This allows us to introduce a novel method for computing correlators of spectrally-flowed vertex operators in WZW models with group $G$ and level $k$, by systematically computing the contribution from a network of line defects."
+     ],
+     "authors": "Nathan McStay et al.",
+     "arxiv_id": "2611.06295"
+    }
+   ]
+  },
+  {
+   "name": "Also in hep-th",
+   "stories": [
+    {
+     "headline": "Static and dynamical Casimir effects in a wedge within the worldline formulation",
+     "body": [
+      "We study a real massless scalar field in $d+1$ dimensions confined to a wedge of opening angle $α$, in the presence of a semitransparent circular arc that may oscillate radially. Within the worldline formulation, and for an arbitrary strength $λ$ of the $δ$-potential that models the arc, we expand the effective action in powers of the radial displacement $R$ of the arc."
+     ],
+     "authors": "César Daniel Fosco and Bruno Cardin Guntsche",
+     "arxiv_id": "2611.05768"
+    }
+   ]
+  },
+  {
+   "name": "Holography & Gauge/Gravity",
+   "stories": [
+    {
+     "headline": "Schwinger Effect with a Transversal Boundary",
+     "body": [
+      "We study the effect of a boundary on pair production by an electric field. In particular, we are interested in the case in which the electric field has a normal component with respect to the boundary.",
+      "This is essentially more complex than pure tangential fields due to the reflection of created particles against the boundary."
+     ],
+     "authors": "Santiago Christiansen Murguizur et al.",
+     "arxiv_id": "2611.05530"
+    }
+   ]
+  },
+  {
+   "name": "Across the Border",
+   "note": "Papers whose primary category is not hep-th (mostly gr-qc), cross-listed into it",
+   "stories": [
+    {
+     "headline": "The quasi-topological space of quasi-topological gravities",
+     "body": [
+      "We investigate general properties of quasi-topological theories of gravity involving infinite towers of polynomial densities and of their regular vacuum black hole solutions. We show that every positive-mass regular vacuum solution necessarily possesses a de Sitter core, while Minkowski and anti-de Sitter cores are excluded."
+     ],
+     "authors": "Pablo Bueno et al.",
+     "arxiv_id": "2611.05485"
+    },
+    {
+     "headline": "Gravitational-Wave Constraints on $R^2$ Gravity",
+     "body": [
+      "Gravitational waves from compact binary coalescences provide a unique opportunity to test general relativity in the strong-field regime. Quadratic $f(R)=R+aR^2$ gravity is among the simplest higher-curvature extensions of general relativity and introduces a massive scalar degree of freedom whose finite interaction range can modify compact-binary dynamics and gravitational-wave emission."
+     ],
+     "authors": "Pawan Kumar Gupta and Laura Sagunski",
+     "arxiv_id": "2611.06902"
+    },
+    {
+     "headline": "The Start Time of Ringdown",
+     "body": [
+      "We determine the convergence of quasi-normal modes sums for a point-particle plunging into a Schwarzschild black hole. While a dynamical amplitude model reproduces the waveform after the particle crosses the bounce radius, a constant amplitude sum converges only after the start time $t_S$, which corresponds to the advanced time at which the particle hits the central singularity."
+     ],
+     "authors": "Adrien Kuntz",
+     "arxiv_id": "2611.05472"
+    }
+   ]
+  }
+ ],
+ "briefs": [
+  {
+   "headline": "Topology change and the Gauss Bonnet term in causal set theory: the sign of the cosmological term and the axion decay constant",
+   "text": "Causal set theory permits changes of spatial topology without the metric degeneracy that forbids them in continuum Lorentzian gravity. (primary category gr-qc)",
+   "arxiv_id": "2611.06102",
+   "authors": "Stylianos A. Tsilioukas",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "Higher Integrability, Generalized Symmetries, and Partially Topological Field Theories",
+   "text": "We exhibit a classical link between higher Lax integrability and generalized symmetries in a non-Lorentzian higher semi-holomorphic Chern--Simons theory on $M\\times\\mathbb CP^1$.",
+   "arxiv_id": "2611.06507",
+   "authors": "Luigi Alfonsi et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "A dynamical Einstein-Proca-dilaton holographic model and exotic hybrid meson resonances",
+   "text": "A fully dynamical Einstein-Proca-dilaton (EPD) holographic model is developed for the exotic $J^{PC}=1^{-+}$ hybrid meson, incorporating the backreaction of the massive vector field dual to the hybrid current in the bulk.",
+   "arxiv_id": "2611.06411",
+   "authors": "Bruno Toniato et al.",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Gluon and Faddeev--Popov ghost propagators in rotating background: An eigenfunction approach",
+   "text": "We construct the free gluon and Faddeev--Popov ghost propagators in rigidly rotating cylindrical coordinates using an eigenfunction approach within the Feynman gauge.",
+   "arxiv_id": "2611.05789",
+   "authors": "Benjamín García-Contreras et al.",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Partially Massless Condensates and Reentrant NUT/Bolt Phase Transitions in Conformal Gravity",
+   "text": "We study non-Einstein Bach-flat Taub-NUT/Bolt instantons with weakened AdS boundary conditions.",
+   "arxiv_id": "2611.05787",
+   "authors": "Cristóbal Corral et al.",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Chiral edge modes from lattice Chern-Simons theory",
+   "text": "It is shown that a level $k$ Abelian lattice Chern-Simons theory with continuum time and a spatial square lattice, which is a topological field theory on the latticized plane and torus, when quantized on a spatial cylinder reduces to chiral edge excitations, exactly localized on the two boundaries and carrying two commuting lattice versions of the level-$k$ $U(1)$ Kac-Moody algebra of opposite chirality.",
+   "arxiv_id": "2611.05663",
+   "authors": "Gordon W. Semenoff",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Complex phase diagram and thermodynamic supercriticality of five-dimensional four-charge AdS black holes in $STU-W^2U$ gauged supergravity",
+   "text": "In this paper, we investigate the complex phase structure and thermodynamic supercriticality of static four-charge anti-de Sitter (AdS) black holes in five-dimensional $STU-W^2U$ gauged supergravity, with all four physical electric charges held fixed.",
+   "arxiv_id": "2611.05624",
+   "authors": "Di Wu and Xiao-Dan Zhu",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Satisfying Freed--Witten quantization on smooth divisors in Calabi--Yau orientifolds",
+   "text": "Freed--Witten quantization conditions on several divisors wrapped by D-branes must be satisfied with one bulk $B$-field.",
+   "arxiv_id": "2611.05480",
+   "authors": "Mudit Jain",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Bumblebee radiation from neutral matter around a black hole",
+   "text": "We investigate bumblebee radiation generated by neutral matter orbiting a black hole with a radial spacelike vector vacuum. (primary category gr-qc)",
+   "arxiv_id": "2611.05676",
+   "authors": "A. A. Araújo Filho",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "Exact thermal correlators at vanishing momenta and the black hole singularity",
+   "text": "We study thermal two- and three-point functions of scalar primaries in holographic CFTs dual to AdS black branes.",
+   "arxiv_id": "2611.05473",
+   "authors": "Kaustubh Singhi",
+   "section": "Holography & Gauge/Gravity"
+  }
+ ],
+ "footer": "Text is excerpted verbatim from the authors’ abstracts as posted on arXiv and has not been peer reviewed. Follow the links for the full papers.",
+ "title": "The arXiv Gazette",
+ "tagline": "All the preprints fit to print",
+ "date": "Thursday, November 5, 2026",
+ "edition": "No. 9 · Morning Edition",
+ "categories": [
+  "hep-th",
+  "gr-qc (cross-lists)"
+ ],
+ "stats": {
+  "Papers scanned": "25",
+  "hep-th primary": "20",
+  "gr-qc cross-lists": "5",
+  "Papers covered": "25"
+ }
+}
