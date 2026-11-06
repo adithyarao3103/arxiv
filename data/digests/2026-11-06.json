@@ -1,0 +1,320 @@
+{
+ "lead": {
+  "headline": "Constraining the spectral gap of 2d CFTs just above c=1",
+  "body": [
+   "We numerically study the space of compact unitary two-dimensional conformal field theories (2d CFTs) with central charge $c>1$ using the modular bootstrap. We focus on bounding the spectral gap $Δ_{\\rm gap}$ of such theories, namely the smallest scaling dimension among the non-vacuum primary operators.",
+   "We use both a primal method that directly searches for consistent spectra and a dual method that yields rigorous exclusions. A key feature of our analysis is requiring the degeneracies of primary operators to be positive integers.",
+   "At $c$ very near $1$, the integrality constraint greatly reduces the allowed spectral gap in both methods. For example, at $c-1 = 3\\times 10^{-3}$ integrality strengthens the rigorous bound from $Δ_{\\rm gap} \\lesssim 0.5$ to $Δ_{\\rm gap} < 0.041$."
+  ],
+  "authors": "Nathan Benjamin et al.",
+  "arxiv_id": "2611.07011",
+  "kicker": "Lead Story · hep-th",
+  "deck": "7 pages, 9 pages of supplementary material, 13 figures, 2 tables, code available at https://github.com/Kevin-Langhoff/cft-gap"
+ },
+ "features": [
+  {
+   "headline": "Multipartite Entanglement, TQFT Partition Functions and PL Bordism",
+   "body": [
+    "In a previous work we conjectured that the multi-invariants of the ground state of a gapped $(d-1)+1$-dimensional system, labeled by bipartite $(d+1)$-edge-colored graphs encoding closed oriented $d$-manifolds $M$, compute the partition functions $Z(M)$ of the low energy topological quantum field theory (TQFT), up to non-universal factors determined by the local structure of the triangulation. In this paper we determine which combinations of partition functions can be isolated from the non-universal factors."
+   ],
+   "authors": "Michele Del Zotto et al.",
+   "arxiv_id": "2611.07000",
+   "kicker": "Field Theory & Symmetry · hep-th"
+  },
+  {
+   "headline": "Conformal Bootstrap Unblocked",
+   "body": [
+    "We develop a novel conformal bootstrap formulated directly in terms of conformal symmetry, reflection positivity, and crossing symmetry, without explicitly relying on the operator product expansion or conformal blocks. By constructing Gram matrices from states created by pairs of local operators and imposing spectral constraints through conformal generators, we obtain a hierarchy of semidefinite programs that directly constrain correlation functions."
+   ],
+   "authors": "Li-Yuan Chiang and David Poland",
+   "arxiv_id": "2611.07004",
+   "kicker": "Field Theory & Symmetry · hep-th"
+  },
+  {
+   "headline": "Defect Anomalies at a Distance",
+   "body": [
+    "Surface defects carry Weyl and gravitational anomalies that generalize the central charges of two-dimensional conformal field theories (CFTs) and characterize the anomalous response of gapless surface modes to background geometry. These anomalies usually appear as contact terms on the defect.",
+    "We explain how they are encoded at a distance, in scheme-independent integrated bulk stress-tensor correlators. We derive sum rules for them in terms of defect operator data, establish a lower bound on the boundary Weyl anomaly in three-dimensional CFTs, and illustrate our results with explicit examples."
+   ],
+   "authors": "Oleksandr Diatlyk et al.",
+   "arxiv_id": "2611.08476",
+   "kicker": "Field Theory & Symmetry · hep-th"
+  }
+ ],
+ "sections": [
+  {
+   "name": "Field Theory & Symmetry",
+   "stories": [
+    {
+     "headline": "Non-symmetric integral geometry: alternative reconstruction procedure with dual Radon transform",
+     "body": [
+      "In the note, we use the principles of non-symmetric integral geometry (non-integral geometry), related to the non-symmetric restricted integration measure, to extend the well-known relations traced from the Fourier slice theorem and the dual Radon transform. The proposed generalization is a very useful for the alternative restoration of the outset function."
+     ],
+     "authors": "I. V. Anikin",
+     "arxiv_id": "2611.07376"
+    },
+    {
+     "headline": "On a Dual Heterotic Kodaira-Spencer Theory",
+     "body": [
+      "We consider a dual version of heterotic Kodaira-Spencer theory on a Calabi-Yau three-fold $X$ with background fluxes, related to the type I BCOV theory of Costello-Li. We implement the Green-Schwarz mechanism of Costello-Li, where the Beltrami differential plays the role of the Green-Schwarz field."
+     ],
+     "authors": "Siddhartha Mangamuri et al.",
+     "arxiv_id": "2611.07178"
+    },
+    {
+     "headline": "Chern-Simons Interfaces and Minimal Models from Quantum Groups",
+     "body": [
+      "Coupling two-dimensional fundamental Dirac fermions to $SU(N)_k$ Chern-Simons theory produces non-chiral interfaces that in the infrared flow to a compact boson and a $W_N$ minimal model. We propose a description of these interfaces as continuum limits of $q$-deformed fermion chains."
+     ],
+     "authors": "Suriyah Rajalingam Kannagi and Sergio Sanjurjo",
+     "arxiv_id": "2611.07012"
+    },
+    {
+     "headline": "$1/N$ corrections to $\\langle TJJ\\rangle$ and $\\langle TTT\\rangle$ in the critical $O(N)$ vector and Gross--Neveu--Yukawa models",
+     "body": [
+      "We compute the subleading corrections in the $1/N$ expansion of the three-point functions $\\langle TJJ\\rangle$ and $\\langle TTT\\rangle$ in the three-dimensional critical $O(N)$ vector and Gross--Neveu--Yukawa models. We determine the coefficients of the two parity-even conformal structures and the corresponding conformal collider parameters."
+     ],
+     "authors": "Yongwei Guo and Zhijin Li",
+     "arxiv_id": "2611.07394"
+    },
+    {
+     "headline": "Background Effects on Thermal Free Energy in Conformal Field Theories",
+     "body": [
+      "We compute background corrections to the thermal free energy of free conformal field theories (CFTs) with a global abelian symmetry defined on a box with all sides infinitely long by turning on a flat gauge field in general dimensions. This result is applied to the U(N) maximally supersymmetric Yang-Mills theory, the ABJ(M) theory, and the free U(N) vector model in four, three, and two spacetime dimensions, respectively."
+     ],
+     "authors": "Shuichi Yokoyama et al.",
+     "arxiv_id": "2611.07312"
+    }
+   ]
+  },
+  {
+   "name": "Also in hep-th",
+   "stories": [
+    {
+     "headline": "Worldsheet skeins and block decomposition of quivers",
+     "body": [
+      "Following the knot-quiver correspondence, we investigate quiver counterparts of the HOMFLYPT skein relations by interpreting link invariants in terms of holomorphic worldsheets and their multicover contributions. Extending this framework to more general worldsheet geometries, we conjecture that, up to quiver equivalence, the adjacency matrix of the quiver associated with any link in a skein triple admits a block decomposition whose diagonal blocks are quiver adjacency matrices associated with the other two links."
+     ],
+     "authors": "Sachin Chauhan et al.",
+     "arxiv_id": "2611.07455"
+    }
+   ]
+  },
+  {
+   "name": "Holography & Gauge/Gravity",
+   "stories": [
+    {
+     "headline": "On Entanglement Dynamics in Holographic Theories",
+     "body": [
+      "Entanglement entropy (EE) is central to modern theoretical physics, yet its calculation in interacting theories with nontrivial time dependence remains challenging. In this thesis, we investigate the real-time dynamics of EE in strongly coupled quantum field theories (QFTs) using the Anti-de Sitter/Conformal Field Theory (AdS/CFT) correspondence."
+     ],
+     "authors": "Hanzhi Jiang",
+     "arxiv_id": "2611.07010"
+    },
+    {
+     "headline": "The Mass Gap Approach to QCD. III. Solution of the gluon confinement problem",
+     "body": [
+      "We present reports on progress in the solution of the gluon confinement problem and in the explanation of the scale breaking in the asymptotic freedom regime in QCD. It is based on the previously formulated the mass gap approach to QCD, which sheds the light on a mass origin in its ground state."
+     ],
+     "authors": "Vakhtang Gogokhia and Gergely Gábor Barnaföldi",
+     "arxiv_id": "2611.07897"
+    }
+   ]
+  },
+  {
+   "name": "Across the Border",
+   "note": "Papers whose primary category is not hep-th (mostly gr-qc), cross-listed into it",
+   "stories": [
+    {
+     "headline": "Critical collapse remains discretely self-similar at large D",
+     "body": [
+      "When matter collapses at the threshold of black hole formation spacetime typically has an emergent continuous or discrete symmetry, depending on the matter content. For the Einstein-Klein-Gordon model in any finite dimension D>3 the associated critical spacetime solutions exhibit discrete self-similarity, characterized by the echoing period Delta."
+     ],
+     "authors": "Christian Ecker et al.",
+     "arxiv_id": "2611.07007"
+    },
+    {
+     "headline": "Demystifying Graviton Detection",
+     "body": [
+      "Detecting single gravitons is possible through the extraction of discrete energy quanta from passing gravitational waves. For decades, this was considered hopeless, with estimates suggesting a detector the size of Jupiter.",
+      "Here, I explain how these earlier estimates relied on the highly inefficient electron ionization process, while the absorption through the full mass quadrupole of a macroscopic system can bring graviton detection within experimental reach."
+     ],
+     "authors": "Igor Pikovski",
+     "arxiv_id": "2611.07447"
+    },
+    {
+     "headline": "Parity-violating scalar-tensor theory revisited: complete basis up to $d=4$ and Hamiltonian analysis",
+     "body": [
+      "We construct complete bases of parity-violating generally covariant scalar-tensor (GST) and spatially covariant gravity (SCG) monomials up to derivative grade $d=4$. Including all derivative partitions, each description contains one $d=3$ and thirteen $d=4$ linearly independent monomials."
+     ],
+     "authors": "Yun-Chuan Zhang et al.",
+     "arxiv_id": "2611.08191"
+    }
+   ]
+  }
+ ],
+ "briefs": [
+  {
+   "headline": "Instantons from geometry in M2-brane sphere partition functions",
+   "text": "Can the geometry transverse to M2-branes capture effects that are exponentially small in their three-sphere ($S^3$) partition function?",
+   "arxiv_id": "2611.07186",
+   "authors": "Kiril Hristov and Ali Mert Yetkin",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Charged AdS$_{3}$ black branes as marginally deformed two-dimensional CFTs",
+   "text": "We study how boundary correlation functions encode the charge dependence of the renormalised Euclidean action of an AdS$_3$ black brane.",
+   "arxiv_id": "2611.07019",
+   "authors": "Suting Zhao et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Constraint Variance Identity and the Matter-Geometry Fluctuation Relation",
+   "text": "The quantum Hamiltonian constraint vanishes for physical states.",
+   "arxiv_id": "2611.07015",
+   "authors": "Yuki Yokokura",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Fermion$\\text{-}$Monopole Scattering: A Unified Perspective",
+   "text": "We revisit the scattering of massless chiral fermions by a minimally charged BPS 't Hooft-Polyakov monopole.",
+   "arxiv_id": "2611.07001",
+   "authors": "Hao Geng and Zekai Wang",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Improved method for extracting low-energy expansion from OPE in mass-gapped theories",
+   "text": "Recently, Takaura proposed a new method for extracting the first nonzero coefficient of the low-energy expansion of an observable from its operator product expansion (OPE) in asymptotically free theories with a mass gap and a single threshold.",
+   "arxiv_id": "2611.07389",
+   "authors": "Hajime Furuta and Yukinari Sumino",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Finite is not enough: Triviality bounds in nonlocal field theories",
+   "text": "An ultraviolet-finite theory need not be ultraviolet complete.",
+   "arxiv_id": "2611.07026",
+   "authors": "Fabian Wagner",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Running Couplings in CP Violating Abelian Theories",
+   "text": "We calculate the one- and two-loop running couplings for a massless photon coupled to dyons, including CP violating couplings.",
+   "arxiv_id": "2611.07016",
+   "authors": "Joshua Newey et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "The three-dimensional Galilean black hole",
+   "text": "We report a novel solution of three-dimensional Galilean Anti-de Sitter gravity.",
+   "arxiv_id": "2611.08471",
+   "authors": "Luis Avilés et al.",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Quantum action for heterotic string field theory with quantum L-infinity structure",
+   "text": "We construct a quantum action for heterotic string field theory that satisfies the quantum Batalin-Vilkovisky equation.",
+   "arxiv_id": "2611.07635",
+   "authors": "Yasu Gen et al.",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Matrix Theory from Holography II: Beyond Counting",
+   "text": "Extending our earlier realization of Matrix Theory for M-theory within AdS/CFT, we propose and test a new triality among a large-charge sector of three-dimensional $\\mathcal N=4$ ADHM theory, the BMN matrix model, and lightlike-compactified M-theory on the maximally supersymmetric pp-wave.",
+   "arxiv_id": "2611.06999",
+   "authors": "Shota Komatsu et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Unruh-DeWitt detectors in a delocalized massive shell",
+   "text": "We construct a model for the response of a detector to vacuum fluctuations inside a massive hollow shell in a superposition of positions. (primary category gr-qc)",
+   "arxiv_id": "2611.07058",
+   "authors": "Giovanna F. do Valle et al.",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "Accessing Fractional Wilson Lines from U(1) Monodromy Defects on the Fuzzy Sphere",
+   "text": "Wilson lines are gauge-invariant probes of charge screening and deconfinement, which can detect the response of quantum critical matter to an external charge, but their universal information at strongly-coupled critical points remains hard to access.",
+   "arxiv_id": "2611.08102",
+   "authors": "Yin Tang and W. Zhu",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Topological Characterization of Adinkra Heights",
+   "text": "Adinkras are highly structured bipartite graphs that encapsulate 1D supersymmetry representations.",
+   "arxiv_id": "2611.07637",
+   "authors": "Amanda E. Francis et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "The logarithm construction and (super) Weyl anomalies",
+   "text": "We apply the logarithm construction of higher-derivative conformal primary (super) fields proposed by Butter et al. to derive simple Wess-Zumino actions for: (i) Weyl anomalies in arbitrary even dimensions; (ii) $\\mathcal{N} =1$ and $\\mathcal{N}=2$ super-Weyl anomalies in four dimensions; and (iii) $(p,q)$ super-Weyl anomalies in two dimensions, with $p,q \\leq 2$.",
+   "arxiv_id": "2611.07547",
+   "authors": "Sergei M. Kuzenko",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Minimal massive completions of partially broken higher-spin models",
+   "text": "The partially broken Fronsdal (PBF) model describes massless particles of arbitrary integer spin $s$ with a gauge symmetry smaller than Fronsdal's, and differs from it only by the coefficient $c$ of the term $(\\p\\cdot h')^2$.",
+   "arxiv_id": "2611.07057",
+   "authors": "E. L. Mendonça and M. I. C. Maués",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Primordial non-Gaussianity in warm $k$-inflation with nonminimal derivative coupling",
+   "text": "This paper derives the finite-inertia intrinsic thermal bispectrum in potential-free warm $k$-inflation with nonminimal derivative coupling (NMDC). (primary category gr-qc)",
+   "arxiv_id": "2611.07492",
+   "authors": "Xiao-Min Zhang et al.",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "Pohlmeyer reduction of Newton-Cartan strings",
+   "text": "We develop a Pohlmeyer-type reduction for classical non-relativistic strings on string Newton-Cartan backgrounds.",
+   "arxiv_id": "2611.08164",
+   "authors": "Aritra Banerjee",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "In light of the Henneaux-Teitelboim action",
+   "text": "We construct an action similar to the Henneaux-Teitelboim action on a six dimensional Lorentzian manifold where the time direction is chosen to be lightlike and generated by a conformal lightlike Killing vector $U$.",
+   "arxiv_id": "2611.07180",
+   "authors": "Andreas Gustavsson",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Asymptotic safety is not generic",
+   "text": "Asymptotically safe quantum gravity proposes a non-perturbative ultraviolet completion of gravity in which the high-energy behavior is controlled by an ultraviolet fixed point---the Reuter fixed point---for which there is robust evidence from a wide range of settings and truncations.",
+   "arxiv_id": "2611.07002",
+   "authors": "Francesco Del Porro et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "An Orbital Curvature for ISCOs",
+   "text": "Building on the fact that circular orbits are the fixed points of the phase portraits arising from the geodesic equations on a black hole spacetime, we develop a general orbital geometry, which captures the stability structure of orbits. (primary category gr-qc)",
+   "arxiv_id": "2611.07875",
+   "authors": "Poulami Mukherjee et al.",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "ADE Quiver Duality Proposals: Graph Classification and Nodewise Realizations",
+   "text": "We use the large-$N$ index strategy to find new quiver dualities in four-dimensional $\\mathcal N=1$ quiver gauge theories.",
+   "arxiv_id": "2611.07557",
+   "authors": "Yuanyuan Fang",
+   "section": "Field Theory & Symmetry"
+  }
+ ],
+ "footer": "Text is excerpted verbatim from the authors’ abstracts as posted on arXiv and has not been peer reviewed. Follow the links for the full papers.",
+ "title": "The arXiv Gazette",
+ "tagline": "All the preprints fit to print",
+ "date": "Friday, November 6, 2026",
+ "edition": "No. 10 · Morning Edition",
+ "categories": [
+  "hep-th",
+  "gr-qc (cross-lists)"
+ ],
+ "stats": {
+  "Papers scanned": "36",
+  "hep-th primary": "30",
+  "gr-qc cross-lists": "6",
+  "Papers covered": "36"
+ }
+}
