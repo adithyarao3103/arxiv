@@ -1,0 +1,313 @@
+{
+ "lead": {
+  "headline": "Expiscating the black hole singularity in holography",
+  "body": [
+   "We argue that the leading exponential rate in the high frequency asymptotics of holographic thermal two-point functions is independent of the conformal dimension and spin (held fixed) of the operator. We analyze the leading universal WKB spectral curve governing the asymptotics at non-vanishing momentum scaling with frequency.",
+   "We show that its classical action governs time domain signatures of the bouncing geodesic singularity, highly damped quasinormal modes, and the asymptotics of multi-stress tensor OPE coefficients. Beyond the leading order, we examine linear and dimension-dependent sublinear scalings of momentum with frequency.",
+   "In both regimes, we derive the connection matrix between the boundary and the horizon using exact-WKB techniques."
+  ],
+  "authors": "Hewei Frederic Jia and Mukund Rangamani",
+  "arxiv_id": "2611.13261",
+  "kicker": "Lead Story · hep-th",
+  "deck": "153 pages, 42 figures"
+ },
+ "features": [
+  {
+   "headline": "Categorical RMT",
+   "body": [
+    "Random matrix theory (RMT) describes the level statistics of chaotic systems one symmetry sector at a time. We propose its analogue for local quantum systems on a circle with ordinary or non-invertible symmetries.",
+    "Symmetry defects define twisted Hilbert spaces, and the symmetry sectors are irreducible representations of the tube algebra, which acts within and between these spaces. Under our proposal, the symmetry fixes exact degeneracies and identifications among sectors, and ordinary RMT describes the rest, with unrelated blocks treated as statistically independent."
+   ],
+   "authors": "Chuanxin Cui et al.",
+   "arxiv_id": "2611.13093",
+   "kicker": "Field Theory & Symmetry · hep-th"
+  },
+  {
+   "headline": "Rotational instability and quadrupolar order in BFSS matrix theory",
+   "body": [
+    "We study the effect of angular momentum on thermal states of the BFSS matrix theory in its gravitational and high-temperature classical regimes. We focus on ensembles with only one non-zero angular momentum.",
+    "On the gravity side, the rotating ensemble is described by the singly-spinning D$0$ black hole. Beyond a critical rotation, we find that this solution becomes unstable to a non-axisymmetric quadrupolar perturbation."
+   ],
+   "authors": "Jun Liu and Jorge E. Santos",
+   "arxiv_id": "2611.13122",
+   "kicker": "Strings, Amplitudes & Supergravity · hep-th"
+  },
+  {
+   "headline": "Giant Graviton Correlators: From Non-maximal to Dual, Bootstrap and Hidden Symmetry",
+   "body": [
+    "We compute four-point functions of two light $\\frac{1}{2}$-BPS operators and two heavy giant graviton operators in $\\mathcal{N}=4$ super Yang--Mills theory at large $N$ and infinite 't Hooft coupling. Using bootstrap techniques, we determine the correlators for arbitrary light-operator dimensions and arbitrary allowed sizes of non-maximal sphere and dual giant gravitons.",
+    "We show that these correlators exhibit a hidden ten-dimensional conformal symmetry, allowing them to be organized into compact generating functions."
+   ],
+   "authors": "Qi Chen et al.",
+   "arxiv_id": "2611.13444",
+   "kicker": "Field Theory & Symmetry · hep-th"
+  }
+ ],
+ "sections": [
+  {
+   "name": "Also in hep-th",
+   "stories": [
+    {
+     "headline": "Quantum Langlands correspondence for Painlevé II",
+     "body": [
+      "We construct an irregular KZ-BPZ correspondence for quantum Painlevé II from a rank-three Wakimoto-Whittaker module. The irregular KZ equation and the quantum isomonodromy equation form a joint affine system whose Drinfeld-Sokolov reduction yields scalar BPZ equations."
+     ],
+     "authors": "Sibasish Banerjee et al.",
+     "arxiv_id": "2611.13639"
+    }
+   ]
+  },
+  {
+   "name": "Holography & Gauge/Gravity",
+   "stories": [
+    {
+     "headline": "Holographic Drag Force and the Entanglement Membrane: Geometric Reconstruction and Information Spreading",
+     "body": [
+      "A central question in holography is how different boundary observables encode and reconstruct the geometry of the gravitational dual. In this work, we uncover an exact geometric correspondence between two seemingly distinct aspects of strongly coupled dynamics: the dissipative drag force experienced by a moving heavy particle(quark) and the entanglement membrane governing the propagation of quantum information."
+     ],
+     "authors": "Dmitry S. Ageev",
+     "arxiv_id": "2611.13088"
+    },
+    {
+     "headline": "Effective scalar-fluid description of thermal first-order phase transitions and their spinodal instabilities",
+     "body": [
+      "We formulate an improved scalar-fluid effective description of first-order phase transitions in relativistic theories, and test it against a microscopic calculation in a holographic model. The effective theory shows that the nature of the spinodal instability is linked to thermodynamic stability, determined by the sign of the specific heat."
+     ],
+     "authors": "Alessio Caddeo et al.",
+     "arxiv_id": "2611.13102"
+    }
+   ]
+  },
+  {
+   "name": "Field Theory & Symmetry",
+   "stories": [
+    {
+     "headline": "Boundary dualities of symplectic Chern-Simons theories and minimal models",
+     "body": [
+      "We propose that a Neumann-type boundary condition of the 3d $\\mathcal{N}=2$ $USp(2n)$ Chern-Simons theory at the level $-(n+\\frac32)$ with a fundamental chiral multiplet is dual to a Dirichlet-type boundary condition of an Abelian rank-$0$ theory. In a topological twist we propose that it supports the affine vertex operator algebra (VOA) $L_n(\\mathfrak{osp}(1|2))$."
+     ],
+     "authors": "Yu Nakayama and Tadashi Okazaki",
+     "arxiv_id": "2611.13484"
+    },
+    {
+     "headline": "Nuclear geometry under external magnetic field in the Skyrme-Maxwell model",
+     "body": [
+      "We find static solutions of the U(1) gauged Skyrme-Maxwell model in a constant external magnetic field, for baryon numbers $B \\leq 6$. The field acts as an isospin-breaking source, stretching the skyrmion along its direction, while its size grows and then shrinks as the induction increases."
+     ],
+     "authors": "Christoph Adam et al.",
+     "arxiv_id": "2611.13152"
+    },
+    {
+     "headline": "Type IIB instanton corrections from pure modular unfolding",
+     "body": [
+      "We study the reconstruction of instanton corrections to type IIB higher-derivative interactions from their low Fourier modes using modular symmetry, without invoking supersymmetry differential equations. This provides a framework for studying non-BPS interactions through their modular coefficient functions."
+     ],
+     "authors": "Amineh Mohseni",
+     "arxiv_id": "2611.13086"
+    }
+   ]
+  },
+  {
+   "name": "Strings, Amplitudes & Supergravity",
+   "stories": [
+    {
+     "headline": "Four-charge Rotating AdS Black Holes in Gauged STU Supergravity",
+     "body": [
+      "We present an exact solutions for non-extremal rotating AdS black holes with four independent charges in four-dimensional gauged STU supergravity. The scalar potential introduced by gauging breaks the hidden symmetry underlying solution-generating methods in the ungauged theory, making the construction of such solutions a longstanding challenge."
+     ],
+     "authors": "Liang Ma and H. Lu",
+     "arxiv_id": "2611.13074"
+    },
+    {
+     "headline": "Tunneling from an oscillating state in quantum field theory",
+     "body": [
+      "How does a scalar field oscillating about a metastable minimum decay? For a coherent state with $\\langle q(t) \\rangle = a \\cos mt$ we find two results.",
+      "When $mR \\ll 1$, with $m$ the mass and $R$ the bubble radius, the decay at time $t$ is a Coleman bubble in the frozen potential $U_t(η) = U(\\langle q \\rangle +η)-U(\\langle q \\rangle)-U'(\\langle q \\rangle)η$, for any amplitude."
+     ],
+     "authors": "Oliver Janssen et al.",
+     "arxiv_id": "2611.14022"
+    }
+   ]
+  },
+  {
+   "name": "Across the Border",
+   "note": "Papers whose primary category is not hep-th (mostly gr-qc), cross-listed into it",
+   "stories": [
+    {
+     "headline": "Black Holes beyond General Relativity: The Effective Metric Description",
+     "body": [
+      "Black holes provide a privileged window on gravity in the strong-field regime, and deviations from the classical solutions of General Relativity (GR) may encode information about quantum gravity and other extensions of the theory. The abundance of proposed deformed black hole geometries, however, makes model-by-model comparison with observations impractical."
+     ],
+     "authors": "Manuel Del Piano et al.",
+     "arxiv_id": "2611.14353"
+    },
+    {
+     "headline": "Challenging the hoop conjecture with spinning pancakes and baguettes",
+     "body": [
+      "Understanding when gravitational collapse produces a black hole remains a central challenge in general relativity. Black-hole uniqueness results characterize the stationary endpoint under suitable assumptions, while singularity theorems establish geodesic incompleteness in the presence of trapped surfaces and appropriate energy and global conditions."
+     ],
+     "authors": "Robin Croft et al.",
+     "arxiv_id": "2611.13266"
+    },
+    {
+     "headline": "Images of Regular Black Holes with Hedgehog Scalar Hair Embedded in Radiatively Inefficient Accretion Flows",
+     "body": [
+      "How a black hole's geometric critical scale manifests in an accretion-flow image is governed by photon propagation, plasma radiative processes, and instrumental resolution. In this work, we investigate radiatively inefficient accretion flows (RIAF) surrounding geometrically regular black holes with hedgehog scalar hair."
+     ],
+     "authors": "Yuxuan Shi and Hao Wei",
+     "arxiv_id": "2611.14306"
+    }
+   ]
+  }
+ ],
+ "briefs": [
+  {
+   "headline": "Gravitational radiation from a particle in circular orbit around a wormhole: the nonrotating case",
+   "text": "In this paper, we have generalized Poisson's(1993) calculation for the case of gravitational radiation from a particle in a circular orbit around a black hole to the case of the wormhole. (primary category gr-qc)",
+   "arxiv_id": "2611.14455",
+   "authors": "Shauvik Biswas and Sayan Chakrabarti",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "Landau Theory of Black-Brane Phase Transitions from Kasner Singularities",
+   "text": "We develop a Landau theory of a continuous black-brane phase transition using the geometry of the black-hole interior.",
+   "arxiv_id": "2611.14075",
+   "authors": "Hong-Da Lyu",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Resummations In Higher-Curvature Modifications Of Starobinsky Inflation",
+   "text": "We study higher-curvature corrections to Starobinsky inflation, which are expected to be generated at the quantum level.",
+   "arxiv_id": "2611.13112",
+   "authors": "Marco Piva",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "The out-state of scalar-induced gravitational waves",
+   "text": "Scalar-induced gravitational waves (SIGWs) are described by second-order tensor perturbations that contain free radiation together with a gauge-dependent response maintained by the scalar source. (primary category gr-qc)",
+   "arxiv_id": "2611.13462",
+   "authors": "Yizhou Lu",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "Solving the SU(2) BFSS model",
+   "text": "We numerically solve the ground state wavefunction of SU(2) BFSS matrix quantum mechanics.",
+   "arxiv_id": "2611.14512",
+   "authors": "Kabir Bajaj and Henry W. Lin",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Yang-Lee edge singularity at $\\mathcal{O}(\\partial^4)$ from the functional renormalization group: revised analysis",
+   "text": "We determine the critical exponents of the Yang-Lee edge singularity as continuous functions of dimension using the functional renormalization group, retaining all operators at second and fourth order in the derivative expansion.",
+   "arxiv_id": "2611.14206",
+   "authors": "Konrad Kockler et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Gravitational Particle Production and Locality of the Wavefunction-Squared",
+   "text": "We show that no particle production due to the background geometry implies the locality of the wavefunction-squared for free heavy masses on expanding cosmologies.",
+   "arxiv_id": "2611.13864",
+   "authors": "Emine Şeyma Kutluk",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "General non-extremal rotating charged AdS black hole solutions with four independent charge parameters in $D=4$, STU gauged supergravity",
+   "text": "We present an exact solution for generic non-extremal rotating, charged black holes with a negative cosmological constant in four-dimensional $\\mathcal{N}=2, U(1)^4$ gauged supergravity.",
+   "arxiv_id": "2611.13151",
+   "authors": "Di Wu and Shuang-Qing Wu",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Scale separation and partial supersymmetry breaking",
+   "text": "We propose new candidate string theory vacua in which partial supersymmetry breaking occurs within the lower-dimensional effective theory in anti-de Sitter space, parametrically below the Kaluza--Klein scale.",
+   "arxiv_id": "2611.13130",
+   "authors": "Niccolò Cribiori et al.",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Moduli spaces in CFT: vortex defects",
+   "text": "We construct and study a class of codimension-two conformal defects in CFTs with spontaneously broken conformal symmetry, assuming that a continuous global symmetry is also broken on the moduli space.",
+   "arxiv_id": "2611.13092",
+   "authors": "Gabriel Cuomo and Adar Sharon",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "More physics at the entangling surface: boundary conditions and entanglement in 2d TQFT",
+   "text": "We present a systematic treatment of entanglement in two-dimensional topological quantum field theories (TQFTs).",
+   "arxiv_id": "2611.13078",
+   "authors": "Jackson R. Fliss et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Renormalized dynamical tidal response of neutron stars in binary dynamics",
+   "text": "We present the relativistic dynamical tidal response of a neutron star computed using stellar perturbation theory and matched to a worldline effective field theory via the tidal scattering phase. (primary category gr-qc)",
+   "arxiv_id": "2611.14077",
+   "authors": "M. V. S. Saketh et al.",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "Multiloop Unitarity from Airy Zeros",
+   "text": "Hidden zeros are non-trivial cancellations that make amplitudes or integrands vanish on specific kinematic loci away from propagator poles.",
+   "arxiv_id": "2611.14359",
+   "authors": "Laurentiu Rodina",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Reducing Massive Scattering Amplitudes to Normal Form",
+   "text": "Local amplitude reduction is a crucial tool in effective field theory (EFT) calculations.",
+   "arxiv_id": "2611.14270",
+   "authors": "Ming-Lei Xiao",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Generalizations of Courant brackets in the T-dual description of a weakly curved string background",
+   "text": "When T-duality is realized as a canonical transformation, the standard Courant bracket is T-dual invariant, while the $B$- and $θ$-twisted Courant brackets are exchanged.",
+   "arxiv_id": "2611.14172",
+   "authors": "Ilija Ivanišević",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Bions and infrared renormalons in Kähler sigma models with $U(1)$ isotropy",
+   "text": "We study semiclassical bion contributions to the vacuum energy of Kähler sigma models with two-dimensional target spaces on $\\mathbb{R} \\times S^1$ with twisted boundary conditions.",
+   "arxiv_id": "2611.13554",
+   "authors": "Chao-Hsiang Sheu",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "BPS Bootstrap",
+   "text": "We apply the large $N$ matrix bootstrap technique to constrain expectation values of simple operators in heavy BPS states that are dual to classical geometries.",
+   "arxiv_id": "2611.13097",
+   "authors": "Yiming Chen",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Non-singular cosmology from effective LQG-inspired black holes",
+   "text": "We propose a non-singular primordial cosmology derived from matching an effective Loop Quantum Gravity-inspired black hole geometry to an expanding Friedmann-Lemaître-Robertson-Walker universe via Darmois-Israel junction conditions. (primary category gr-qc)",
+   "arxiv_id": "2611.14001",
+   "authors": "V. F. C. Belo et al.",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "Geometry of Gauge-invariant Quantum Fields",
+   "text": "Gauge-invariant representatives of massless gauge fields generally involve inverse differential operators.",
+   "arxiv_id": "2611.13670",
+   "authors": "Andrea Quadri",
+   "section": "Field Theory & Symmetry"
+  }
+ ],
+ "footer": "Text is excerpted verbatim from the authors’ abstracts as posted on arXiv and has not been peer reviewed. Follow the links for the full papers.",
+ "title": "The arXiv Gazette",
+ "tagline": "All the preprints fit to print",
+ "date": "Wednesday, November 11, 2026",
+ "edition": "No. 13 · Morning Edition",
+ "categories": [
+  "hep-th",
+  "gr-qc (cross-lists)"
+ ],
+ "stats": {
+  "Papers scanned": "34",
+  "hep-th primary": "27",
+  "gr-qc cross-lists": "7",
+  "Papers covered": "34"
+ }
+}
