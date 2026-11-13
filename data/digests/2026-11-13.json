@@ -1,0 +1,321 @@
+{
+ "lead": {
+  "headline": "Swing Surfaces in AdS/CFT",
+  "body": [
+   "We study holographic entanglement entropy in the flat limit of AdS$_3$/CFT$_2$, and clarify the relation between Ryu-Takayanagi surfaces and the swing surfaces proposed for flat-space holography. We show that the ordinary RT formula does not admit a well-defined flat-space limit and connect this to subtleties of the state-operator map in the flat limit.",
+   "We then construct an AdS$_3$ uplift of the swing prescription and develop its corresponding information-theoretic interpretation through two complementary approaches. First, we show that the swing surface length computes the mutual information between suitably chosen nearly null boundary intervals in a special class of pure CFT states.",
+   "The gravity interpretation of this result involves scattering processes which take place deep inside of the AdS$_3$ bulk."
+  ],
+  "authors": "Jacqueline Caminiti and Sabrina Pasterski",
+  "arxiv_id": "2611.15854",
+  "kicker": "Lead Story · hep-th",
+  "deck": "42 pages + appendices, 7 figures"
+ },
+ "features": [
+  {
+   "headline": "Exact Infrared Triangle in Gravity with Long-Range Interactions",
+   "body": [
+    "Einstein gravity coupled to massless matter exhibits universality in the infrared. In the presence of long-range interactions we show that a novel superrotation charge conservation is equivalent to the massless limit of the classical logarithmic soft graviton theorem, and we propose a formula for the corresponding tail to the displacement memory.",
+    "These results, which extend earlier work on gravity coupled to massive matter in a qualitatively different way, are exact in the gravitational coupling and reveal that long-range gravitational dressings resum."
+   ],
+   "authors": "Sangmin Choi et al.",
+   "arxiv_id": "2611.15921",
+   "kicker": "Gravity & Cosmology · hep-th"
+  },
+  {
+   "headline": "Cosmological Dressing Rules for Massive Scalars",
+   "body": [
+    "The Schwinger-Keldysh formulation of de Sitter correlation functions comes in different guises including harmonic analysis and dressed flat space correlators. We observe that these are equivalent spectral representations of the same Sturm-Liouville problem.",
+    "Starting from the latter we derive dressing rules for scalar fields of arbitrary mass with auxiliary propagators in the form of Euler integrals that are accessible to flat space diagrammatic tools."
+   ],
+   "authors": "Jonathan Gräfe et al.",
+   "arxiv_id": "2611.15870",
+   "kicker": "Gravity & Cosmology · hep-th"
+  },
+  {
+   "headline": "De Sitter Gravity and Emergent Time from Fusion Matrix Product States and SYK",
+   "body": [
+    "We propose a quantum-mechanical model dual to two-dimensional de Sitter (dS) gravity. It is a quantum channel, defined by a matrix product state that fuses one spin at each step, and is related to a limit of the Sachdev-Ye-Kitaev model without chord crossings.",
+    "Its simplest part is a random walk with an emergent $SL(2,\\mathbb R)$ symmetry, which we identify with the symmetry of the future boundary of dS. It selects a time variable in which the walk obeys the Schwarzian action and yields the disk amplitude of dS Jackiw-Teitelboim gravity."
+   ],
+   "authors": "Shinsei Ryu and Yu-ki Suzuki",
+   "arxiv_id": "2611.17045",
+   "kicker": "Gravity & Cosmology · hep-th"
+  }
+ ],
+ "sections": [
+  {
+   "name": "Field Theory & Symmetry",
+   "stories": [
+    {
+     "headline": "Matching lattice and continuum chiral determinants at finite volume",
+     "body": [
+      "Recent formulations of lattice chiral gauge theories define a complex fermion weight either through Craig's gauge-invariant overlap measure or, following Hsu and Witten, through a continuum Weyl determinant on a reconstructed gauge connection, with its phase fixed by the five-dimensional $η$-invariant."
+     ],
+     "authors": "Zhengwen Liu",
+     "arxiv_id": "2611.16544"
+    },
+    {
+     "headline": "Finite cyclic monodromy in BMS3 gravity",
+     "body": [
+      "We investigate inducing data for three dimensional asymptotically flat BMS gravity on hyperbolic Virasoro orbits with winding, which contain no constant supermomentum, and the restriction of formal smooth equivariant sections to global Lorentz orbits. Using the developing map of the associated Hill operator we rederive their stabilizer and show that, in the spin double cover, it is the direct product of a line with a cyclic group of even order."
+     ],
+     "authors": "Evangelos Melas",
+     "arxiv_id": "2611.16823"
+    },
+    {
+     "headline": "Holographic Counterterms from Restricted Weyl Symmetry in Even-Dimensional Einstein-AdS Gravity",
+     "body": [
+      "We develop a symmetry-based approach to renormalization for even-dimensional Einstein-AdS gravity based on infinitesimal bulk Weyl transformations that preserve its field equations asymptotically. We determine a bulk-covariant completion of the Einstein-Hilbert density by requiring its variation under restricted Weyl transformations with parameter $Σ(X)$ to vanish modulo terms whose integrals remain finite as the radial cutoff is removed."
+     ],
+     "authors": "Giorgos Anastasiou",
+     "arxiv_id": "2611.16187"
+    }
+   ]
+  },
+  {
+   "name": "Gravity & Cosmology",
+   "stories": [
+    {
+     "headline": "A precision bound for gravitational transseries",
+     "body": [
+      "We propose that the large $N$ transseries of a holographic observable above the black hole threshold admits a precision bound, a limit on how precisely the transseries can determine the observable at finite $N$, set by the data of its D-brane instanton sectors."
+     ],
+     "authors": "Ji Hoon Lee",
+     "arxiv_id": "2611.17274"
+    },
+    {
+     "headline": "Silent Heavy Fields: An Exclusion Rule for the Cosmological Collider",
+     "body": [
+      "The cosmological collider uses oscillatory signatures in primordial correlators to probe heavy fields during inflation. This probe has blind spots, as heavy fields can keep ticking in time while remaining silent in the correlators.",
+      "In this letter, we derive an exclusion rule under which cosmological collider signals vanish."
+     ],
+     "authors": "Shuntaro Aoki et al.",
+     "arxiv_id": "2611.16029"
+    }
+   ]
+  },
+  {
+   "name": "Strings, Amplitudes & Supergravity",
+   "stories": [
+    {
+     "headline": "The $(5,5)$ String",
+     "body": [
+      "We study an $N=(2,1)$ heterotic string with right-movers on $\\mathbb R^{2,2}$ and left-movers of signature $(5,5)$, obtained by adjoining the lattice $\\mathrm{II}_{3,3}$. Unlike the standard $N=(2,1)$ strings it requires no null current, and its target space remains four-dimensional."
+     ],
+     "authors": "Justin Kaidi",
+     "arxiv_id": "2611.17275"
+    },
+    {
+     "headline": "Twisting IKKT with branes",
+     "body": [
+      "Motivated by the conjectural relationship between the IKKT matrix model and type IIB string theory, we classify supersymmetric twists of the matrix model, allowing for both dynamical and kinematical supercharges. Beyond the two twists available at any finite $N$, which we studied in our previous work, we find five additional classes at infinite rank which require non-commuting backgrounds associated with D-branes in IIB supergravity."
+     ],
+     "authors": "Fabian Hahner and Natalie M. Paquette",
+     "arxiv_id": "2611.17270"
+    }
+   ]
+  },
+  {
+   "name": "Also in hep-th",
+   "stories": [
+    {
+     "headline": "Self-Force and Bremsstrahlung in Finite Electrodynamics",
+     "body": [
+      "We study the self-force and the accompanying Bremsstrahlung for a moving point charge in nonlinear electrodynamics with finite self-field and self-energy. The self-force in the Maxwell theory has been the subject of many studies, often by renowned physicists.",
+      "After reviewing Coleman's lucid treatise for Maxwell among them, we wish to explore the same question in the Born--Infeld theory, our prototype."
+     ],
+     "authors": "Kyungsun Lee and Piljin Yi",
+     "arxiv_id": "2611.15993"
+    }
+   ]
+  },
+  {
+   "name": "Across the Border",
+   "note": "Papers whose primary category is not hep-th (mostly gr-qc), cross-listed into it",
+   "stories": [
+    {
+     "headline": "Cubic Curvature Deformations to the Kerr Black Hole Shadow",
+     "body": [
+      "We investigate the effects of cubic curvature corrections on the shadows of rotating black holes within the effective field theory of gravity. Starting from a perturbatively corrected Kerr metric incorporating two independent cubic curvature couplings, we construct black hole shadows through numerical integration of null geodesics, without assuming separability of the geodesic equations."
+     ],
+     "authors": "Alireza Allahyari et al.",
+     "arxiv_id": "2611.15876"
+    },
+    {
+     "headline": "A Universal Law for Horizon Formation in Black Hole Mergers",
+     "body": [
+      "When two black holes merge, a common horizon appears around them as a single surface, which immediately splits into an outer and an inner one. We show that this event has a universal local form.",
+      "Without any symmetry assumption, the two surfaces separate as $(t-t_*)^{1/2}$ along a single, everywhere positive mode and share a drift linear in $t-t_*$."
+     ],
+     "authors": "Yu-Cun Xie and Vaishak Prasad",
+     "arxiv_id": "2611.16168"
+    }
+   ]
+  }
+ ],
+ "briefs": [
+  {
+   "headline": "Generalized Kosmann derivative and symmetry operators on Dirac structures",
+   "text": "We develop a spinorial symmetry framework for metric Dirac structures in $H$-twisted exact Courant algebroids.",
+   "arxiv_id": "2611.16309",
+   "authors": "Ümit Ertem et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Multiparticle residues of open-string tachyon amplitudes from DDF sewing",
+   "text": "We compute the maximal simultaneous residues of color-ordered tachyon disk amplitudes in the critical open bosonic string by summing all physical intermediate states.",
+   "arxiv_id": "2611.16280",
+   "authors": "Dripto Biswas and Qu Cao",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Holographic Wilsonian RG of Yang-Mills theory in AdS",
+   "text": "In this work, we extend the equilibrium-evolution duality between stochastic quantization and Wilsonian renormalization to non-abelian gauge theories in anti-de Sitter space, for which the radial coordinate of AdS plays the role of the stochastic time.",
+   "arxiv_id": "2611.16074",
+   "authors": "Soner Albayrak",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Anti-periodic Gravitino and Dirac Effective Operators",
+   "text": "Introducing a preserved $U(1)_R$ symmetry forbids gravitini Majorana masses while allowing a Dirac mass.",
+   "arxiv_id": "2611.16047",
+   "authors": "Karim Benakli",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Decoupling Dynamics: A Tale of Two Limits",
+   "text": "The symmetries of a $d$-dimensional QFT are known to be captured by a topological theory in one dimension higher, the Symmetry Topological Field Theory (SymTFT), which is invariant under gauging finite symmetries of the QFT, but not under dynamical gauging of continuous symmetries.",
+   "arxiv_id": "2611.17327",
+   "authors": "Andrea Antinucci and Oscar Lewis",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Love numbers for the Myers-Perry geometry",
+   "text": "We analyze Love numbers for scalar fields in the Myers-Perry geometry in arbitrary dimensions.",
+   "arxiv_id": "2611.17261",
+   "authors": "Rhucha Deshpande and Oleg Lunin",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Subsystem Flow: Quantum Error Correction, Petz Recovery, and Ergodic Inclusions",
+   "text": "In quantum error correction (QEC), the goal is to engineer an encoding that protects logical information against the erasure of a physical subsystem.",
+   "arxiv_id": "2611.15887",
+   "authors": "Yidong Chen et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Bound States of Two D0-Branes and the Three-Graviton Coupling",
+   "text": "We numerically solve for the ground state of the $SU(2)$ BFSS matrix model for M-theory.",
+   "arxiv_id": "2611.17325",
+   "authors": "Sergio Sanjurjo and Themistocles Zikopoulos",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Covariant Wigner--Weyl calculus, non-dissipative transport and the chiral anomaly in inhomogeneous systems with nontrivial momentum-space topology",
+   "text": "We review, systematize and extend the covariant Wigner--Weyl calculus for fermions in non-Abelian gauge fields and its applications to systems inhomogeneous in coordinate space with nontrivial momentum-space topology: the non-Abelian chiral separation and quantum Hall effects, their stability under interactions, the Fermi-surface invariant of inhomogeneous systems and the non-elliptic models that carry it, with their equilibrium chiral magnetic effect, the factorization of the chiral anomaly into the instanton number and the momentum-space invariant $N_3$, and the noncommutative-geometric form of the invariants.",
+   "arxiv_id": "2611.17178",
+   "authors": "M. A. Zubkov",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Gauge Theory Bootstrap with varying $N_c$",
+   "text": "We use the Gauge Theory Bootstrap to study asymptotically free gauge theories with a varying number of colors $N_c$.",
+   "arxiv_id": "2611.16824",
+   "authors": "Rafael Cordoba et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Discrete anomaly inflow from SymTFT of $U(1)$ global symmetry: the modified Villain resolution",
+   "text": "We construct a lattice SymTFT for a $U(1)$ global symmetry with anomaly coefficient $k$ using the modified Villain formulation, in which the spin structure required for odd $k$ is realised explicitly by lattice Majorana fermions.",
+   "arxiv_id": "2611.16696",
+   "authors": "Napat Poovuttikul and K. Sapmee",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Is Spin Slow in Hot QCD?",
+   "text": "Promoting spin to a hydrodynamic variable requires slow relaxation, as mass-suppressed helicity flips in hot QCD suggest.",
+   "arxiv_id": "2611.16684",
+   "authors": "Zi-Hao Liu and Mei Huang",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Thermodynamics within and across AdS Gauss--Bonnet holographic CFTs",
+   "text": "We study thermal competition within individual holographic conformal field theories (CFTs) and across theories with different anomaly coefficients in five-dimensional AdS Gauss--Bonnet gravity.",
+   "arxiv_id": "2611.16364",
+   "authors": "Limin Zeng",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Extension of Poincare superalgebra via hidden symmetries",
+   "text": "Isometries of a manifold and special types of spinors called Killing spinors which are related to Killing vector fields constitute a symmetry superalgebra structure corresponding to Poincare superalgebra.",
+   "arxiv_id": "2611.15946",
+   "authors": "Ümit Ertem",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Cosmological correlators and kinematic flow on complex Hartle-Hawking saddles",
+   "text": "The Lorentzian gravitational path integral over homogeneous and isotropic metrics in a closed universe with positive cosmological constant is dominated by complex saddle points, such as the Hartle-Hawking saddles.",
+   "arxiv_id": "2611.15868",
+   "authors": "Vikramaditya Mondal and Shinji Mukohyama",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Holographic viscous transport in scalar-coupled Gauss-Bonnet gravity",
+   "text": "We test horizon formulas for the shear and bulk viscosities of a holographic plasma against viscosities extracted directly from retarded stress-tensor correlators.",
+   "arxiv_id": "2611.16936",
+   "authors": "Tao Ma et al.",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Accelerating solitons in Rindler space",
+   "text": "Relativistic nonlinear field theories that are integrable in two-dimensional Minkowski spacetime remain integrable in Rindler space.",
+   "arxiv_id": "2611.16568",
+   "authors": "Huiquan Li and Jianyong Wang",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Imaging the two-sided black hole interior with four-point correlators",
+   "text": "We propose a boundary four-point function smeared with wavepackets, which probes local physics behind the horizon of a two-sided AdS black hole.",
+   "arxiv_id": "2611.15933",
+   "authors": "Joydeep Chakravarty",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Magnetic-slope crossovers in the QCD bulk-to-shear viscosity ratio",
+   "text": "How a magnetic field alters dissipation in quark--gluon matter is almost unconstrained from first principles, since real-time transport is not directly accessible to lattice simulation.",
+   "arxiv_id": "2611.15929",
+   "authors": "Aalok Misra et al.",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "$α'^2$-corrections to the bosonic string from an action-level double copy map",
+   "text": "The low-energy effective action of the bosonic string contains higher-derivative corrections of the form Riem$^2$ and Riem$^3$ to the Einstein--Hilbert action, together with the associated Kalb--Ramond couplings.",
+   "arxiv_id": "2611.15862",
+   "authors": "Eric Lescano et al.",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Infinite spin superparticles",
+   "text": "We obtain infinite spin representations of the super-Poincaré algebra from a higher-derivative superparticle action on a super-Minkowski background in 3, 4, 6 and 10 dimensions.",
+   "arxiv_id": "2611.17006",
+   "authors": "Eugenia Boffo and Martin Cederwall",
+   "section": "Also in hep-th"
+  }
+ ],
+ "footer": "Text is excerpted verbatim from the authors’ abstracts as posted on arXiv and has not been peer reviewed. Follow the links for the full papers.",
+ "title": "The arXiv Gazette",
+ "tagline": "All the preprints fit to print",
+ "date": "Friday, November 13, 2026",
+ "edition": "No. 14 · Morning Edition",
+ "categories": [
+  "hep-th",
+  "gr-qc (cross-lists)"
+ ],
+ "stats": {
+  "Papers scanned": "35",
+  "hep-th primary": "33",
+  "gr-qc cross-lists": "2",
+  "Papers covered": "35"
+ }
+}
