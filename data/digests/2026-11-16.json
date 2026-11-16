@@ -1,0 +1,243 @@
+{
+ "lead": {
+  "headline": "Geometric Quantization of the Giant Graviton Master Moduli Space",
+  "body": [
+   "We describe a remarkable reorganization of the space of gauge invariant operators of free or twisted $U(N)$ gauge theories as combinations of single-trace and determinant operators modulo certain \"open loop equations\". The reorganization has a transparent holographic interpretation, describing how states at finite $N$ can be reproduced by imposing certain $N$-independent gauge constraints on the combination of the closed strings Fock space and a geometric quantization of the moduli space of Giant Graviton D-branes, with quantization parameter $N^{-1}$.",
+   "The moduli space of Giant Graviton D-branes is reproduced from tachyon condensation of auxiliary D-brane/anti-D-brane pairs which are \"Koszul dual\" to the D-brane system which supports the original gauge theory."
+  ],
+  "authors": "Kasia Budzik and Davide Gaiotto",
+  "arxiv_id": "2611.18539",
+  "kicker": "Lead Story · hep-th",
+  "deck": "37+21 pages"
+ },
+ "features": [
+  {
+   "headline": "What Comes Out Of Monopole-Fermion Scattering?",
+   "body": [
+    "We describe what happens when chiral fermions scatter off magnetic monopoles. It has long been known that, in many situations, the outgoing state cannot be constructed from any finite number of excitations.",
+    "In the language of 2d CFT, it lives in a twisted sector of the Hilbert space. Here we explain what this means from the perspective of a d=3+1 observer.",
+    "We show that an ingoing one-particle excitation is scattered into an outgoing state surrounded by a soft cloud which consists of an infinite number of low energy particle-anti-particle pairs."
+   ],
+   "authors": "David Tong",
+   "arxiv_id": "2611.17416",
+   "kicker": "Strings, Amplitudes & Supergravity · hep-th"
+  },
+  {
+   "headline": "Microcausality Bounds on Dispersion Laws",
+   "body": [
+    "Microcausality holds in any state, including those that spontaneously break Lorentz invariance, and requires the poles (and other singularities) of the retarded Green's function to satisfy $\\mathrm{Im}\\,ω\\le |\\mathrm{Im}\\,k|$ throughout the complex plane. Building on the work of Heller, Serantes, Spaliński and Withers, we study its consequences for dispersion relations that are linear at small $k$, like Goldstone bosons, assuming tree-level, non-dissipative dynamics."
+   ],
+   "authors": "Paolo Creminelli et al.",
+   "arxiv_id": "2611.17407",
+   "kicker": "Field Theory & Symmetry · hep-th"
+  },
+  {
+   "headline": "Link invariants in nilpotent group gauge theories",
+   "body": [
+    "We consider 3-dimensional topological gauge theories with nilpotent gauge groups, both finite, that is Dijkgraaf-Witten theories, and continuous, that is Chern-Simons theories. Abelian topological quantum field theories are exactly those which do not detect the Borromean rings, and nilpotent gauge groups provide the natural next steps beyond the abelian case.",
+    "We show that the untwisted Dijkgraaf-Witten theory with gauge group $G$ detects Brunnian links with up to $n+1$ components, but no Brunnian links with more components, if and only if $G$ is $n$-step nilpotent."
+   ],
+   "authors": "Thomas Nicosanti et al.",
+   "arxiv_id": "2611.18237",
+   "kicker": "Field Theory & Symmetry · hep-th"
+  }
+ ],
+ "sections": [
+  {
+   "name": "Holography & Gauge/Gravity",
+   "stories": [
+    {
+     "headline": "Superstars, quantum wormholes and von Neumann algebras",
+     "body": [
+      "We entangle heavy 1/2-BPS states in two copies of $\\mathcal{N}=4$ SU($N$) Super-Yang-Mills (SYM) theory. Each copy is separately dual to an extremal, supersymmetric, singular black hole geometry, in which the horizon coincides with a singularity.",
+      "General ideas in the AdS/CFT correspondence suggest that the entanglement between the two copies should lead to some form of connectivity between the two geometries---a kind of wormhole."
+     ],
+     "authors": "Vijay Balasubramanian et al.",
+     "arxiv_id": "2611.17404"
+    },
+    {
+     "headline": "Mirror symmetry of $\\mathcal{N}=(0,4)$ boundary conditions with Nahm poles",
+     "body": [
+      "We propose mirror symmetry between $\\mathcal{N}=(0,4)$ boundary conditions with Nahm poles and Neumann boundary conditions with boundary Fermi multiplets in 3d $\\mathcal{N}=4$ non-Abelian gauge theories, including $U(N)$ SQCD, $T[SU(N)]$ and the ADHM theories."
+     ],
+     "authors": "Tadashi Okazaki",
+     "arxiv_id": "2611.18118"
+    },
+    {
+     "headline": "Graded unitarity constraints on simply-laced affine Kac--Moody algebras",
+     "body": [
+      "We investigate constraints imposed by four-dimensional unitarity (recently formalised as graded unitarity) on possible simply-laced affine Kac--Moody vertex algebras arising from four dimensions via the SCFT/VOA correspondence. Under the assumption that the $\\mathfrak{R}$-filtration is weight-based with respect to the currents and the Casimir operators, with appropriately shifted $R$-charge assignments for the latter, we demonstrate that all values of the level other than a discrete set are incompatible with four-dimensional unitarity."
+     ],
+     "authors": "Harshal Kulkarni",
+     "arxiv_id": "2611.17403"
+    },
+    {
+     "headline": "Infinite Index Identities for Argyres-Douglas Theories and Graded Vector Space Isomorphisms for VOAs",
+     "body": [
+      "Supersymmetric indices provide stringent tests of dualities between superconformal field theories (SCFTs). We establish infinite families of Schur-index identities among four-dimensional $\\mathcal N=2$ Argyres-Douglas (AD) theories, with the logarithms of their fugacities related linearly."
+     ],
+     "authors": "Hongliang Jiang",
+     "arxiv_id": "2611.18198"
+    }
+   ]
+  },
+  {
+   "name": "Strings, Amplitudes & Supergravity",
+   "stories": [
+    {
+     "headline": "Black Hole Probes under T-duality",
+     "body": [
+      "Attractor black holes are finite-size probes of infinite-distance limits in the vector-multiplet moduli space of type IIA Calabi-Yau compactifications. We ask whether the hypermultiplet moduli space admits analogous probes.",
+      "T-dualizing BPS black holes along a Euclidean time circle and along a spatial circle, which realizes the temporal and spatial c-map, we construct the dual type IIB D-instantons and axionic strings, on $T^6/(\\mathbb{Z}_2\\times\\mathbb{Z}_2)$ and on a generic Calabi-Yau threefold."
+     ],
+     "authors": "Matilda Delgado et al.",
+     "arxiv_id": "2611.17413"
+    },
+    {
+     "headline": "Hidden Geometric Structure Beyond Conformal Flatness",
+     "body": [
+      "We uncover a hidden geometric structure in holographic correlators of M-theory, despite the absence of conformal flatness. We study two-point functions of $\\frac{1}{2}$-BPS local operators in the presence of a $\\frac{1}{2}$-BPS surface defect in six-dimensional $(2,0)$ theory, dual to an M2-brane in $\\mathrm{AdS}_7\\times$S$^4$."
+     ],
+     "authors": "Xinan Zhou",
+     "arxiv_id": "2611.17486"
+    },
+    {
+     "headline": "Modular Structure of the ADHM Effective Twisted Superpotential",
+     "body": [
+      "The Cardy limit of M2-brane indices retains nonperturbative information through the effective twisted superpotential, including corrections exponentially suppressed at large rank. We investigate the flavor dependence of these corrections in the three-dimensional $\\mathcal N=4$ $\\mathrm U(N)$ ADHM theory at the universal twist."
+     ],
+     "authors": "Seyed Morteza Hosseini",
+     "arxiv_id": "2611.18108"
+    }
+   ]
+  },
+  {
+   "name": "Field Theory & Symmetry",
+   "stories": [
+    {
+     "headline": "From pure spinor modules to superspace superfields",
+     "body": [
+      "We relate the pure spinor formalism to the superspace description of constrained superfields and gauge multiplets, mainly for abelian two-dimensional N=(2,2) supersymmetry, with three- and four-dimensional N=1 examples for comparison. For each multiplet we give an explicit module over the supertranslation Chevalley-Eilenberg algebra and match its reconstruction with the known superfields."
+     ],
+     "authors": "Ondrej Hulik and Raphael Senghaas",
+     "arxiv_id": "2611.18556"
+    }
+   ]
+  },
+  {
+   "name": "Across the Border",
+   "note": "Papers whose primary category is not hep-th (mostly gr-qc), cross-listed into it",
+   "stories": [
+    {
+     "headline": "Separability of coupled gravitational perturbations in Plebański--Demiański spacetimes",
+     "body": [
+      "Recently, a major breakthrough in the separability of gravitational perturbations of the Kerr--Newman rotating charged black hole was achieved by Hintz [arxiv:2609.33661], and extended to non-zero cosmological constant Kerr--Newman-(A)dS black holes by Yoshida [arxiv:2610.20500] and Zhao [arxiv:2610.22274]."
+     ],
+     "authors": "Finnian Gray and Hryhorii Ovcharenko",
+     "arxiv_id": "2611.18200"
+    }
+   ]
+  }
+ ],
+ "briefs": [
+  {
+   "headline": "Gravitational form factors of $ρ$ and $a_1$ mesons in V-QCD",
+   "text": "We compute the gravitational form factors and mechanical properties of the $ρ$ and $a_1$ mesons in V-QCD, a holographic model of QCD with backreacting flavor and dynamical chiral symmetry breaking.",
+   "arxiv_id": "2611.17961",
+   "authors": "Antti Hippeläinen",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Polar states in AdS$_3$ holography",
+   "text": "Modularity determines the elliptic genus of $\\textrm{Sym}^N(\\mathrm{K3})$ at finite $N$ from the indexed degeneracies of polar states, which are states that lie below the black hole threshold in AdS$_3$/CFT$_2$.",
+   "arxiv_id": "2611.17437",
+   "authors": "Ji Hoon Lee and Wei Li",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Second order and secondary functional renormalization group flow equations",
+   "text": "The functional renormalization group provides a powerful non-perturbative framework for quantum field theory through the exact flow equation for the scale-dependent effective action.",
+   "arxiv_id": "2611.18025",
+   "authors": "Stefan Floerchinger",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Dynamical Gauss--Bonnet Sum Rules and Global Consistency in Five-Dimensional Braneworld Cosmology",
+   "text": "We derive an exact dynamical consistency relation for a smooth, periodically compactified five-dimensional Einstein--Gauss--Bonnet cosmology sourced by a real, minimally coupled canonical scalar field.",
+   "arxiv_id": "2611.17663",
+   "authors": "Paulo Michel Longo Tavares da Silva",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "BMS charge algebras from Carrollian energy-momentum commutators",
+   "text": "Starting from background-field Ward identities, we derive universal local commutator relations for the (conformal) Carrollian energy-momentum tensor and determine conditions under which they reproduce the BMS charge algebra.",
+   "arxiv_id": "2611.17424",
+   "authors": "Florian Ecker et al.",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "The Spectral Anatomy of Complex-Time Singularities",
+   "text": "The properties of the bulk spacetime in a holographic theory may be probed by the analytic structure of the boundary correlator $G(t,x)$.",
+   "arxiv_id": "2611.18520",
+   "authors": "Samuel Valach and Mile Vrbica",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Exploring M-theory on AdS$_7\\times$S$^4$: Mellin amplitudes with composite operators",
+   "text": "We bootstrap mixed correlators in M-theory on AdS$_7\\times$S$^4$, focusing on tree-level correlation functions involving one double-particle operator and three single-particle operators.",
+   "arxiv_id": "2611.18472",
+   "authors": "Francesco Aprile et al.",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Destabilization of Abelian-Higgs vortices at large Chern-Simons coupling",
+   "text": "We study the effect of the Chern--Simons (CS) coupling on the radial spectral stability of axially symmetric vortices in the $(2+1)$-dimensional Abelian--Higgs model.",
+   "arxiv_id": "2611.18221",
+   "authors": "Emir Syahreza Fadhilla et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Spectrum of a 2D QFT analogue of the SYK model",
+   "text": "We study the spectrum of the two-dimensional generalisation of the SYK model proposed by Turiaci and Verlinde, in which chiral Majorana fermions with a topological kinetic term interact through random $2q$-fermion couplings.",
+   "arxiv_id": "2611.18063",
+   "authors": "Avik Chakraborty et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Gravitational Corrections to OPE Coefficients",
+   "text": "The short-distance singular behavior of correlation functions of quantum field theories in curved spacetime is a universal property shared by all well-behaved states (known as Hadamard states).",
+   "arxiv_id": "2611.18415",
+   "authors": "Ameya Chavda et al.",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Phases of deformed sine dilaton gravity and JT limit",
+   "text": "We study the implications of marginal deformation in sine dilaton gravity (sDG).",
+   "arxiv_id": "2611.17810",
+   "authors": "Paramesh Mahapatra et al.",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Entanglement-to-Stress Relation from an Effective Holographic Description of the Transverse-Field Ising Model",
+   "text": "We investigate an effective holographic description of the transverse-field Ising model (TFIM).",
+   "arxiv_id": "2611.17645",
+   "authors": "Dong-Hee Kim et al.",
+   "section": "Holography & Gauge/Gravity"
+  }
+ ],
+ "footer": "Text is excerpted verbatim from the authors’ abstracts as posted on arXiv and has not been peer reviewed. Follow the links for the full papers.",
+ "title": "The arXiv Gazette",
+ "tagline": "All the preprints fit to print",
+ "date": "Monday, November 16, 2026",
+ "edition": "No. 15 · Morning Edition",
+ "categories": [
+  "hep-th",
+  "gr-qc (cross-lists)"
+ ],
+ "stats": {
+  "Papers scanned": "25",
+  "hep-th primary": "24",
+  "gr-qc cross-lists": "1",
+  "Papers covered": "25"
+ }
+}
