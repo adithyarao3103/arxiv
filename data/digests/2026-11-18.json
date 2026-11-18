@@ -1,0 +1,331 @@
+{
+ "lead": {
+  "headline": "Cosmic Censorship in the Landscape of SUSY-Broken AdS Vacua",
+  "body": [
+   "We investigate signatures of weak cosmic censorship in non-supersymmetric vacua of both IIA and IIB string theory. In particular, we examine the Penrose Inequality, which can be proven holographically using Ryu-Takayanagi, and can be independently proven in SUSY AdS vacua for spherically symmetric initial data.",
+   "We prove that any EFT of scalars coupled to gravity in AdS, including in particular those of string compactifications, satisfies both the Penrose Inequality and a positive mass theorem if a function that we call a \"weak fake superpotential\" exists. We demonstrate that this condition is satisfied globally for the DGKT skew-whiffed vacua in IIA.",
+   "Since there is no known nonperturbative instability in this DGKT vacuum, this provides evidence that the IIA SUSY-broken AdS vacua may be absolutely stable."
+  ],
+  "authors": "Netta Engelhardt and Richard Nally",
+  "arxiv_id": "2611.21722",
+  "kicker": "Lead Story · hep-th",
+  "deck": "72 pages, 2 tables, 11 figures"
+ },
+ "features": [
+  {
+   "headline": "Localization identities for spectral determinants: two-dimensional QCD and Ising field theory",
+   "body": [
+    "Spectral determinants encode the meson spectra of planar two-dimensional QCD and of Ising field theory in the two-particle Bethe-Salpeter approximation. We derive localization identities for these determinants which express their logarithmic derivatives with respect to the spectral parameter in terms of Baxter $Q-$functions evaluated at special points, proving previously conjectured relations.",
+    "Our derivation uses finite-rank commutation relations and virial identities of the underlying integral spectral operators."
+   ],
+   "authors": "Bercel Boldis et al.",
+   "arxiv_id": "2611.21724",
+   "kicker": "Field Theory & Symmetry · hep-th"
+  },
+  {
+   "headline": "Structure Constants of Planar N=4 SYM at Any Coupling",
+   "body": [
+    "We recast a recent conjecture for structure constants in planar N=4 supersymmetric Yang-Mills theory in a separation-of-variables-inspired form suitable for non-perturbative analysis. All state-dependent information enters through the quantum spectral curve.",
+    "As a showcase, we compute at finite coupling the three-point functions of two half-BPS operators and the spin-two member of the Konishi multiplet. Our results span weak to strong coupling, reproduce the known perturbative and string-theory limits, and are consistent with conformal-bootstrap bounds."
+   ],
+   "authors": "Simon Ekhammar et al.",
+   "arxiv_id": "2611.21843",
+   "kicker": "Field Theory & Symmetry · hep-th"
+  },
+  {
+   "headline": "An infrared-safe $S$-matrix for $\\mathcal N=4$ super Yang-Mills",
+   "body": [
+    "Scattering amplitudes of massless gauge theories are not observables: they are infrared divergent, and the standard regulators are tied either to perturbation theory or the planar limit. We study $\\mathcal N=4$ super Yang-Mills theory on rigid AdS$_4$ with Dirichlet boundary conditions, where the role of the amplitude is played by correlation functions of boundary operators.",
+    "These are finite, and they are defined at any coupling and for any gauge group."
+   ],
+   "authors": "Maria Nocchi and Leonardo Rastelli",
+   "arxiv_id": "2611.21713",
+   "kicker": "Strings, Amplitudes & Supergravity · hep-th"
+  }
+ ],
+ "sections": [
+  {
+   "name": "Field Theory & Symmetry",
+   "stories": [
+    {
+     "headline": "CFTs with Large Virasoro Primary Gaps",
+     "body": [
+      "We construct the first explicit examples of compact unitary bosonic full conformal field theories (CFTs) in two dimensions with a unique vacuum and an all-spin Virasoro-primary gap greater than two. Our constructions use asymmetric orbifolds of lattice CFTs built from even unimodular lattices of sufficiently large minimum norm, ensuring that no charged state lies below the desired gap."
+     ],
+     "authors": "Ziming Ji and Jiahua Tian",
+     "arxiv_id": "2611.23231"
+    }
+   ]
+  },
+  {
+   "name": "Gravity & Cosmology",
+   "stories": [
+    {
+     "headline": "Gravity/Thermodynamics Correspondence for Generic Dynamical Spacetimes",
+     "body": [
+      "Working within covariant phase space formalism, we establish \\textit{gravity-thermodynamics correspondence} for generic dynamical spacetimes. We derive local first and second laws of thermodynamics on general null boundaries, for generic non-stationary solutions to Einstein gravity {with minimally coupled matter} for physical observers that we carefully specify."
+     ],
+     "authors": "Vahid Reza Shajiee et al.",
+     "arxiv_id": "2611.21730"
+    },
+    {
+     "headline": "'Forward-backward' flows and integration cycles for semiclassical Euclidean gravity",
+     "body": [
+      "Integrating Euclidean semiclassical gravity over real Riemannian metrics is subtle due to the conformal factor problem. A perturbative prescription was given by Gibbons-Hawking-Perry (GHP) where the integration contour for the conformal perturbations is rotated to be imaginary."
+     ],
+     "authors": "Nicholas M. K. Ross and Toby Wiseman",
+     "arxiv_id": "2611.21717"
+    },
+    {
+     "headline": "Modular conjugations for thermal states and second worlds",
+     "body": [
+      "The modular conjugation $J$ maps an algebra of observables onto its commutant. For the vacuum on a Rindler wedge it is a spacetime reflection, but for thermal states in two-dimensional CFTs the known expressions involve chiral fields at the complex points $x\\pm iβ/2$, interpreted as belonging to a ``second world''."
+     ],
+     "authors": "Alan Garbarz et al.",
+     "arxiv_id": "2611.21750"
+    }
+   ]
+  },
+  {
+   "name": "Strings, Amplitudes & Supergravity",
+   "stories": [
+    {
+     "headline": "From Top to Bottom: Quark Mass Hierarchies in Heterotic String Theory",
+     "body": [
+      "Standard Model fermion masses exhibit large hierarchies, spanning more than five orders of magnitude in the quark sector alone. In this paper, we study whether these hierarchies can be generated perturbatively at tree level in smooth heterotic Calabi-Yau compactifications, where the supergravity approximation remains under computational control."
+     ],
+     "authors": "Yuri Chervonyi et al.",
+     "arxiv_id": "2611.21751"
+    },
+    {
+     "headline": "5d $\\mathbb{Z}_{n}$ S-folds, quotient curves, and isogenies",
+     "body": [
+      "We construct Seiberg--Witten curves for the $\\mathbb{Z}_3$, $\\mathbb{Z}_4$, and $\\mathbb{Z}_6$ S-folds of 5d rank-1 superconformal theories. Compared with the $\\mathbb{Z}_2$ case arXiv:2611.09804, $\\mathbb{Z}_{3,4,6}$ S-folds require stronger constraints on the mass parameters."
+     ],
+     "authors": "Sung-Soo Kim et al.",
+     "arxiv_id": "2611.22811"
+    }
+   ]
+  },
+  {
+   "name": "Holography & Gauge/Gravity",
+   "stories": [
+    {
+     "headline": "An Effective Theory for Hot Lines",
+     "body": [
+      "We develop a high-temperature effective theory for spatial conformal line defects in theories with thermal screening. The defect partition function admits a local geometric expansion, whose leading terms describe the effective tension and bending response of the line."
+     ],
+     "authors": "Julien Barrat et al.",
+     "arxiv_id": "2611.23169"
+    }
+   ]
+  },
+  {
+   "name": "Also in hep-th",
+   "stories": [
+    {
+     "headline": "All-Genus 2D $\\mathcal{N}=1$ Superconformal Blocks",
+     "body": [
+      "We develop a numerical algorithm for two dimensional $\\mathcal{N}=1$ superconformal blocks at arbitrary genera, in arbitrary plumbing channels, and for arbitrary spin structures. The algorithm utilizes two commuting copies of Virasoro subalgebras of the direct sum of the $\\mathcal{N}=1$ superconformal algebra with an auxiliary free fermion algebra, which allows us to reduce the $\\mathcal{N}=1$ superconformal blocks to Virasoro conformal blocks."
+     ],
+     "authors": "Sam Christian et al.",
+     "arxiv_id": "2611.21725"
+    }
+   ]
+  },
+  {
+   "name": "Across the Border",
+   "note": "Papers whose primary category is not hep-th (mostly gr-qc), cross-listed into it",
+   "stories": [
+    {
+     "headline": "Beyond the point lens: radial structure and the horizon in wave-optics gravitational lensing",
+     "body": [
+      "Gravitational-wave lensing in the wave-optics regime is sensitive to the structure of the lens beyond its total mass: to its exterior radial profile and, as we show, to the boundary condition at its centre. We develop an analytic framework to compute these effects for a scalar wave, as corrections to the wave lensed by a Newtonian point mass."
+     ],
+     "authors": "Alice Garoffolo and Gianmassimo Tasinato",
+     "arxiv_id": "2611.22618"
+    },
+    {
+     "headline": "Cyclic Boson Stars with Quantum Vortex Molecules",
+     "body": [
+      "We find a new type of stationary boson star with cyclic rotational symmetry in the minimal model of complex scalar field coupled to gravity. Unlike conventional axisymmetric spinning boson stars, these configurations can carry noninteger angular momentum per particle in units of the reduced Planck constant, revealing a new way for boson stars to carry angular momentum."
+     ],
+     "authors": "Xing-Yu Yang and Rong-Gen Cai",
+     "arxiv_id": "2611.21734"
+    },
+    {
+     "headline": "Convergence of the quasinormal-mode expansion of the Kerr Green function",
+     "body": [
+      "Black-hole ringdown is usually modeled as a linear superposition of quasinormal modes, and fits to gravitational-wave observations increasingly include high overtones. However, the overtone sum does not necessarily converge: overtones are more strongly damped and thus decay faster in time, but their amplitudes in the Green function (the signal at an observer produced by an impulse at a source point) grow, so the mode description may break down before a finite time."
+     ],
+     "authors": "Davide Ciattaglia et al.",
+     "arxiv_id": "2611.23110"
+    }
+   ]
+  }
+ ],
+ "briefs": [
+  {
+   "headline": "The Pfaffian sector of $\\mathrm{SO}(2N)$ BPS cohomology: brane excitations, triality and fortuity",
+   "text": "We study the classical $\\frac{1}{16}$-BPS cohomology of $\\mathcal{N}=4$ super-Yang-Mills theory with gauge group $\\mathrm{SO}(2N)$ in the BMN sector, including the operators built with one $ε$-tensor.",
+   "arxiv_id": "2611.23173",
+   "authors": "Zheng Miao and Yuezhang Tang",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Quantum phase transition and superselection sectors in two-color one-flavor matrix QCD at weak coupling",
+   "text": "We numerically investigate the weak-coupling (small $g$) regime of the matrix model of $SU(2)$ gauge theory coupled to one flavor of massless fundamental quarks.",
+   "arxiv_id": "2611.22791",
+   "authors": "Nirmalendu Acharyya et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Spectral recurrences and maximal analyticity: cosmological correlators at one and two loops",
+   "text": "We develop a method for computing de Sitter boundary correlators based on the maximal analyticity of the two-point function and differential--difference equations satisfied by Schwinger--Keldysh diagrams.",
+   "arxiv_id": "2611.22687",
+   "authors": "Bruce A. Bassett et al.",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Lie-Poisson Formulation of Dissipative Spin Hydrodynamics",
+   "text": "Covariance and the second law cannot fix how fluid flow couples to spin, since reversible couplings produce no entropy.",
+   "arxiv_id": "2611.22615",
+   "authors": "Zi-Hao Liu and Mei Huang",
+   "section": "Also in hep-th"
+  },
+  {
+   "headline": "Simple Models of Thermal Order in $2+1$ Dimensions",
+   "text": "Heating need not destroy order.",
+   "arxiv_id": "2611.21842",
+   "authors": "Michael Smolkin and Lev Yung",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "FLZ integrability in the 't Hooft model",
+   "text": "We study the 't Hooft equation describing mesons in large-$N_c$ two-dimensional QCD with arbitrary unequal quark masses.",
+   "arxiv_id": "2611.21787",
+   "authors": "Alexey Litvinov et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Center anomalies without twists: torsion, exact degeneracies, and condensates",
+   "text": "Mixed center anomalies are usually exposed by 't Hooft's twisted boundary conditions in a Hamiltonian formalism.",
+   "arxiv_id": "2611.21743",
+   "authors": "Mohamed M. Anber",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Modular Hamiltonian and modular flow of a massive scalar in an interval",
+   "text": "We obtain the vacuum modular Hamiltonian of a free massive scalar in an interval, for any $mL$.",
+   "arxiv_id": "2611.21739",
+   "authors": "Raúl E. Arias and Daniel Fondevila",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Supersymmetric warped AdS$_3$ solutions in eleven-dimensional supergravity",
+   "text": "We construct new families of supersymmetric solutions of eleven-dimensional supergravity by deforming the half-BPS $\\mathrm{AdS}_3\\times \\mathrm{S}^3_+\\times \\mathrm{S}^3_-\\times\\mathbb R^2$ background.",
+   "arxiv_id": "2611.21727",
+   "authors": "Ruggero Noris",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Not All Holographic Entropy Inequalities Are Free of Area Law Ultraviolet Divergences",
+   "text": "In the AdS/CFT correspondence, linear constraints on subsystem entropies, which are necessary conditions for the validity of the Ryu-Takayanagi proposal, define the holographic entropy cone.",
+   "arxiv_id": "2611.21726",
+   "authors": "Xin-Xiang Ju and Bartlomiej Czech",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "StringQFT: A Multiuse Textbook Resource for AI-Assisted Theoretical Physics",
+   "text": "We present StringQFT as a textbook collection for string constructions of quantum field theory and as infrastructure for AI-assisted theoretical physics.",
+   "arxiv_id": "2611.23225",
+   "authors": "Xingyang Yu",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Strange-Metal Magnetotransport without a Strange-Metal Ground State",
+   "text": "Strange metals display a linear-in-temperature resistivity, $ρ_{xx}\\sim T$, and a quadratic inverse Hall angle, $\\cotΘ_H\\sim T^2$.",
+   "arxiv_id": "2611.22985",
+   "authors": "Yongjun Ahn et al.",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Fluid/Gravity Correspondence in 3d Flat Gravity with Non-Compact Boundaries",
+   "text": "We study 3d flat gravity on a restricted phase space with a non-compact spatial boundary.",
+   "arxiv_id": "2611.22718",
+   "authors": "H. Adami et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "The additive ambiguity of gravitational entropy fixed by the topology of the horizon",
+   "text": "In quantum gravity the algebra of observables of a subregion is of type III$_1$ at leading order in the semiclassical expansion, and it becomes of type II once the gravitational constraint is imposed. (primary category gr-qc)",
+   "arxiv_id": "2611.22731",
+   "authors": "Stylianos A. Tsilioukas",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "Higher Spin Lagrangians for Black Holes in Arbitrary Dimension",
+   "text": "In this paper, we investigate the classical gravitational multipolar structure of rotating objects studying higher-spin Lagrangians coupled to gravity in arbitrary dimensions $D=d+1$.",
+   "arxiv_id": "2611.22594",
+   "authors": "Francesco Campanella",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Non-integrability of open strings via Pohlmeyer reduction",
+   "text": "We study integrable and non-integrable boundary conditions for classical strings from the point of view of Pohlmeyer reduction.",
+   "arxiv_id": "2611.22570",
+   "authors": "Divania Carelse et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Regular/Singular Black Hole Thermodynamics from Renormalised Volume/Area",
+   "text": "We study the finite mismatch between the holographically and topologically renormalised Euclidean actions of the four-dimensional AdS C-metric.",
+   "arxiv_id": "2611.22107",
+   "authors": "Gabriel Arenas-Henriquez et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Giant gravitons without giant gravitons",
+   "text": "We demonstrate that the partition function of a free bosonic $U(N)$ multi-matrix model admits a giant graviton expansion.",
+   "arxiv_id": "2611.21754",
+   "authors": "Blake J. Bottesi and James T. Liu",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Hidden wormholes from an action principle in $D=4$",
+   "text": "We present new black hole solutions for the class of gravitational effective field theories in four spacetime dimensions that extend General Relativity while retaining the graviton as the only degree of freedom of gravitational origin. (primary category gr-qc)",
+   "arxiv_id": "2611.21712",
+   "authors": "Francesco Del Porro et al.",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "Isomorphisms of Class S Theories with IndexLab",
+   "text": "We use IndexLab to scan untwisted and twisted class $\\mathcal{S}$ constructions based on ADE Lie algebras of rank up to seven, as well as $A_8$ and $E_8$.",
+   "arxiv_id": "2611.21711",
+   "authors": "Zhihao Duan and Zhenghao Zhong",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Toric Calabi-Yau orientifolds: constructions, fixed loci and O-plane charges",
+   "text": "We review the systematic construction of toric orientifold Calabi-Yau threefolds through divisor exchanges and coordinate reflections.",
+   "arxiv_id": "2611.22785",
+   "authors": "Xu Cao and Xin Gao",
+   "section": "Strings, Amplitudes & Supergravity"
+  }
+ ],
+ "footer": "Text is excerpted verbatim from the authors’ abstracts as posted on arXiv and has not been peer reviewed. Follow the links for the full papers.",
+ "title": "The arXiv Gazette",
+ "tagline": "All the preprints fit to print",
+ "date": "Wednesday, November 18, 2026",
+ "edition": "No. 17 · Morning Edition",
+ "categories": [
+  "hep-th",
+  "gr-qc (cross-lists)"
+ ],
+ "stats": {
+  "Papers scanned": "36",
+  "hep-th primary": "31",
+  "gr-qc cross-lists": "5",
+  "Papers covered": "36"
+ }
+}
