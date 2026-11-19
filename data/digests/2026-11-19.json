@@ -1,0 +1,271 @@
+{
+ "lead": {
+  "headline": "Learning the Anyon Atlas",
+  "body": [
+   "We extend our previous search for the modular data of topological quantum field theories in 2+1 dimensions from 22 to 42 anyons, identifying 150,679 new modular data. We do so by adding to our algorithm three rejection gates, two of them based on logistic regression, that discard representations of $SL(2,\\mathbb{Z})$ unlikely to yield modular data.",
+   "We estimate that roughly 80% of the modular data between ranks 23 and 42 has been identified after closing under known constructions. With this data, we find counterexamples to a conjecture of Geiko and Moore that the reality of the higher Gauss sums suffices for time-reversal symmetry in Chern-Simons theories, and propose a refined criterion.",
+   "We demonstrate the scalability of this gated implementation by identifying prime modular data at rank 100 that is not realized by any Chern-Simons theory."
+  ],
+  "authors": "Jonah Berean-Dutcher et al.",
+  "arxiv_id": "2611.24752",
+  "kicker": "Lead Story · hep-th",
+  "deck": "24 pages, 11 figures"
+ },
+ "features": [
+  {
+   "headline": "A Positive Metric on Four-Dimensional QFTs",
+   "body": [
+    "A natural metric on the space of four-dimensional quantum field theories was introduced by Jack and Osborn in classic work on the local renormalization group. In perturbation theory, the Jack-Osborn metric determines the flow of the $a$-anomaly, and positivity implies the $a$-theorem.",
+    "We derive a non-perturbative generalization of the Jack-Osborn metric and show that it is non-negative by the averaged null energy condition (ANEC)."
+   ],
+   "authors": "Thomas Hartman et al.",
+   "arxiv_id": "2611.23370",
+   "kicker": "Field Theory & Symmetry · hep-th"
+  },
+  {
+   "headline": "Computing $F$-Symbols from Modular Data",
+   "body": [
+    "We present a strategy for computing the $F$-symbols of unitary modular categories with a self-dual simple generator, starting from their modular data, which almost entirely avoids the non-linear solution of the pentagon equations. The algorithm climbs a ladder of braid group representations on successively more strands of the generator until enough $F$-symbols have been determined to propagate them to a complete solution."
+   ],
+   "authors": "Jonah Berean-Dutcher et al.",
+   "arxiv_id": "2611.24753",
+   "kicker": "Field Theory & Symmetry · hep-th"
+  },
+  {
+   "headline": "Grade Restriction Rule For D-Brane Transport In Non-Abelian Gauged Linear Sigma Models",
+   "body": [
+    "We study the low energy behaviour of B-type D-branes in non-Abelian gauged linear sigma models. The main problem is to determine the grade restriction rule for D-brane transport from one phase to another along paths.",
+    "We analyze the convergence condition of the integral for the hemisphere partition function. We perform a thorough analysis in a particular model with two phases, one weakly coupled and one strongly coupled, both corresponding to Calabi-Yau threefolds."
+   ],
+   "authors": "Richard Eager et al.",
+   "arxiv_id": "2611.24250",
+   "kicker": "Strings, Amplitudes & Supergravity · hep-th"
+  }
+ ],
+ "sections": [
+  {
+   "name": "Gravity & Cosmology",
+   "stories": [
+    {
+     "headline": "Melvin-type Electromagnetized Kerr Black Hole in Kaluza-Klein and Einstein-Maxwell-dilaton-axion Theories",
+     "body": [
+      "A naive application of solution-generating techniques to construct Melvin-type rotating black holes in the Kaluza-Klein (KK) theory in the presence of both electric and magnetic external fields generically introduces an undesirable Taub-swirling twist term. We investigate its origin and modify the electromagnetization procedure, thereby constructing an exact solution of the Melvin-type electromagnetized Kerr black hole in the KK theory without the swirling term."
+     ],
+     "authors": "Liang Ma et al.",
+     "arxiv_id": "2611.23379"
+    },
+    {
+     "headline": "Folded out-of-time-order correlators in double-scaled SYK",
+     "body": [
+      "Harlow and Zhao arXiv:2607.14215 have identified ``anti-scrambling'' as a characteristic signature of cosmological horizons in de Sitter space, and proposed that it can be realized in a quantum system with bounded energy by Euclidean time ``folding\" of out-of-time-order correlators (OTOCs)."
+     ],
+     "authors": "Joseph D. Lykken et al.",
+     "arxiv_id": "2611.23453"
+    },
+    {
+     "headline": "Horizon kinematics and the fine structure induced by finite-energy Hawking radiation",
+     "body": [
+      "Hawking radiation can modify the horizon structure of a black hole through the loss of mass and global charges. Investigating this process through quantum tunneling, we develop a systematic strategy to reconstruct horizon displacements under finite-energy emission, even when their radii are not explicitly known."
+     ],
+     "authors": "M. A. Aguirre Cortés et al.",
+     "arxiv_id": "2611.23376"
+    },
+    {
+     "headline": "ER=EPR and IMP wormholes in quantum gravity",
+     "body": [
+      "We analyze and refine the ER=EPR conjecture by studying IMP (Isenberg, Mazzeo and Pollack \\cite{Isenberg:2001qe}) wormholes in QFT and quantum gravity, in the AdS/CFT context. IMP wormholes are solutions to the Einstein equations constructed from another general solution of Einstein's equations by gluing a handle on a Cauchy slice with a constant mean curvature, so that the initial data on the slice does not change in the regions away from the handle."
+     ],
+     "authors": "Eyoab Bahiru",
+     "arxiv_id": "2611.23396"
+    }
+   ]
+  },
+  {
+   "name": "Holography & Gauge/Gravity",
+   "stories": [
+    {
+     "headline": "The Holomorphic-Topological Poisson Sigma Model and Quantization of Affine W-algebras",
+     "body": [
+      "We construct explicit deformation quantizations of classical principal affine $W$-algebras for every simple Lie algebra $\\mathfrak g$ using the holomorphic-topological Poisson sigma model of A. Khan and K.",
+      "Zeng. A linear differential-graded presentation identifies the universal bulk with Chern--Simons theory near a principal nilpotent background, where holomorphic gauge gives a finite, 1-loop exact quantization."
+     ],
+     "authors": "Niklas Garner et al.",
+     "arxiv_id": "2611.23377"
+    },
+    {
+     "headline": "Only the disk: topological obstructions for warped AdS$_6\\times S^2$ in Type IIB",
+     "body": [
+      "Supersymmetric AdS$_6\\times S^2$ solutions of Type IIB supergravity are warped products over a Riemann surface $Σ$. They are determined by two holomorphic differentials on $Σ$, with five-branes at poles on its boundary.",
+      "We derive restrictions on the genus and the number of boundary components of $Σ$."
+     ],
+     "authors": "Nakwoo Kim",
+     "arxiv_id": "2611.24320"
+    }
+   ]
+  },
+  {
+   "name": "Strings, Amplitudes & Supergravity",
+   "stories": [
+    {
+     "headline": "Localizing the M-Theory Path Integral: Membrane Instantons",
+     "body": [
+      "We propose a formula for M2-instanton contributions to the M-theory path integral, incorporating quantum corrections to all orders in the Planck length. The M2-brane action is determined by relative equivariant localization, while an equivariant Dolbeault character computes the one-loop determinant."
+     ],
+     "authors": "Pietro Benetti Genolini et al.",
+     "arxiv_id": "2611.23369"
+    }
+   ]
+  },
+  {
+   "name": "Field Theory & Symmetry",
+   "stories": [
+    {
+     "headline": "Holomorphic Feynman diagrams in four dimensions and the quantum BPS ring",
+     "body": [
+      "We compute, at all loop orders, the kernels of the holomorphic Feynman graphs that carry the loop corrections to supersymmetry transformations and to regularized products of local operators in the holomorphic twist of four-dimensional $\\mathcal N=1$ supersymmetric gauge theories."
+     ],
+     "authors": "Botao Li et al.",
+     "arxiv_id": "2611.24160"
+    }
+   ]
+  },
+  {
+   "name": "Across the Border",
+   "note": "Papers whose primary category is not hep-th (mostly gr-qc), cross-listed into it",
+   "stories": [
+    {
+     "headline": "Black hole binary mergers in dynamical Chern-Simons gravity with regularisation",
+     "body": [
+      "We study the non-linear dynamics of Chern-Simons gravity with numerical relativity for the first time. We use the regularisation prescription to obtain a well-posed initial-value formulation in the gauges commonly used in numerical relativity, and we simulate head-on collisions and binary black hole mergers in the regime of validity of effective field theory, extracting the corresponding scalar and gravitational waves."
+     ],
+     "authors": "Llibert Aresté Saló et al.",
+     "arxiv_id": "2611.24420"
+    },
+    {
+     "headline": "Charge at regular centers in curvature-coupled electrodynamics",
+     "body": [
+      "An electric or magnetic flux through shrinking symmetry spheres ordinarily produces an $r^{-4}$ Maxwell stress and a singular center. We examine how this obstruction changes when the Maxwell invariant is multiplied by an arbitrary scalar-curvature response $h(R)$."
+     ],
+     "authors": "Ye Zhou",
+     "arxiv_id": "2611.24634"
+    },
+    {
+     "headline": "Gauge and scale dependence of the quadratic backreaction source during inflation: Uniform-expansion gauge",
+     "body": [
+      "Cosmological backreaction is most directly expressed through the local expansion of the spacetime foliation, so uniform-expansion (UE) slicing provides a natural geometrical setting in which to examine the quadratic effective energy-momentum tensor (2EMT) of scalar perturbations during slow-roll inflation."
+     ],
+     "authors": "Inyong Cho",
+     "arxiv_id": "2611.24127"
+    }
+   ]
+  }
+ ],
+ "briefs": [
+  {
+   "headline": "Scalar/axion Wormholes and Boundary Conditions in Gravitational Path Integrals",
+   "text": "Recent work noted that whether or not a given class of spacetime wormholes contributes to the gravitational path integral can depend strongly on the choice of boundary conditions.",
+   "arxiv_id": "2611.23392",
+   "authors": "Jason Hallsten et al.",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Holography at finite resolution: zero-point length in AdS/CFT",
+   "text": "We explore the zero-point length $l_0$ of T-duality-inspired effective field theory in holography, distinguishing two readings.",
+   "arxiv_id": "2611.24779",
+   "authors": "Ankit Anand et al.",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Deep learning spacetime from entanglement dynamics",
+   "text": "In the eternal AdS black hole, the entanglement of the thermofield double state is geometrically realised by the Einstein--Rosen bridge, in line with the ER=EPR conjecture.",
+   "arxiv_id": "2611.24666",
+   "authors": "Hyun-Sik Jeong et al.",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "$1/N$ corrections to $\\langle TJJ\\rangle$ and $\\langle TTT\\rangle$ in QED$_3$, QED$_3$--GNY and scalar QED$_3$",
+   "text": "Three-dimensional Abelian gauge theories have broad applications in deconfined quantum criticality, Dirac spin liquids and cuprate superconductivity.",
+   "arxiv_id": "2611.24531",
+   "authors": "Yongwei Guo et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Non-Perturbative Moduli Stabilization with Sp$(4,\\mathbb Z)$ Modular Symmetry",
+   "text": "We study the stabilization of the three complex moduli associated with Sp$(4,\\mathbb Z)$ modular symmetry by gaugino condensation in $\\mathcal N=1$ supergravity models from heterotic string theory, where one-loop threshold corrections fix both the modular weight and the singularity structure of the superpotential.",
+   "arxiv_id": "2611.23381",
+   "authors": "Miguel Hernandez-Segura et al.",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Comment on \"Exact, nonsingular black holes from a phantom DBI field as primordial dark matter\"",
+   "text": "We demonstrate that the metric and scalar configuration proposed in Ref.~[1] do not satisfy the complete set of field equations of the Dirac-Born-Infeld (DBI) field theory minimally coupled to general relativity on a radial domain containing the event horizon. (primary category gr-qc)",
+   "arxiv_id": "2611.23597",
+   "authors": "Mustapha Azreg-Aïnou and Marco A. A. de Paula",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "Dynamics of a spinning body with scalar multipoles",
+   "text": "We construct an effective worldline action for a spinning compact object in theories of gravity with massless, non-minimally coupled scalar fields. (primary category gr-qc)",
+   "arxiv_id": "2611.23426",
+   "authors": "Jacopo Lestingi et al.",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "Beyond hidden zeros and uniqueness in Tr$(φ^3)$: Block and rod zeros in any Tr$(φ^m)$",
+   "text": "Hidden zeros have proven powerful tools for reconstructing amplitudes in Tr$(φ^3)$, a theory of colored scalars with cubic interactions.",
+   "arxiv_id": "2611.24897",
+   "authors": "Laurentiu Rodina",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Rotating black hole thermodynamics at NNLO in higher-curvature gravity",
+   "text": "We investigate higher-curvature corrections to black-hole thermodynamics in quasitopological gravity using perturbative Euclidean-action methods.",
+   "arxiv_id": "2611.24874",
+   "authors": "Cristobal Laporte",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Regge Dilaton Gravity from Feynman Diagrams",
+   "text": "Baratin and Freidel showed that closed Feynman diagrams in three and four Euclidean dimensions can be expressed as expectation values of observables in a Regge-type topological model \\cite{baratin_hidden_2007, baratin_hidden_2007-1}.",
+   "arxiv_id": "2611.24691",
+   "authors": "Florian Girelli and Christopher Pollack",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Localization of a 3-form gauge field in a braneworld",
+   "text": "The localization of a $3$-form gauge field is investigated in a extra dimension attached to an AdS metric in $4+1$ dimensions.",
+   "arxiv_id": "2611.24510",
+   "authors": "Pratik Chattopadhyay and M. J. Neves",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Cohomological Foundations of Entropic Monotonicity: The Relative Cyclic Complex, the Transgression Map, and the Entropic $c$-Theorem in $d = 2$",
+   "text": "We develop a cohomological framework for the entropic $c$-theorem in two dimensions, based on the relative cyclic complex of a pair of von Neumann algebras and on the transgression map associated with a faithful normal state.",
+   "arxiv_id": "2611.24396",
+   "authors": "R. C. Rashkov",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Boundary preparation and anomalous relaxation near a black hole exceptional point",
+   "text": "We study the relaxation of a Robin scalar field near a stable exceptional point of a planar Schwarzschild AdS black hole, where finite boundary driving controls the recovery time without changing the leading decay rate at linear order. (primary category gr-qc)",
+   "arxiv_id": "2611.24488",
+   "authors": "Yu Shi and Sheng Long",
+   "section": "Across the Border"
+  }
+ ],
+ "footer": "Text is excerpted verbatim from the authors’ abstracts as posted on arXiv and has not been peer reviewed. Follow the links for the full papers.",
+ "title": "The arXiv Gazette",
+ "tagline": "All the preprints fit to print",
+ "date": "Thursday, November 19, 2026",
+ "edition": "No. 18 · Morning Edition",
+ "categories": [
+  "hep-th",
+  "gr-qc (cross-lists)"
+ ],
+ "stats": {
+  "Papers scanned": "28",
+  "hep-th primary": "22",
+  "gr-qc cross-lists": "6",
+  "Papers covered": "28"
+ }
+}
