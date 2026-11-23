@@ -1,0 +1,207 @@
+{
+ "lead": {
+  "headline": "The Kerr Metric in Canonical Harmonic Coordinates to All Orders",
+  "body": [
+   "We give in closed form the transformation from Boyer--Lindquist coordinates to the canonical harmonic coordinates of the Kerr metric, to all orders in Newton's constant and in the spin. This is the canonical harmonic chart selected by the MPM prescription and by the harmonic-gauge Einstein recursion sourced by the Kerr multipoles, with the residual homogeneous freedom fixed by the boundary conditions.",
+   "The chart is the real, time-reversal-covariant combination of the two radial harmonic functions underlying the Cook--Scheel coordinates, which differ from it by a definite residual harmonic transformation. The proof rests on a classification of the residual harmonic freedom.",
+   "Rotational covariance, parity, time reversal and analyticity in the spin allow a decaying homogeneous solution beyond the linear field only in the spatial components at third post-Minkowskian order, with angular degree $\\ell=p+2$ at spin order $a^p$."
+  ],
+  "authors": "Amina Sadu and Pierre Vanhove",
+  "arxiv_id": "2611.27573",
+  "kicker": "Lead Story · hep-th",
+  "deck": "36 pages. Codes available at Github https://github.com/pierrevanhove/kerr-metric-harmonic and Zenodo https://zenodo.org/records/24397114"
+ },
+ "features": [
+  {
+   "headline": "Gauging background isometries of the ILST null string",
+   "body": [
+    "We present a general gauging of a subalgebra, $\\mathfrak h$, of the isometries $\\mathfrak g$ of the background geometry for the ILST string (e-Print: hep-th/9307108 [hep-th]). We discuss which of the isometries in $\\mathfrak g$ survive the gauging as symmetries.",
+    "The gauged symmetry does not in general involve transformations of the vector density V. There is thus a corresponding contraction of the algebra of constraints as compared to the flat background and it no longer represent the full Carroll-Weyl algebra."
+   ],
+   "authors": "Ulf Lindström",
+   "arxiv_id": "2611.27437",
+   "kicker": "Strings, Amplitudes & Supergravity · hep-th"
+  },
+  {
+   "headline": "BMS Charges from Null Hypersurfaces",
+   "body": [
+    "We show how the gravitational dynamics, phase space and Noether charges of the BMS group at future null infinity $\\mathscr{I}^+$ can be derived as limits of their analogues on null hypersurfaces at finite distance. The Bondi mass-loss and angular-momentum evolution equations arise as limits of the Raychaudhuri and Damour constraints.",
+    "The Ashtekar--Streubel (aka Wald--Zoupas) symplectic potential arises as a specific member of a two-parameter family of null-boundary symplectic potentials, corresponding to the Dirichlet (aka canonical) polarization, while the other members differ by field-space exact terms, leading to the same radiative pre-symplectic structure but potentially different BMS fluxes."
+   ],
+   "authors": "Martina Adamo et al.",
+   "arxiv_id": "2611.27488",
+   "kicker": "Holography & Gauge/Gravity · hep-th"
+  },
+  {
+   "headline": "String breaking in a (1+1)-dimensional $e^+e^-$ collider",
+   "body": [
+    "In this paper, we develop a framework for studying solitons in $(1+1)$-dimensional gauge theories using tensor networks, and we apply it to simulate $e^+e^-$ collisions in the massive Schwinger model. We work at $θ= π$ and at a bare fermion mass exceeding the critical value; in this regime, there are two degenerate vacua, and the $e^+$ and $e^-$ particles are realized as soliton states interpolating between them.",
+    "We carefully explain how to find and characterize such soliton states using infinite tensor network methods, and then exhibit real-time simulations of their collisions."
+   ],
+   "authors": "Ross Dempsey et al.",
+   "arxiv_id": "2611.27134",
+   "kicker": "Strings, Amplitudes & Supergravity · hep-th"
+  }
+ ],
+ "sections": [
+  {
+   "name": "Field Theory & Symmetry",
+   "stories": [
+    {
+     "headline": "Neural variational Skyrmions as a topological benchmark: emergent symmetry, precision energies and KAN--MLP comparison",
+     "body": [
+      "We propose the three-dimensional Skyrme model as a topological benchmark for neural variational methods and construct fully three-dimensional Skyrmions with baryon number $B=1,\\ldots,4$ without imposing a symmetry ansatz, with high precision. For $B=2,3,4$, the relaxation of these Skyrmions starts from $B$ unit-charge lumps with random positions and orientations, which carry no symmetry information."
+     ],
+     "authors": "Koji Hashimoto et al.",
+     "arxiv_id": "2611.27411"
+    },
+    {
+     "headline": "Onset of quantum chaos in a family of two-dimensional conformal field theories",
+     "body": [
+      "We exhibit random matrix statistics in the scaling dimensions of non-BPS primary operators in a family of two-dimensional conformal field theories. Specifically, we consider the sigma model with K3 target space and $\\mathcal N=(4,4)$ supersymmetry in a neighborhood of the Kummer orbifold point $\\mathbb T^4/\\mathbb Z_2$."
+     ],
+     "authors": "Felix M. Haehl and Moshe Rozali",
+     "arxiv_id": "2611.26694"
+    },
+    {
+     "headline": "Pairing and modular: Generalized electrons and quasiholes inside the $\\boxtimes$ of topological orders",
+     "body": [
+      "We study the relationship between the pair creation mechanism in physics and the pairing ($\\boxtimes_{\\mathbf{A}_{\\text{ub}}}$) in mathematics, focusing on the modular and algebraic properties. We provide a way to couple two topologically ordered systems, $\\mathbf{A}$ and $\\mathbf{A'}$ sharing the common (non-group-like) structure $\\mathbf{A}_{\\text{ub}}=\\overline{\\mathbf{A'}_{\\text{ub}}}$, through the nonabelian anyon analog of the pair creation mechanism denoted as $\\mathbf{A}_{\\text{ub},\\boxtimes}=\\mathbf{A}_{\\text{ub}}\\boxtimes \\mathbf{A'}_{\\text{ub}}$."
+     ],
+     "authors": "Yoshiki Fukusumi and Yuma Furuta",
+     "arxiv_id": "2611.27378"
+    }
+   ]
+  },
+  {
+   "name": "Gravity & Cosmology",
+   "stories": [
+    {
+     "headline": "Cosmological Correlators with Triple Massive Exchanges",
+     "body": [
+      "Among all tree-level contributions to the primordial bispectrum, the triple exchange of massive scalars is the most challenging. In this paper we present an analytical formula for this bispectrum in the form of a double series, which allows the three exchanged fields to have different masses and converges throughout the whole physical region."
+     ],
+     "authors": "Shuntaro Aoki et al.",
+     "arxiv_id": "2611.27611"
+    }
+   ]
+  },
+  {
+   "name": "Holography & Gauge/Gravity",
+   "stories": [
+    {
+     "headline": "Bulk Wilson Loops from $\\mathscr{I}$",
+     "body": [
+      "A Carrollian description of four-dimensional Yang-Mills theory on partially complexified future null infinity was recently proposed by Opreij, Skinner and Wang in arXiv:2604.09771. In this paper, we give a new form of the Carrollian Yang-Mills kinetic action on real future null infinity, and recover the logarithmic two-point function found by arXiv:2604.09771."
+     ],
+     "authors": "James Drummond et al.",
+     "arxiv_id": "2611.27739"
+    },
+    {
+     "headline": "Energy and Charge Transmission at Conformal Interfaces: Relations and Bounds",
+     "body": [
+      "Symmetry constrains how independently energy and charge can pass through a conformal interface. For interfaces between Wess--Zumino--Witten (WZW) models $G_{k_L}$ and $G_{k_R}$ preserving the diagonal affine algebra, we derive an exact relation between the energy and charge transmission coefficients, $c_{LR}=2(\\dim G)k_{LR}/(k_L+k_R+2h^\\vee)$."
+     ],
+     "authors": "Yuma Furuta et al.",
+     "arxiv_id": "2611.27002"
+    },
+    {
+     "headline": "Polarized IKKT holography: bulk realization of BPS operators",
+     "body": [
+      "We study the holographic imprint of polarization in the lowest BPS multiplet of the IKKT matrix model. On the matrix model side, the deformation requires operator mixing and broken-symmetry Ward identities to organize the surviving operators into an irreducible atypical multiplet of the $F(4)$ superalgebra."
+     ],
+     "authors": "Franz Ciceri et al.",
+     "arxiv_id": "2611.27482"
+    }
+   ]
+  },
+  {
+   "name": "Strings, Amplitudes & Supergravity",
+   "stories": [
+    {
+     "headline": "Brane Tilings and Polygons with Two Interior Points",
+     "body": [
+      "We fully classify the brane tilings and the 4d N=1 supersymmetric quiver gauge theories corresponding to toric Calabi-Yau 3-folds whose toric diagrams are convex lattice polygons with two interior lattice points. There are 45 such polygons up to GL(2,Z) transformations and lattice translations: 5 triangles, 19 quadrilaterals, 16 pentagons and 5 hexagons."
+     ],
+     "authors": "Rak-Kyeong Seong",
+     "arxiv_id": "2611.27861"
+    }
+   ]
+  },
+  {
+   "name": "Across the Border",
+   "note": "Papers whose primary category is not hep-th (mostly gr-qc), cross-listed into it",
+   "stories": [
+    {
+     "headline": "A covariant analysis of massless Dirac fields in LRS spacetimes",
+     "body": [
+      "We investigate the massless Dirac field in locally rotationally symmetric (LRS) spacetimes using a covariant spinorial-fluid representation, with the spinor current and spin direction aligned with the LRS frame. When the current has both vorticity and sheet twist, characterized by a constant ratio $λ$, the LRS integrability condition relates evolution and propagation derivatives, reducing the field equations to an ordinary differential system that can be integrated exactly."
+     ],
+     "authors": "Eduardo Bittencourt et al.",
+     "arxiv_id": "2611.27271"
+    },
+    {
+     "headline": "Effective theory of quantum black holes with Kretschmann scalar",
+     "body": [
+      "We investigate the thermodynamics, quasinormal modes (QNMs), and shadows of the effective theory of quantum black holes (BHs) by expanding the physical constants in terms of the Kretschmann scalar. The resulting effective metric can contain two horizons, which is typical for a quantum-corrected Schwarzschild spacetime."
+     ],
+     "authors": "G. I. B. Darman et al.",
+     "arxiv_id": "2611.27608"
+    },
+    {
+     "headline": "Dark Energy Based on Modified Gravity: Where the Future Lies?",
+     "body": [
+      "Based on current observational data, there is a strong possibility that dark energy was in a phantom regime in the near past, and a transition from a phantom to a quintessential regime may have occurred. Since then, many scenarios compatible with the DESI data have been proposed."
+     ],
+     "authors": "Shin'ichi Nojiri et al.",
+     "arxiv_id": "2611.27228"
+    }
+   ]
+  }
+ ],
+ "briefs": [
+  {
+   "headline": "Banana D-modules",
+   "text": "We study the holonomic $D$-module whose solutions are generic-mass banana Feynman integrals with complex propagator powers and spacetime dimension.",
+   "arxiv_id": "2611.27546",
+   "authors": "Giacomo Brunello et al.",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "A matrix model of an M5--brane on a plane--wave background",
+   "text": "We construct the maximally supersymmetric deformation of the recently proposed $\\mathcal{A}_6$ matrix model on a plane--wave background.",
+   "arxiv_id": "2611.26687",
+   "authors": "Carmine Montella",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "The $a$-function in fractional dimensions",
+   "text": "We consider the $β$-functions for both scalar, and supersymmetric chiral scalar, field theories with a general $n$th-order self-interaction, in their critical dimensions, which are in general non-integer.",
+   "arxiv_id": "2611.27464",
+   "authors": "I. Jack and D. R. T. Jones",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Perturbative $S$-matrix Unitarity in Higher-Derivative Theory of Fermions",
+   "text": "We construct a higher-derivative fermion theory with four-Fermi interactions.",
+   "arxiv_id": "2611.27021",
+   "authors": "Yugo Abe et al.",
+   "section": "Field Theory & Symmetry"
+  }
+ ],
+ "footer": "Text is excerpted verbatim from the authors’ abstracts as posted on arXiv and has not been peer reviewed. Follow the links for the full papers.",
+ "title": "The arXiv Gazette",
+ "tagline": "All the preprints fit to print",
+ "date": "Monday, November 23, 2026",
+ "edition": "No. 20 · Morning Edition",
+ "categories": [
+  "hep-th",
+  "gr-qc (cross-lists)"
+ ],
+ "stats": {
+  "Papers scanned": "19",
+  "hep-th primary": "16",
+  "gr-qc cross-lists": "3",
+  "Papers covered": "19"
+ }
+}
