@@ -1,0 +1,431 @@
+{
+ "lead": {
+  "headline": "Flat Space Entanglement from Wedge Holography",
+  "body": [
+   "We study holographic entanglement entropy in three-dimensional flat space by combining wedge holography with a controlled flat limit of AdS end-of-the-world branes. The limit takes a wedge of AdS$_4$ bounded by two AdS$_3$ branes to a Randall-Sundrum-like configuration of two flat branes, and the entanglement entropy of an interval in the two-dimensional corner CFT becomes that of an interval at null infinity of the branes.",
+   "The result has the functional form of the entanglement entropy of a two-dimensional Carrollian CFT, the proposed holographic dual of gravity in asymptotically flat three-dimensional spacetimes. However, the inferred central charges yield $c_M=0$ and $c_L\\to\\infty$ in the flat limit.",
+   "Adding a gravitational Chern-Simons term produces a $c_M$-like contribution, but we still find $c_L\\to\\infty$ and $c_M\\to0$ in this limit."
+  ],
+  "authors": "Robert C. Myers and Bruno Sivilotti",
+  "arxiv_id": "2611.31414",
+  "kicker": "Lead Story · hep-th",
+  "deck": "39 pages plus appendices"
+ },
+ "features": [
+  {
+   "headline": "The Relaxation of Quantum Near-Extremal Black Holes. (I) Microcanonical States, Pruning of Quasinormal Modes, and the Aretakis Instability",
+   "body": [
+    "The late-time relaxation of a near-extremal black hole is classically governed by an infinite tower of purely damped quasinormal modes. This poses a puzzle: the higher overtones decay at rates much larger than the energy $E$ of the black hole above extremality, so they would need black hole states below the extremal mass.",
+    "We resolve it by including the quantum fluctuations that become large when $E$ falls below a scale $E_b$."
+   ],
+   "authors": "Roberto Emparan et al.",
+   "arxiv_id": "2611.31459",
+   "kicker": "Gravity & Cosmology · hep-th"
+  },
+  {
+   "headline": "Anomalies and the Berry Phase: From $π^0\\toγγ$ to the geometry of the fermion vacuum",
+   "body": [
+    "We review the chiral anomaly from a historical perspective, from the $π^0\\toγγ$ puzzle and the work of Adler, Bell and Jackiw, to the Wess-Zumino-Witten (WZW) term. We then describe how the WZW term was motivated from quantum chromodynamics in 1983-85.",
+    "Integrating out the non-Abelian gauge fields, that have a gapped spectrum, gives a Nambu-Jona-Lasinio type theory of quarks, and integrating out the quarks, which are gapped by chiral symmetry breaking, gives the WZW model."
+   ],
+   "authors": "Spenta R. Wadia",
+   "arxiv_id": "2611.33121",
+   "kicker": "Field Theory & Symmetry · hep-th"
+  },
+  {
+   "headline": "$AdS$ Leading Regge Trajectory from String Field Theory",
+   "body": [
+    "We determine the $AdS$ mass of the leading Regge trajectory in superstring backgrounds $AdS_5\\times S^5$, $AdS_4\\times\\mathbb{CP}^3$, and $AdS_3\\times S^3\\times{\\cal M}_4$ with pure Ramond-Ramond (RR) flux for both ${\\cal M}_4=S^3\\times S^1$ and ${\\cal M}_4=T^4$, to the second order in the expansion with respect to the background RR flux by solving the linearized equations of motion in closed superstring field theory."
+   ],
+   "authors": "Minjae Cho et al.",
+   "arxiv_id": "2611.31678",
+   "kicker": "Field Theory & Symmetry · hep-th"
+  }
+ ],
+ "sections": [
+  {
+   "name": "Gravity & Cosmology",
+   "stories": [
+    {
+     "headline": "Inflation at strong mixing as a connection problem: effective field theory, Stokes phenomenon and the cosmological collider",
+     "body": [
+      "We study a massive field strongly mixed with the curvature perturbation during inflation, in the regime where the latter is described at low energies by a single-field effective field theory (EFT) with a quadratic dispersion relation. What this EFT captures, and what lies beyond it, are encoded in a connection problem, which relates the solutions that define the vacuum at early times to those that describe observables at late times."
+     ],
+     "authors": "Sebastian Garcia-Saenz et al.",
+     "arxiv_id": "2611.32612"
+    },
+    {
+     "headline": "The Schwarzschild-Kerr crossover of high overtone quasinormal modes",
+     "body": [
+      "A slowly rotating black hole is close to a nonrotating one, but its highly damped quasinormal spectrum is not. The Schwarzschild approximation holds only up to overtone numbers of order $χ^{-4/3}$, where $χ$ is the dimensionless spin.",
+      "We find that the frequency shift at this scale is a universal function, derived from the wave boundary conditions with an error estimate."
+     ],
+     "authors": "Yasuyuki Hatsuda",
+     "arxiv_id": "2611.31394"
+    }
+   ]
+  },
+  {
+   "name": "Also in hep-th",
+   "stories": [
+    {
+     "headline": "Differential Equations for Feynman Integrals from Higher Residue Pairings",
+     "body": [
+      "We develop a method for constructing differential equations for Feynman integrals directly from multivariate intersection numbers, without fibration. The large-$\\varepsilon$ expansion of the intersection pairing, with $\\varepsilon$ the dimensional regulator, is given by Saito's higher residue pairings, which localise at the critical points of a potential and admit closed multivariate formulae."
+     ],
+     "authors": "Giacomo Brunello et al.",
+     "arxiv_id": "2611.32544"
+    }
+   ]
+  },
+  {
+   "name": "Holography & Gauge/Gravity",
+   "stories": [
+    {
+     "headline": "Entanglement structure in conformal Y-junctions",
+     "body": [
+      "We study how entanglement constrains energy transmission in conformal Y-junctions using holographic and free-field models. We define pairwise effective central charges from mutual information as a natural extension of the interface entanglement coefficient.",
+      "For holographic junctions, we formulate a branched RT prescription and show that the resulting entropies satisfy monogamy of mutual information."
+     ],
+     "authors": "Yan Liu and You-Jie Zeng",
+     "arxiv_id": "2611.32062"
+    }
+   ]
+  },
+  {
+   "name": "Field Theory & Symmetry",
+   "stories": [
+    {
+     "headline": "Elliptic spin Ruijsenaars--Schneider model via the Poisson reduction of the affine Heisenberg double",
+     "body": [
+      "We construct the Hamiltonian structure of the elliptic spin Ruijsenaars--Schneider model with dynamical inhomogeneities by Poisson reduction of the affine Heisenberg double extended by an affine oscillator manifold. This construction extends the Heisenberg double approach to spin Ruijsenaars--Schneider models from the hyperbolic to the elliptic case."
+     ],
+     "authors": "Gleb Arutyunov et al.",
+     "arxiv_id": "2611.31405"
+    },
+    {
+     "headline": "A spin chain as a deformed conformal field theory: an ODE/IM approach",
+     "body": [
+      "The ODE/IM correspondence relates ordinary differential equations to integrable quantum field theories in the continuum. We ask whether it extends to integrable spin chains of finite length $N$.",
+      "We analyse the twisted XXZ chain at a special anisotropy and twist, focusing on states in its Lee--Yang scaling sector."
+     ],
+     "authors": "Sujay K. Ashok et al.",
+     "arxiv_id": "2611.31417"
+    }
+   ]
+  },
+  {
+   "name": "Strings, Amplitudes & Supergravity",
+   "stories": [
+    {
+     "headline": "The Hidden Simplicity of the Classical Limit",
+     "body": [
+      "We study the classical limit of two-to-two massive-scalar amplitudes at all orders of perturbation theory. We compute these amplitudes in the probe limit for several theories: a family of scalar theories, electrodynamics, and $\\mathcal{N}=8$ supergravity with half-BPS matter."
+     ],
+     "authors": "Yilber Fabian Bautista et al.",
+     "arxiv_id": "2611.31369"
+    },
+    {
+     "headline": "NS5-branes and the black hole/string transition",
+     "body": [
+      "Near to the onset of BTZ black hole formation in string theory is a large ensemble of 6d BPS supergravity solutions sourced by slightly separated fundamental strings and Neveu-Schwarz fivebranes. We extend the construction of these geometries to include gauge excitations of the fivebranes, and then study the energetics of D-string solitons in relation to the deconfinement transition of little strings, which are the natural non-abelian degrees of freedom that deconfine in the transition to the black hole phase."
+     ],
+     "authors": "Asad Fayiz and Emil J. Martinec",
+     "arxiv_id": "2611.31945"
+    }
+   ]
+  },
+  {
+   "name": "Across the Border",
+   "note": "Papers whose primary category is not hep-th (mostly gr-qc), cross-listed into it",
+   "stories": [
+    {
+     "headline": "Horizon dynamical entropies and phase space topology",
+     "body": [
+      "We study phase space topologies induced by infinite-dimensional norms as a means to solve the problem of 'integrability' of Hamiltonian generators corresponding to diffeomorphisms of a null hypersurface, with the specific goal in mind to compare different prescriptions for the dynamical entropy of black holes, which replaces the area in non-stationary regimes."
+     ],
+     "authors": "Matteo Bruno and Simone Speziale",
+     "arxiv_id": "2611.32444"
+    },
+    {
+     "headline": "Scalar-tensor interactions selected through their first-order thermodynamic dynamics",
+     "body": [
+      "We investigate the restrictive capability of first-order thermodynamics on scalar-tensor gravity. Starting from a general action containing nonlinear curvature dependence, an Einstein-tensor-Hessian coupling, and independent quadratic and cubic scalar-Hessian interactions, we derive the complete effective-fluid quantities."
+     ],
+     "authors": "David S. Pereira",
+     "arxiv_id": "2611.33033"
+    },
+    {
+     "headline": "Strong hyperbolicity of puncture-gauge formulations of gravitational theories with second order equations of motion",
+     "body": [
+      "We prove that the modified CCZ4 (mCCZ4) formulation, used in nonlinear puncture-gauge simulations of (d+1)-dimensional Einstein-Gauss-Bonnet gravity and four-derivative scalar-tensor theory in four dimensions, is strongly hyperbolic for both theories at sufficiently weak coupling, provided that the gauge parameters are chosen to satisfy a cone-separation condition."
+     ],
+     "authors": "Shunhui Yao",
+     "arxiv_id": "2611.32853"
+    }
+   ]
+  }
+ ],
+ "briefs": [
+  {
+   "headline": "Hadron structure in $1+1$ dimensions from the infinite Hamiltonian lattice",
+   "text": "The internal structure of a hadron is encoded in matrix elements of operators between hadron states of definite momentum.",
+   "arxiv_id": "2611.31750",
+   "authors": "Ross Dempsey",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Fisher information in the flux landscape",
+   "text": "We quantify the fine-tuning of the flux superpotential in Type IIB Calabi-Yau orientifold compactifications using the Fisher Information Metric.",
+   "arxiv_id": "2611.32901",
+   "authors": "Martin Carrascal and Radu Tatar",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Holographic Spread Complexity of a Probe Particle with General Initial Data",
+   "text": "We investigate the holographic spread complexity of a massive particle probing global AdS$_3$ with general initial data.",
+   "arxiv_id": "2611.32427",
+   "authors": "Zekun Qian et al.",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "D0-brane bound states in Matrix theory: nonperturbative bounds on matrix extent, noncommutativity and spatial shape",
+   "text": "In Matrix theory, a single eleven-dimensional supergraviton is associated with a BPS bound state of D0-branes.",
+   "arxiv_id": "2611.32333",
+   "authors": "Tetsuyuki Muramatsu",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "All the Positive Energy Correlators",
+   "text": "We develop a framework to systematically obtain the full set of positivity bounds on multi-point energy correlators for sources of arbitrary spin.",
+   "arxiv_id": "2611.31587",
+   "authors": "Lorenzo Ricci et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Radiation from periods: Bremsstrahlung functions, wound loops, latitudes and integral constraints in ABJM",
+   "text": "The Bremsstrahlung functions of the 1/2BPS and 1/6BPS Wilson lines of ABJM theory measure their response to small deformations.",
+   "arxiv_id": "2611.31555",
+   "authors": "Michelangelo Preti",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "The double copy and perturbative teleparallel gravity",
+   "text": "In this paper we analyze the double copy between gluon and graviton amplitudes within the context of teleparallel gravity.",
+   "arxiv_id": "2611.33146",
+   "authors": "Georg Stettinger",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Scalar perturbations in extremal Reissner-Nordström geometry: new methods at work",
+   "text": "We study scalar radiation emitted by a particle moving along a circular orbit around a four-dimensional extremal Reissner-Nordström black hole.",
+   "arxiv_id": "2611.33123",
+   "authors": "Giorgio Di Russo et al.",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "The Four-Loop Ladder Integral Family for the QED Electron Self-Energy",
+   "text": "We compute the complete set of master integrals of the four-loop ladder integral family contributing to the electron self-energy in Quantum Electrodynamics.",
+   "arxiv_id": "2611.32854",
+   "authors": "Felix Forner et al.",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Cosmological Constant Screening from Quantum Horizon Chaos",
+   "text": "We propose a microscopic mechanism for screening the cosmological constant through quantum chaos of the horizon degrees of freedom.",
+   "arxiv_id": "2611.32839",
+   "authors": "Chong-Sun Chu",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "The Wilson-loop formulation of Yang-Mills at finite mode truncation: a Level-Two structural bypass of the Gribov ambiguity",
+   "text": "The unfixed real-time Henstock-Kurzweil functional integral for truncated Yang-Mills removes the choice of a gauge surface, but gauge orbits remain objects of the formulation: that is a Level-One bypass of the Gribov ambiguity.",
+   "arxiv_id": "2611.32690",
+   "authors": "Yu. N. Berdinsky",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Romans Mass from a $\\mathrm{GL}(1,\\mathbb{R})$ Topological Field Theory with Boundary",
+   "text": "We construct an eleven-dimensional topological field theory with boundary whose edge modes are the dilaton and form fields of type IIA supergravity, including the Romans mass.",
+   "arxiv_id": "2611.32437",
+   "authors": "Euihun Joung and J. A. Rosabal",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "M5-branes wrapped on topological disks from maximal 7D gauged supergravity",
+   "text": "We study new supersymmetric $AdS_5 \\times Σ$ solutions for $Σ$ being a topological disk from the maximal gauged supergravity in seven dimensions with $CSO(p,q,5-p-q)$ gauge groups.",
+   "arxiv_id": "2611.31947",
+   "authors": "Patharadanai Nuchino and Parinya Karndumri",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Beyond the Thermodynamic-Volume Limit in Holographic Complexity",
+   "text": "In the large black hole regime, holographic complexity obeys a thermodynamic-volume scaling law, while the finite-size approach to this limit remains unresolved.",
+   "arxiv_id": "2611.31761",
+   "authors": "Di Wu and Robert B. Mann",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "BPS baryonic tubes in chiral perturbation theory minimally coupled with electrodynamics and a novel crossover",
+   "text": "We derive a novel first-order BPS system (whose solutions are automatically solutions of the second-order field equations) in chiral perturbation theory (CPT) in $(3+1)$ dimensions.",
+   "arxiv_id": "2611.31719",
+   "authors": "Fabrizio Canfora et al.",
+   "section": "Also in hep-th"
+  },
+  {
+   "headline": "Second-order localization and intersecting O6-planes in scale-separated AdS vacua",
+   "text": "We construct explicit periodic second-order localization corrections to scale-separated AdS$_4$ vacua of massive type IIA supergravity on $T^6/(\\mathbb{Z}_2\\times\\mathbb{Z}_2)$.",
+   "arxiv_id": "2611.31660",
+   "authors": "Aravind Aikot and Timm Wrase",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "The Matrix in Pieces: Complete BFSS Scattering at Finite Rank",
+   "text": "As two matrix blocks separate in Banks-Fischler-Shenker-Susskind matrix quantum mechanics, the modes connecting them develop a growing excitation gap.",
+   "arxiv_id": "2611.31649",
+   "authors": "Mai Qi",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Topological Phase Transition of $ F_{α}{}^{γ} F^{αβ} F_{β}{}^{η} \\ F^{λμ} R_{γηλμ} $ AdS Black Holes",
+   "text": "We investigate the thermodynamic criticality and topological properties of four-dimensional charged anti-de Sitter black holes in the presence of a nonminimal electromagnetic-curvature interaction of the form \\(F_α{}^γF^{αβ}F_β{}^ηF^{λμ}R_{γηλμ}\\).",
+   "arxiv_id": "2611.31433",
+   "authors": "Mehdi Sadeghi and Faramarz Rahmani",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Refined Rényi Entropy from Replica-Geometry Tensor Networks",
+   "text": "Holographic tensor networks are a central route to understanding the mechanism behind the holographic duality, but standard fixed-graph constructions with maximally entangled links face a structural obstacle.",
+   "arxiv_id": "2611.31398",
+   "authors": "Qiang Wen et al.",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "The Cosmological Constant as a Clock and the Vilenkin Wavefunction as a Resonance",
+   "text": "We address the problem of time in quantum gravity using a covariant formulation of unimodular gravity. (primary category gr-qc)",
+   "arxiv_id": "2611.32987",
+   "authors": "Stephon Alexander and Marcell Howard",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "Baker-Akhiezer functions for Koornwinder-van Diejen integrable system",
+   "text": "The Koornwinder-van Diejen integrable system is a counterpart of the trigonometric Ruijsenaars integrable system (associated with the root system $A_n$) for the root system $(C_n^\\vee, C_n)$.",
+   "arxiv_id": "2611.32744",
+   "authors": "Liudmila Bishler",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Resolvent reconstruction of minimal strings beyond KdV II: D series models",
+   "text": "Three-state Potts gravity and tetracritical Ising gravity have the same central charge and the same conformal spectral curve.",
+   "arxiv_id": "2611.32150",
+   "authors": "Wasif Ahmed and Joydeep Naskar",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "A cubic theory of gravity with quasitopological-like properties for compactified cosmologies",
+   "text": "We identify a cubic combination of curvature invariants in dimension $D=7$ that when added to the Einstein-Hilbert action, yields a healthy cosmological evolution in four dimensions after compactification on a constant-curvature internal space of dimension three.",
+   "arxiv_id": "2611.31758",
+   "authors": "Vicente Aguilar et al.",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Exact Scalar and Fermionic Propagators in a Uniform Electric Background",
+   "text": "By implementing an analytical hybrid framework that combines the Ritus eigenfunction technique with Schwinger's proper-time formalism, we construct exact propagators for charged scalar and fermionic fields in a constant, homogeneous, external electric field in four-dimensional Euclidean space.",
+   "arxiv_id": "2611.31528",
+   "authors": "Emerson B. S. Corrêa",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "A Kerr-black-hole worldline action to $\\mathcal{O}(G^5)$",
+   "text": "We establish a worldline action which correctly reproduces Kerr-black-hole dynamics up to fifth order in Newton's constant in a physical post-Minkowskian counting.",
+   "arxiv_id": "2611.31377",
+   "authors": "Yilber Fabian Bautista et al.",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Quantum black hole evaporation from thin shell collapse: a complete effective picture",
+   "text": "Quantum gravity is expected to play a central role in resolving classical singularities and providing a complete, predictive spacetime picture. (primary category gr-qc)",
+   "arxiv_id": "2611.31399",
+   "authors": "Michał Bobula and Francesco Fazzini",
+   "section": "Across the Border"
+  },
+  {
+   "headline": "Holographic ensembles and giant gravitons at the Leigh--Strassler fixed point",
+   "text": "Finite-rank observables in holographic quantum field theories provide stringent tests of string and M-theory, but remain challenging to compute when supersymmetry is non-maximal.",
+   "arxiv_id": "2611.33072",
+   "authors": "Jesse van Muiden and De-liang Zhong",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Holographic Mutual Information in an Anisotropic Field Theory",
+   "text": "We investigate holographic mutual information in an anisotropic strongly coupled plasma within the framework of gauge/gravity duality.",
+   "arxiv_id": "2611.32637",
+   "authors": "Mehri Rahimi et al.",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Entanglement island and Page curve for one-sided rotating Kerr black holes",
+   "text": "We investigate the information paradox for one-sided asymptotically flat rotating Kerr black holes formed through gravitational collapse using the island prescription.",
+   "arxiv_id": "2611.32438",
+   "authors": "Soumen Pari",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "The DBI critical electric field in stationary non-diagonal geometries",
+   "text": "We investigate the critical electric field for the holographic Schwinger effect in general stationary non-diagonal geometries.",
+   "arxiv_id": "2611.32378",
+   "authors": "Leila Shahkarami",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Holographic Entanglement Entropy of Network CFT",
+   "text": "Miao et al. \\cite{Guo:2025sbm, Guo:2026prm} proposed the AdS/NCFT correspondence, which explores the gravity dual of conformal field theories defined on networks.",
+   "arxiv_id": "2611.32224",
+   "authors": "Zhi-Rong Deng and Jie Yang",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Circulating currents around orbifolded defects",
+   "text": "We investigate holographic monodromy defects with five dimensional orbifold singularities which lift to smooth and supersymmetric ten dimensional geometries.",
+   "arxiv_id": "2611.31391",
+   "authors": "Matthew M. Roberts",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Bootstrapping two-loop $β$-functions for bosonic and heterotic strings",
+   "text": "Beyond one loop, $β$-functions of non-linear $σ$-models are hard to compute directly.",
+   "arxiv_id": "2611.31372",
+   "authors": "Achilleas Gitsis and Falk Hassler",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "The Eigenfunction Method to Calculate the Klein--Gordon Propa-gator in an Inhomogeneous Magnetic Field",
+   "text": "In this paper, we use the Eigenfunction method (Ritus' method) to calculate the Klein--Gordon propagator under an external magnetic field with an exponential damping factor $b$, in a four-dimensional Euclidean space.",
+   "arxiv_id": "2611.31630",
+   "authors": "Emerson B. S. Corrê et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "New relations of tree-level string amplitudes from the massless prescription",
+   "text": "We discover new relations between the string corrections to $(m+1)$-point field-theory amplitudes and $m$-point string amplitudes at tree level from the massless prescription of vertex operators.",
+   "arxiv_id": "2611.31580",
+   "authors": "Chen Huang and Yi-Xiao Tao",
+   "section": "Strings, Amplitudes & Supergravity"
+  }
+ ],
+ "footer": "Text is excerpted verbatim from the authors’ abstracts as posted on arXiv and has not been peer reviewed. Follow the links for the full papers.",
+ "title": "The arXiv Gazette",
+ "tagline": "All the preprints fit to print",
+ "date": "Wednesday, November 25, 2026",
+ "edition": "No. 22 · Morning Edition",
+ "categories": [
+  "hep-th",
+  "gr-qc (cross-lists)"
+ ],
+ "stats": {
+  "Papers scanned": "50",
+  "hep-th primary": "45",
+  "gr-qc cross-lists": "5",
+  "Papers covered": "50"
+ }
+}
