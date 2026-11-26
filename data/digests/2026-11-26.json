@@ -1,0 +1,354 @@
+{
+ "lead": {
+  "headline": "Late-time OTOCs in Toda conformal field theory",
+  "body": [
+   "We study late-time out-of-time-order correlators (OTOCs) of semi-degenerate primary fields in two-dimensional $A_{N-1}$ Toda conformal field theory. In Liouville theory ($N=2$), we find that the OTOC decays as $t^{-3/2}$ when the continuum edge dominates, correcting a previously reported constant limit.",
+   "For $N=3$, a transverse contour pinch reduces the spectral integral to one dimension. Assuming that the reduced expansion is complete, in the continuous phase the regulated edge behaves as a discrete state, and the OTOC approaches a pure braiding phase.",
+   "As we check numerically, the edge block is a free-field correlator in a charge-neutral Weyl frame; this explains the pure phase and is consistent with crossing symmetry. For both $N=2$ and $N=3$, a dominant discrete residue gives a constant late-time limit."
+  ],
+  "authors": "Giwan Kim and Masahito Yamazaki",
+  "arxiv_id": "2611.33744",
+  "kicker": "Lead Story · hep-th",
+  "deck": "74 pages, 10 figures"
+ },
+ "features": [
+  {
+   "headline": "Interfaces in Long Range CFT$_1$",
+   "body": [
+    "We consider interfaces in the theory of a single free scalar in AdS$_2$ defined by adding relevant operators along portions of the boundary. We begin with Neumann/Dirichlet interfaces, computing the associated scaling dimension and $g$-factor ratio; we also explain how arbitrary interface correlators can be computed numerically efficiently.",
+    "Then we move on to interfaces between generalized free field and long-range interacting theories such as long range Ising, determining many quantities in perturbation theory."
+   ],
+   "authors": "Bastien Girault and Miguel F. Paulos",
+   "arxiv_id": "2611.34705",
+   "kicker": "Holography & Gauge/Gravity · hep-th"
+  },
+  {
+   "headline": "RMT${}_2$: Random Spectral Correlations for CFT${}_2$ and AdS${}_3$ Gravity",
+   "body": [
+    "We present the full framework of RMT${}_2$, a consistent unification of random matrix theory and modular invariance. The systematic prescription, which augments the existing construction by incorporating spin, lifts random matrix correlators to $\\text{SL}(2,\\mathbb{Z})$ Poincaré sums of their Mellin transforms, in a manner which enforces random matrix correlations near extremality in every spinning primary sector.",
+    "The resulting RMT${}_2$ correlators are further expressible in terms of an orthogonal basis of Eisenstein series and Maass cusp forms."
+   ],
+   "authors": "Jan Boruch et al.",
+   "arxiv_id": "2611.33291",
+   "kicker": "Holography & Gauge/Gravity · hep-th"
+  },
+  {
+   "headline": "Defect Correlators from Supergravity: Finding the Missing Contact Terms",
+   "body": [
+    "We resolve a puzzle in the computation of holographic correlators using supergravity when defects are present. Previous direct supergravity calculations of defect two-point functions were found to differ from bootstrap results by a set of contact contributions.",
+    "We show that the discrepancy arises from two effects: nonlinear Kaluza-Klein field redefinitions in the bulk, which induce additional quadratic couplings when applied consistently to localized sources, and off-shell terms in mixed bulk--defect vertices, which can collapse internal defect propagators."
+   ],
+   "authors": "Qi Chen and Xinan Zhou",
+   "arxiv_id": "2611.34082",
+   "kicker": "Strings, Amplitudes & Supergravity · hep-th"
+  }
+ ],
+ "sections": [
+  {
+   "name": "Gravity & Cosmology",
+   "stories": [
+    {
+     "headline": "Bounds on Love Numbers and Quasinormal Modes from the Surface Impedance",
+     "body": [
+      "The surface impedance of a body is fixed by its interior alone and encodes its entire tidal response. We derive bounds on Love numbers and quasinormal modes from constraints on the impedance that follow from either of two properties of a stable body: it is lossless, meaning that it dissipates no energy, or it is passive, meaning that it never gives back more energy than it has received."
+     ],
+     "authors": "Daniel McLoughlin and Mikhail P. Solon",
+     "arxiv_id": "2611.33285"
+    }
+   ]
+  },
+  {
+   "name": "Strings, Amplitudes & Supergravity",
+   "stories": [
+    {
+     "headline": "The String Theory Photinoverse",
+     "body": [
+      "Type-IIB string compactifications typically give rise to a significant number of RR-photons. These are generically massless and do not possess any light charged states, making them `superhidden'.",
+      "However, since supersymmetry is present at least at some high scale, corresponding `dark photinos' are also predicted."
+     ],
+     "authors": "Andreas P. Braun et al.",
+     "arxiv_id": "2611.33273"
+    },
+    {
+     "headline": "The all-loop spectrum of GGK strings",
+     "body": [
+      "We study the non-perturbative spectrum of the non-relativistic limit of string theory in AdS$_5\\times$S$^5$, also known as GGK theory. In light-cone gauge, we show that the bosonic spectrum on a number of vacua is described at all-loops by free massive and massless scalar fields in AdS$_2$, confirming a conjecture by de Leeuw, Fontanella and Nieto-García, arXiv:2403.09563."
+     ],
+     "authors": "Marius de Leeuw et al.",
+     "arxiv_id": "2611.34619"
+    },
+    {
+     "headline": "Machine Learning for Calabi--Yau Geometry and Heterotic Compactification",
+     "body": [
+      "Quantitative predictions from string compactification depend on geometric data that are difficult to compute analytically. This review surveys machine learning approaches to predicting topological properties of Calabi-Yau manifolds, discusses the search for new Calabi-Yau fourfolds, as well as numerical methods for approximating Ricci-flat metrics."
+     ],
+     "authors": "Vishnu Jejjala and Damian Mayorga Pena",
+     "arxiv_id": "2611.33311"
+    }
+   ]
+  },
+  {
+   "name": "Holography & Gauge/Gravity",
+   "stories": [
+    {
+     "headline": "A Pole-Cut Formula for Holographic Extremal Correlators",
+     "body": [
+      "We show that the holographic spectral function of a neutral massless scalar on the extremal Reissner-Nordstrom black brane in $AdS_5$ admits an elegant formula in terms of the quasi-normal modes (QNMs) and branch-cut data. In the extremal case, the spectral data comprises the zeros of the boundary source function, i.e. the QNMs, as well as its phase discontinuity across the branch cut on the negative imaginary axis of the complex frequency plane."
+     ],
+     "authors": "Jyotirmoy Bhattacharya et al.",
+     "arxiv_id": "2611.34824"
+    }
+   ]
+  },
+  {
+   "name": "Field Theory & Symmetry",
+   "stories": [
+    {
+     "headline": "Higher derivatives and ghosts through three centuries",
+     "body": [
+      "We outline the history of the research of dynamic systems including higher derivatives in the Lagrangian, The story starts in 1744 when Euler published a book where the Euler--Lagrange differential equations for a HD system were first written. The next important landmarks were the papers of Ostrogradsky (1850) and of Pais and Uhlenbeck (1950)."
+     ],
+     "authors": "Andrei Smilga",
+     "arxiv_id": "2611.34097"
+    },
+    {
+     "headline": "Identifying Renormalization Group Interfaces of Massless WZW Flows $\\widehat{\\mathfrak{su}}(2)_k \\to \\widehat{\\mathfrak{su}}(2)_1$",
+     "body": [
+      "A renormalization-group interface encodes how a flow relates operators at short and long distances. We identify this interface up to topological dressing for the conjectured massless $\\widehat{\\mathfrak{su}}(2)_k \\to \\widehat{\\mathfrak{su}}(2)_1$ Wess-Zumino-Witten flows at every odd level $k\\geq 3$."
+     ],
+     "authors": "Yuma Furuta et al.",
+     "arxiv_id": "2611.33354"
+    },
+    {
+     "headline": "Character expansion of the Itzykson-Zuber pair correlator",
+     "body": [
+      "We revisit a long-standing problem of correlation functions with the Harish-Chandra-Itzykson-Zuber measure. The immediate goal is to reproduce the long-known answer for pair correlator in the form of character expansion - a sum over Schur polynomials with carefully adjusted coefficients."
+     ],
+     "authors": "Alexei Morozov and Hasib Sifat",
+     "arxiv_id": "2611.34829"
+    }
+   ]
+  },
+  {
+   "name": "Across the Border",
+   "note": "Papers whose primary category is not hep-th (mostly gr-qc), cross-listed into it",
+   "stories": [
+    {
+     "headline": "Lorentz charges for Lovelock gravity",
+     "body": [
+      "In this paper, we construct the charges associated with the residual local Lorentz transformations on a black hole horizon in the Lovelock class of theories of gravity. The horizons is assumed to be non- expanding horizons, \\emph{i.e} a null hypersurface for which the expansion corresponding to the null generator vanish."
+     ],
+     "authors": "Ayan Chatterjee et al.",
+     "arxiv_id": "2611.34176"
+    },
+    {
+     "headline": "Resolving the Conformal Mode Problem with Einstein-Cartan Gravity",
+     "body": [
+      "We show that, when $Λ> 0$, the conformal factor problem is absent in first order Einstein-Cartan gravity in which the spin connection and tetrad are independent off-shell. At fixed connection, a conformal rescaling of the tetrad produces no conformal kinetic term so that the action is bounded from below."
+     ],
+     "authors": "Stephon Alexander et al.",
+     "arxiv_id": "2611.33278"
+    }
+   ]
+  }
+ ],
+ "briefs": [
+  {
+   "headline": "An algebraic quantization of gravity from the null cone",
+   "text": "We propose a background independent quantization of vacuum general relativity on four dimensional Lorentzian spacetimes.",
+   "arxiv_id": "2611.34924",
+   "authors": "Venkatesa Chandrasekaran",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Power-law tunneling in the Razavy hyperbolic double well: Heun connection formulas and their resonances",
+   "text": "We study nonperturbative level splitting in the symmetric Razavy hyperbolic double well, relating its double-confluent Heun connection problem to exact WKB and quasi-exact solvability.",
+   "arxiv_id": "2611.34588",
+   "authors": "Jie Ren and Xuanzhuang Wu",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Rényi multi-entropy from Riemann surfaces",
+   "text": "We compute vacuum tripartite Rényi multi-entropy in a two-dimensional compact-boson conformal field theory (CFT).",
+   "arxiv_id": "2611.34715",
+   "authors": "Kenya Tasuki",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Time-weighted energy correlators are infrared unsafe in gauge theories",
+   "text": "Energy correlators are infrared safe because each detector weights a parton by its energy, but a weight in the arrival time makes them infrared unsafe in gauge theories.",
+   "arxiv_id": "2611.34886",
+   "authors": "Siqing Yu",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Entanglement and HBAR entropy in a Lorentzian non-commutative black hole",
+   "text": "We investigate how Lorentzian non-commutative smearing affects entanglement and horizon brightened acceleration radiation (HBAR) outside a black hole.",
+   "arxiv_id": "2611.34706",
+   "authors": "A. A. Araújo Filho et al.",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Black hole entropy from angular holonomies of Sine-Gordon soliton lattices in AdS$_3$",
+   "text": "We construct boundary conditions for AdS$_3$ gravity that realize Sine-Gordon dynamics.",
+   "arxiv_id": "2611.34444",
+   "authors": "Marcela Cárdenas et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "An Argument for the Weak Gravity Conjecture from Constrained Wormholes",
+   "text": "The gravitational path integral (GPI) computes inner products between states of open and closed universes in any low-energy effective theory.",
+   "arxiv_id": "2611.33415",
+   "authors": "Gabriele Di Ubaldo et al.",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Energy plateau cascades from complex-time local quenches in thermal two-dimensional CFTs",
+   "text": "In this work, we study local operator quenches in thermal two-dimensional conformal field theories with complex-time evolution, which can be viewed as an effective description of conditional dynamics in a system interacting with an environment.",
+   "arxiv_id": "2611.33283",
+   "authors": "Dmitry S. Ageev and Vladimir A. Bykov",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Unitarization from Spin Geometry",
+   "text": "We derive the dimensional reduction of 10D super Yang-Mills theory on a general closed 6D spin manifold using spectral decompositions for the higher-dimensional gauge field and gaugino, keeping the infinite towers of Kaluza-Klein (KK) modes in the lower-dimensional theory.",
+   "arxiv_id": "2611.33277",
+   "authors": "Francesco Bertucci et al.",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "The black hole IR triangle for scalar QED",
+   "text": "We construct the black hole infrared triangle of scalar QED on a stretched Schwarzschild horizon at tree level.",
+   "arxiv_id": "2611.33271",
+   "authors": "Fabiano Feleppa et al.",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Vacuum correlation measures as CFT partition functions",
+   "text": "We show that in any $d$-dimensional CFT, the vacuum sandwiched Rényi mutual information (SRMI) of integer order $n$ between two disjoint balls maps to a CFT partition function on a manifold of topology $\\#^{n-1}(S^1 \\times S^{d-1})$, with moduli fixed by the ball configuration and single-ball modular flow.",
+   "arxiv_id": "2611.34922",
+   "authors": "Hewei Frederic Jia",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Massive Triangle in Cosmological Correlator beyond Conformal Coupling",
+   "text": "A massive scalar coupled in pairs to the inflaton generates a one-loop primordial bispectrum whose mass corrections at generic momenta have lacked closed analytic expressions beyond conformal coupling.",
+   "arxiv_id": "2611.34892",
+   "authors": "Taushif Ahmed and Syed Mehedi Hasan",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Reconstructing massive quivers on a defect circle",
+   "text": "We study the kink and particle spectra for the massive $φ_{2,1}$-deformations of minimal models $\\mathcal M_{k+1,k+2}$ via truncated conformal space approach (TCSA) on a defect circle.",
+   "arxiv_id": "2611.34129",
+   "authors": "Ting-Kai Chen and Jin Chen",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Neural Network Field Theory and the AdS/CFT Correspondence",
+   "text": "We develop a neural realization of massive scalar field theory on Euclidean anti--de Sitter space and its holographic boundary observables within neural network field theory (NN--FT).",
+   "arxiv_id": "2611.33281",
+   "authors": "Dmitry S. Ageev et al.",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Gauge groups of type 0 orientifolds",
+   "text": "We determine the global form of the gauge groups of the orthogonal and symplectic type 0 orientifolds, using the constraints from perturbative and brane states.",
+   "arxiv_id": "2611.33275",
+   "authors": "Vittorio Larotonda and Salvatore Raucci",
+   "section": "Strings, Amplitudes & Supergravity"
+  },
+  {
+   "headline": "Logarithmic scalar soft factorization from matching conditions",
+   "text": "Logarithmic soft theorems in QED and gravity can be understood as conservation laws associated with asymptotic symmetries.",
+   "arxiv_id": "2611.34791",
+   "authors": "Matías Briceño et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Superconformal Index Identities for Dual Gauge Theories",
+   "text": "We study superconformal index identities for three classes of dual four-dimensional gauge theories.",
+   "arxiv_id": "2611.34487",
+   "authors": "Min-xin Huang et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "All known supersymmetric $\\mathrm{AdS}_4 \\times S^7$ uplifts from maximal supergravity",
+   "text": "The solutions of $D=4$ $\\mathcal N=8$ SO(8)-gauged supergravity uplift consistently to eleven dimensions.",
+   "arxiv_id": "2611.33564",
+   "authors": "Krzysztof Pilch and Oscar Varela",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "On the Structure Constants of ${\\cal N}=2$ Liouville Theory",
+   "text": "We show the structure constants of $\\mathcal{N}=2$ spacelike Liouville theory.",
+   "arxiv_id": "2611.33343",
+   "authors": "Jingxin Tu",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Chaotic singularities inside vacuum black holes",
+   "text": "According to the conjecture of Belinski, Khalatnikov and Lifshitz, general relativity gives rise to chaotic dynamics in the vicinity of generic spacelike singularities.",
+   "arxiv_id": "2611.33287",
+   "authors": "Robie A. Hennigar and Ayan K. Patra",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "The OPE of lines beyond CFT",
+   "text": "We discuss the fusion of parallel line defects in theories defined by relevant deformations of a conformal fixed point.",
+   "arxiv_id": "2611.33272",
+   "authors": "Jan Albert et al.",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "The Dirac equation in arbitrary coordinate systems and curved spacetimes - An orthonormal frames approach",
+   "text": "In this pedagogical article we discuss the Dirac equation in arbitrary coordinate systems.",
+   "arxiv_id": "2611.33620",
+   "authors": "Andrew DeBenedictis and Saša Ilijić",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Holographic probes and Krylov complexity on asymptotically Lifshitz rotating black branes",
+   "text": "We study two types of holographic probes on a five-dimensional, asymptotically Lifshitz, rotating black hole.",
+   "arxiv_id": "2611.33599",
+   "authors": "Moises Bravo-Gaete et al.",
+   "section": "Holography & Gauge/Gravity"
+  },
+  {
+   "headline": "Quark-Loop Corrections and Auxiliary Field-Strength Mixing in First-Order QCD",
+   "text": "In the first-order formulation of Yang-Mills theory the gluon field strength is an independent auxiliary field $F$, and the only gluon self-interaction is a momentum-independent cubic vertex.",
+   "arxiv_id": "2611.34421",
+   "authors": "Hasnat Mohammad Nayeem",
+   "section": "Field Theory & Symmetry"
+  },
+  {
+   "headline": "Robin--Hadamard states for unstable field in half-Minkowski spacetime",
+   "text": "We investigate the quantization of a real massless scalar field in four-dimensional half-Minkowski spacetime subject to an attractive Robin boundary condition.",
+   "arxiv_id": "2611.34369",
+   "authors": "Bruno S. Felipe et al.",
+   "section": "Gravity & Cosmology"
+  },
+  {
+   "headline": "Probe branes from equivariant volumes",
+   "text": "Classical Euclidean probe actions control non-perturbative weights and extended observables in holography.",
+   "arxiv_id": "2611.33445",
+   "authors": "Kiril Hristov and Pedro Vicente Marto",
+   "section": "Strings, Amplitudes & Supergravity"
+  }
+ ],
+ "footer": "Text is excerpted verbatim from the authors’ abstracts as posted on arXiv and has not been peer reviewed. Follow the links for the full papers.",
+ "title": "The arXiv Gazette",
+ "tagline": "All the preprints fit to print",
+ "date": "Thursday, November 26, 2026",
+ "edition": "No. 23 · Morning Edition",
+ "categories": [
+  "hep-th",
+  "gr-qc (cross-lists)"
+ ],
+ "stats": {
+  "Papers scanned": "40",
+  "hep-th primary": "38",
+  "gr-qc cross-lists": "2",
+  "Papers covered": "40"
+ }
+}
